@@ -1,0 +1,1 @@
+document.addEventListener("click",function(t){const e=t.target.closest(".contacts__block-copy");if(e){const t=e.parentElement.querySelector(".contacts__block-link");if(t){const c=t.getAttribute("href");navigator.clipboard.writeText(c).then(()=>{e.classList.add("is-copy"),setTimeout(()=>e.classList.remove("is-copy"),2e3)})}}});

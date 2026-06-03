@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Shield, Radio, Anchor, Crosshair } from 'lucide-react';
 
@@ -140,7 +141,7 @@ export default function Hero({ lang }: HeroProps) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="relative glass-panel rounded-sm p-6 max-w-md mx-auto aspect-square flex flex-col justify-between overflow-hidden scanlines">
+          <div className="relative glass-panel rounded-sm p-6 max-w-md mx-auto aspect-square flex items-center justify-center overflow-hidden scanlines">
             <div className="absolute inset-0 bg-[#ff6b00]/[0.02] pointer-events-none" />
             
             {/* Corner Indicators */}
@@ -149,34 +150,15 @@ export default function Hero({ lang }: HeroProps) {
             <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-[#5e7a5e]" />
             <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#ff6b00]" />
 
-            {/* Tactical Grid Visualization */}
-            <div className="flex justify-between items-center border-b border-[#242a35] pb-4">
-              <span className="font-mono text-xs text-[#5e7a5e] tracking-widest">TACTICAL MONITOR // UNIT-01</span>
-              <div className="flex items-center space-x-1">
-                <div className="w-1.5 h-1.5 bg-[#ff6b00] rounded-full animate-ping" />
-                <span className="text-[10px] font-mono text-[#ff6b00] font-bold">LOCKED</span>
-              </div>
-            </div>
-
-            {/* Faux Vector Scope */}
-            <div className="my-6 relative flex items-center justify-center flex-grow">
-              <div className="w-48 h-48 rounded-full border border-[#242a35] border-dashed flex items-center justify-center animate-spin" style={{ animationDuration: '40s' }}>
-                <div className="w-36 h-36 rounded-full border border-[#242a35]/60 flex items-center justify-center">
-                  <div className="w-24 h-24 rounded-full border border-[#5e7a5e]/25 flex items-center justify-center" />
-                </div>
-              </div>
-              <Crosshair className="w-10 h-10 text-[#ff6b00]/60 absolute" />
-              <div className="absolute text-[8px] font-mono text-[#8a99ad]/50 bottom-2 text-center w-full">
-                RADAR DEPTH // 20KM CONE
-              </div>
-            </div>
-
-            {/* Technical logs */}
-            <div className="border-t border-[#242a35] pt-4 font-mono text-[9px] text-[#5e7a5e] space-y-1">
-              <div>&gt; STABILIZING LINK... OK</div>
-              <div>&gt; LINK RATE: 10 GBPS // ATTN: 0.35dB/KM</div>
-              <div>&gt; ANTI-JAMMING BLOCKERS: ENGAGED</div>
-              <div className="text-[#ff8f3d]">&gt; TARGET THREAT MATRIX: STABLE</div>
+            {/* Full-size Brand Logo */}
+            <div className="relative w-full h-full transition-transform hover:scale-102 duration-500">
+              <Image 
+                src="/Logo_Reaper.png"
+                alt="Reaper Defence Brand Logo"
+                fill
+                priority
+                className="object-contain filter drop-shadow-[0_0_35px_rgba(255,107,0,0.18)] brightness-110"
+              />
             </div>
 
           </div>

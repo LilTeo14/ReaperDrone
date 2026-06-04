@@ -129,7 +129,7 @@ export default function Catalog({ lang }: CatalogProps) {
         es: "Guerra Electrónica"
       },
       model: "Active Jammers",
-      image: "",
+      image: "/catalogo/Guerra electronica/categoria ge.png",
       description: {
         en: "Active RF jammers, handheld anti-drone silencers, and vehicular drone suppression systems.",
         es: "Inhibidores de RF activos, silenciadores portátiles anti-drones y sistemas de supresión de drones vehiculares."

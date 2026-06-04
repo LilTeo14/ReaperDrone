@@ -80,7 +80,7 @@ export default function Hero({ lang }: HeroProps) {
           animate="visible"
         >
           {/* Top Group: Tag and Subheadline */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-8">
             {/* Tag Header */}
             <motion.div 
               variants={itemVariants}
@@ -104,7 +104,7 @@ export default function Hero({ lang }: HeroProps) {
           {/* Middle Group: Supporting Text */}
           <motion.p 
             variants={itemVariants}
-            className="text-base text-[#8a99ad] leading-relaxed max-w-2xl lg:py-4"
+            className="text-lg text-[#8a99ad] leading-relaxed max-w-2xl lg:py-4"
           >
             {t[lang].support}
           </motion.p>

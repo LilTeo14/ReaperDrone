@@ -101,7 +101,7 @@ export default function Catalog({ lang }: CatalogProps) {
         es: "Sistemas UAV"
       },
       model: "VTOL & Fixed Wing",
-      image: "/h1_long_range.jpg",
+      image: "/catalogo/Sistemas UAV/as1202.jpeg",
       description: {
         en: "Long-range tactical fixed-wing and VTOL reconnaissance platforms designed for persistent border patrol, target mapping, and over-the-horizon intelligence.",
         es: "Plataformas tácticas de ala fija y VTOL de largo alcance diseñadas para patrullaje persistente, mapeo de objetivos e inteligencia más allá del horizonte."

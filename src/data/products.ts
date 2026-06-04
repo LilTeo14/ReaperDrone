@@ -321,7 +321,7 @@ export const products: Product[] = [
     name: "AERIAL SENTRY 73",
     model: "VTOL Reconnaissance UAV",
     category: "vtol",
-    image: "/catalogo/Sistemas UAV/as 73.webp",
+    image: "/catalogo/Sistemas UAV/as 73.jpg",
     en: {
       description: "Compact VTOL (Vertical Take-Off and Landing) drone designed for military reconnaissance, surveillance, and tactical operations. Fully modular structure allows rapid assembly and deployment in confined spaces without runways.",
       features: [
@@ -724,7 +724,7 @@ export const products: Product[] = [
     name: "1MINI2 (60W) Handheld Drone Jammer",
     model: "Handheld Tactical Jammer",
     category: "ew",
-    image: "/extracted/page_1_img_0.png",
+    image: "/catalogo/Herramientas tacticas/jmr.png",
     en: {
       description: "Compact handheld drone jammer providing 360-degree omnidirectional coverage up to 200 meters. Extremely portable and lightweight for rapid active protection.",
       features: [

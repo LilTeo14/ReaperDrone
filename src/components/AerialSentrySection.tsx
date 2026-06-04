@@ -42,7 +42,7 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
   };
 
   return (
-    <section className="relative bg-[#0d0f12] py-24 border-b border-[#242a35]/40" id="vtol-flagship">
+    <section className="relative bg-[#25211c] py-24 border-b border-[#4f473d]/40" id="vtol-flagship">
       <div className="absolute inset-0 grid-overlay opacity-[0.1] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -74,9 +74,9 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
               TWIN PROPULSION VECTOR // ACTIVE
             </div>
 
-            <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-[#242a35]" />
-            <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-[#242a35]" />
-            <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-[#242a35]" />
+            <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-[#4f473d]" />
+            <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-[#4f473d]" />
+            <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-[#4f473d]" />
             <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-[#ff6b00]" />
 
             {/* Drone Render */}
@@ -91,7 +91,7 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
             </div>
 
             {/* Core Diagnostics Overlays */}
-            <div className="w-full mt-8 grid grid-cols-2 gap-4 border-t border-[#242a35] pt-6 font-mono text-[10px]">
+            <div className="w-full mt-8 grid grid-cols-2 gap-4 border-t border-[#4f473d] pt-6 font-mono text-[10px]">
               <div className="flex items-center space-x-2 text-[#8a99ad]">
                 <Cpu className="w-4 h-4 text-[#ff6b00]/60" />
                 <span>Wingspan: 1200 mm</span>
@@ -108,26 +108,26 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
             
             {/* Operational profile counters */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="border border-[#242a35] bg-black/25 p-4 rounded-sm text-center">
+              <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm text-center">
                 <span className="block text-xl font-bold font-mono text-[#ff8f3d]">{product[lang].operationalProfile!.endurance}</span>
                 <span className="text-[9px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].endurance}</span>
               </div>
-              <div className="border border-[#242a35] bg-black/25 p-4 rounded-sm text-center">
+              <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm text-center">
                 <span className="block text-xl font-bold font-mono text-[#ff8f3d]">{product[lang].operationalProfile!.payload}</span>
                 <span className="text-[9px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].payload}</span>
               </div>
-              <div className="border border-[#242a35] bg-black/25 p-4 rounded-sm text-center">
+              <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm text-center">
                 <span className="block text-xl font-bold font-mono text-[#ff8f3d]">{product[lang].operationalProfile!.range}</span>
                 <span className="text-[9px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].range}</span>
               </div>
-              <div className="border border-[#242a35] bg-black/25 p-4 rounded-sm text-center">
+              <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm text-center">
                 <span className="block text-xl font-bold font-mono text-[#ff8f3d]">2x 2216 / 8"</span>
                 <span className="text-[9px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].propulsion}</span>
               </div>
             </div>
 
             {/* Quick-Release Modularity Panel */}
-            <div className="border border-[#242a35] bg-[#12151a]/40 p-6 rounded-sm space-y-4">
+            <div className="border border-[#4f473d] bg-[#1d1915]/40 p-6 rounded-sm space-y-4">
               <div className="flex items-center space-x-2 text-[#ff8f3d]">
                 <Hammer className="w-5 h-5" />
                 <h3 className="font-mono text-sm font-bold tracking-wider uppercase">
@@ -164,11 +164,11 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
               <h3 className="font-mono text-xs text-[#ff6b00] tracking-widest uppercase mb-4">
                 // {t[lang].specHeader}
               </h3>
-              <div className="border border-[#242a35] bg-black/10 rounded-sm overflow-hidden text-xs font-mono">
+              <div className="border border-[#4f473d] bg-black/10 rounded-sm overflow-hidden text-xs font-mono">
                 {content.specs.slice(0, 6).map((spec, idx) => (
                   <div 
                     key={idx} 
-                    className="flex justify-between items-center p-3 border-b border-[#242a35]/40 last:border-b-0 hover:bg-[#12151a]/30"
+                    className="flex justify-between items-center p-3 border-b border-[#4f473d]/40 last:border-b-0 hover:bg-[#1d1915]/30"
                   >
                     <span className="text-[#8a99ad]">{spec.label}</span>
                     <span className="text-white font-bold">{spec.value}</span>

@@ -15,7 +15,7 @@ export default function Home() {
   const [lang, setLang] = useState<'en' | 'es'>('es');
 
   return (
-    <main className="relative min-h-screen bg-[#090b0e] text-[#f3f4f6]">
+    <main className="relative min-h-screen bg-[#322d27] text-[#f3f4f6]">
       
       {/* Background Grids */}
       <div className="absolute inset-0 grid-overlay opacity-[0.05] pointer-events-none" />

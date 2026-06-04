@@ -52,7 +52,7 @@ export default function Hero({ lang }: HeroProps) {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#090b0e] pt-12 pb-24 border-b border-[#242a35]/40">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#322d27] pt-12 pb-24 border-b border-[#4f473d]/40">
       
       {/* Background Telemetry Overlays */}
       <div className="absolute inset-0 grid-overlay opacity-[0.25] pointer-events-none" />
@@ -127,7 +127,7 @@ export default function Hero({ lang }: HeroProps) {
             </a>
             <a 
               href="#contact"
-              className="px-8 py-4 bg-[#12151a] hover:bg-[#1a202c] text-[#8a99ad] hover:text-white font-bold text-sm tracking-widest uppercase font-mono rounded-sm transition-all duration-300 transform hover:-translate-y-0.5 border border-[#242a35] hover:border-[#ff6b00]/40 flex items-center justify-center"
+              className="px-8 py-4 bg-[#1d1915] hover:bg-[#1a202c] text-[#8a99ad] hover:text-white font-bold text-sm tracking-widest uppercase font-mono rounded-sm transition-all duration-300 transform hover:-translate-y-0.5 border border-[#4f473d] hover:border-[#ff6b00]/40 flex items-center justify-center"
             >
               {t[lang].btnContact}
             </a>

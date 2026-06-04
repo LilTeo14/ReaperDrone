@@ -91,13 +91,13 @@ export default function ContactForm({ lang }: ContactFormProps) {
   };
 
   return (
-    <footer className="relative bg-[#090b0e] pt-24 pb-12 border-t border-[#242a35]/60" id="contact">
+    <footer className="relative bg-[#322d27] pt-24 pb-12 border-t border-[#4f473d]/60" id="contact">
       <div className="absolute inset-0 grid-overlay opacity-[0.03] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Main Grid: Form Left, Info Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-[#242a35]/40">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-[#4f473d]/40">
           
           {/* Left Column: Info & Socials */}
           <div className="lg:col-span-5 space-y-8">
@@ -119,7 +119,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
                 // {t[lang].contactInfo}
               </h3>
               
-              <div className="border border-[#242a35] bg-black/25 p-4 rounded-sm space-y-3 font-mono text-xs">
+              <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm space-y-3 font-mono text-xs">
                 <div className="flex justify-between items-center">
                   <span className="text-[#8a99ad]">{t[lang].email}:</span>
                   <a href="mailto:matiasbarriosm@gmail.com" className="text-white hover:text-[#ff6b00] font-bold transition-colors">
@@ -149,7 +149,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 border border-[#242a35] bg-[#12151a] hover:bg-[#ff6b00]/10 hover:border-[#ff6b00]/50 rounded-sm flex items-center justify-center text-[#8a99ad] hover:text-white transition-all duration-300"
+                      className="w-10 h-10 border border-[#4f473d] bg-[#1d1915] hover:bg-[#ff6b00]/10 hover:border-[#ff6b00]/50 rounded-sm flex items-center justify-center text-[#8a99ad] hover:text-white transition-all duration-300"
                       aria-label={social.label}
                     >
                       <Icon className="w-4 h-4" />
@@ -164,9 +164,9 @@ export default function ContactForm({ lang }: ContactFormProps) {
           {/* Right Column: Secure Form */}
           <div className="lg:col-span-7">
             <div className="glass-panel p-8 rounded-sm scanlines relative">
-              <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-[#242a35]" />
-              <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-[#242a35]" />
-              <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-[#242a35]" />
+              <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-[#4f473d]" />
+              <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-[#4f473d]" />
+              <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-[#4f473d]" />
               <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-[#ff6b00]" />
 
               <h3 className="font-mono text-xs text-[#ff6b00] tracking-widest uppercase mb-6 flex items-center space-x-2">
@@ -197,7 +197,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
                         type="text" 
                         required 
                         placeholder="John Doe"
-                        className="w-full bg-[#12151a] border border-[#242a35] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors"
+                        className="w-full bg-[#1d1915] border border-[#4f473d] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors"
                       />
                     </div>
                     <div className="space-y-2">
@@ -206,7 +206,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
                         type="text" 
                         required 
                         placeholder="Ministry of Defense / Private Security"
-                        className="w-full bg-[#12151a] border border-[#242a35] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors"
+                        className="w-full bg-[#1d1915] border border-[#4f473d] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors"
                       />
                     </div>
                   </div>
@@ -217,7 +217,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
                       type="email" 
                       required 
                       placeholder="jdoe@agency.gov"
-                      className="w-full bg-[#12151a] border border-[#242a35] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors"
+                      className="w-full bg-[#1d1915] border border-[#4f473d] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors"
                     />
                   </div>
 
@@ -227,7 +227,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
                       rows={4}
                       required 
                       placeholder="Input requested platform specs or operational mission scope..."
-                      className="w-full bg-[#12151a] border border-[#242a35] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors resize-none"
+                      className="w-full bg-[#1d1915] border border-[#4f473d] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors resize-none"
                     />
                   </div>
 

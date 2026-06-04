@@ -120,7 +120,7 @@ export default function MediaGallery({ lang }: MediaGalleryProps) {
     : galleryItems.filter(item => item.category === activeCategory);
 
   return (
-    <section className="relative bg-[#0d0f12] py-24 border-b border-[#242a35]/40" id="gallery">
+    <section className="relative bg-[#25211c] py-24 border-b border-[#4f473d]/40" id="gallery">
       <div className="absolute inset-0 grid-overlay opacity-[0.05] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -140,7 +140,7 @@ export default function MediaGallery({ lang }: MediaGalleryProps) {
         </div>
 
         {/* Media Categories Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12 border-b border-[#242a35]/40 pb-6">
+        <div className="flex flex-wrap justify-center gap-2 mb-12 border-b border-[#4f473d]/40 pb-6">
           {categories.map((cat) => (
             <button
               key={cat.id}
@@ -148,7 +148,7 @@ export default function MediaGallery({ lang }: MediaGalleryProps) {
               className={`px-4 py-2 font-mono text-[11px] uppercase tracking-wider transition-all duration-300 rounded-sm border ${
                 activeCategory === cat.id
                   ? 'border-[#ff6b00] bg-[#ff6b00]/10 text-white'
-                  : 'border-[#242a35] text-[#8a99ad] hover:text-white hover:border-[#ff6b00]/40 bg-black/10'
+                  : 'border-[#4f473d] text-[#8a99ad] hover:text-white hover:border-[#ff6b00]/40 bg-black/10'
               }`}
             >
               {cat.label}
@@ -167,14 +167,14 @@ export default function MediaGallery({ lang }: MediaGalleryProps) {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 key={item.id}
-                className="glass-panel group rounded-sm overflow-hidden border border-[#242a35] hover:border-[#ff6b00]/40 transition-all duration-300 aspect-video relative flex flex-col justify-end cursor-pointer"
+                className="glass-panel group rounded-sm overflow-hidden border border-[#4f473d] hover:border-[#ff6b00]/40 transition-all duration-300 aspect-video relative flex flex-col justify-end cursor-pointer"
               >
                 
                 {/* Visual backdrop grid inside thumbnails */}
                 <div className="absolute inset-0 grid-overlay opacity-[0.15] pointer-events-none z-10" />
 
                 {/* Media indicators overlays */}
-                <div className="absolute top-3 right-3 bg-black/70 border border-[#242a35] p-1.5 rounded-sm z-20 text-white">
+                <div className="absolute top-3 right-3 bg-black/70 border border-[#4f473d] p-1.5 rounded-sm z-20 text-white">
                   {item.type === 'video' ? <Video className="w-4 h-4 text-[#ff6b00]" /> : <Camera className="w-4 h-4 text-emerald-400" />}
                 </div>
 

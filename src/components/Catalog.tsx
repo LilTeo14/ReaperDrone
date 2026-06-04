@@ -164,7 +164,7 @@ export default function Catalog({ lang }: CatalogProps) {
   const fiberProducts = products.filter(p => p.category === 'fiber');
 
   return (
-    <section className="relative bg-[#090b0e] py-24 border-b border-[#242a35]/40" id="catalog">
+    <section className="relative bg-[#322d27] py-24 border-b border-[#4f473d]/40" id="catalog">
       <div className="absolute inset-0 grid-overlay opacity-[0.05] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -195,7 +195,7 @@ export default function Catalog({ lang }: CatalogProps) {
         </div>
 
         {/* Tab Filters */}
-        <div className="flex flex-wrap gap-2 border-b border-[#242a35]/50 pb-6 mb-10">
+        <div className="flex flex-wrap gap-2 border-b border-[#4f473d]/50 pb-6 mb-10">
           {(['all', 'fpv', 'uav', 'fiber', 'ew', 'other'] as const).map((tab) => {
             const labels = {
               all: t[lang].tabAll,
@@ -212,7 +212,7 @@ export default function Catalog({ lang }: CatalogProps) {
                 className={`px-5 py-2.5 font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 rounded-sm border ${
                   activeTab === tab
                     ? 'border-[#ff6b00] bg-[#ff6b00]/10 text-white shadow-md shadow-[#ff6b00]/10'
-                    : 'border-[#242a35] text-[#8a99ad] hover:text-white hover:border-[#ff6b00]/40 bg-black/20'
+                    : 'border-[#4f473d] text-[#8a99ad] hover:text-white hover:border-[#ff6b00]/40 bg-black/20'
                 }`}
               >
                 {labels[tab]}
@@ -233,8 +233,8 @@ export default function Catalog({ lang }: CatalogProps) {
               >
                 
                 {/* Product Thumbnail Section */}
-                <div className="relative aspect-video bg-black/40 border-b border-[#242a35]/50 flex items-center justify-center overflow-hidden">
-                  <div className="absolute top-3 left-3 bg-[#12151a]/90 border border-[#242a35] px-2.5 py-1 rounded-sm z-10 font-mono text-[9px] text-[#ff6b00] font-bold">
+                <div className="relative aspect-video bg-black/40 border-b border-[#4f473d]/50 flex items-center justify-center overflow-hidden">
+                  <div className="absolute top-3 left-3 bg-[#1d1915]/90 border border-[#4f473d] px-2.5 py-1 rounded-sm z-10 font-mono text-[9px] text-[#ff6b00] font-bold">
                     {t[lang].categoryTag}
                   </div>
                   
@@ -259,8 +259,8 @@ export default function Catalog({ lang }: CatalogProps) {
                   
                   {/* Fallback Display if image error or loading */}
                   {(!loadedImages[category.id] || failedImages[category.id]) && (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-[#12151a] text-center font-mono select-none group-hover:bg-[#151921] transition-all z-0">
-                      <div className="w-12 h-12 border border-[#242a35] rounded-sm flex items-center justify-center mb-2 group-hover:border-[#ff6b00]/30 transition-colors">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-[#1d1915] text-center font-mono select-none group-hover:bg-[#221f1a] transition-all z-0">
+                      <div className="w-12 h-12 border border-[#4f473d] rounded-sm flex items-center justify-center mb-2 group-hover:border-[#ff6b00]/30 transition-colors">
                         <Cpu className="w-6 h-6 text-[#8a99ad] group-hover:text-[#ff6b00] transition-colors" />
                       </div>
                       <span className="text-[10px] text-[#8a99ad] font-bold uppercase tracking-wider">{category.model}</span>
@@ -284,13 +284,13 @@ export default function Catalog({ lang }: CatalogProps) {
                   </div>
 
                   {/* Micro Action Bar */}
-                  <div className="border-t border-[#242a35]/60 pt-4 flex gap-4">
+                  <div className="border-t border-[#4f473d]/60 pt-4 flex gap-4">
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
                         setActiveTab(category.targetTab);
                       }}
-                      className="flex-grow py-2.5 bg-[#12151a] hover:bg-[#ff6b00]/10 border border-[#242a35] hover:border-[#ff6b00] text-[#8a99ad] hover:text-white font-mono text-xs font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center space-x-2"
+                      className="flex-grow py-2.5 bg-[#1d1915] hover:bg-[#ff6b00]/10 border border-[#4f473d] hover:border-[#ff6b00] text-[#8a99ad] hover:text-white font-mono text-xs font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       <Eye className="w-4 h-4 text-[#ff6b00]" />
                       <span>{t[lang].btnExplore}</span>
@@ -309,8 +309,8 @@ export default function Catalog({ lang }: CatalogProps) {
               >
                 
                 {/* Product Thumbnail Section */}
-                <div className="relative aspect-video bg-black/40 border-b border-[#242a35]/50 flex items-center justify-center overflow-hidden">
-                  <div className="absolute top-3 left-3 bg-[#12151a]/90 border border-[#242a35] px-2.5 py-1 rounded-sm z-10 font-mono text-[9px] text-[#5e7a5e] font-bold">
+                <div className="relative aspect-video bg-black/40 border-b border-[#4f473d]/50 flex items-center justify-center overflow-hidden">
+                  <div className="absolute top-3 left-3 bg-[#1d1915]/90 border border-[#4f473d] px-2.5 py-1 rounded-sm z-10 font-mono text-[9px] text-[#5e7a5e] font-bold">
                     {product.category.toUpperCase()}
                   </div>
                   
@@ -335,8 +335,8 @@ export default function Catalog({ lang }: CatalogProps) {
                   
                   {/* Fallback Display if image error or loading */}
                   {(!loadedImages[product.id] || failedImages[product.id]) && (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-[#12151a] text-center font-mono select-none group-hover:bg-[#151921] transition-all z-0">
-                      <div className="w-12 h-12 border border-[#242a35] rounded-sm flex items-center justify-center mb-2 group-hover:border-[#ff6b00]/30 transition-colors">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-[#1d1915] text-center font-mono select-none group-hover:bg-[#221f1a] transition-all z-0">
+                      <div className="w-12 h-12 border border-[#4f473d] rounded-sm flex items-center justify-center mb-2 group-hover:border-[#ff6b00]/30 transition-colors">
                         <Cpu className="w-6 h-6 text-[#8a99ad] group-hover:text-[#ff6b00] transition-colors" />
                       </div>
                       <span className="text-[10px] text-[#8a99ad] font-bold uppercase tracking-wider">{product.model}</span>
@@ -365,10 +365,10 @@ export default function Catalog({ lang }: CatalogProps) {
                   </div>
 
                   {/* Micro Action Bar */}
-                  <div className="border-t border-[#242a35]/60 pt-4 flex gap-4">
+                  <div className="border-t border-[#4f473d]/60 pt-4 flex gap-4">
                     <button
                       onClick={() => setSelectedProduct(product)}
-                      className="flex-grow py-2.5 bg-[#12151a] hover:bg-[#ff6b00]/10 border border-[#242a35] hover:border-[#ff6b00] text-[#8a99ad] hover:text-white font-mono text-xs font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center space-x-2"
+                      className="flex-grow py-2.5 bg-[#1d1915] hover:bg-[#ff6b00]/10 border border-[#4f473d] hover:border-[#ff6b00] text-[#8a99ad] hover:text-white font-mono text-xs font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       <Eye className="w-4 h-4 text-[#ff6b00]" />
                       <span>{t[lang].btnDetails}</span>
@@ -387,7 +387,7 @@ export default function Catalog({ lang }: CatalogProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mt-20 border border-[#242a35] bg-[#0c0e12]/80 rounded-sm p-8"
+            className="mt-20 border border-[#4f473d] bg-[#1c1815]/80 rounded-sm p-8"
           >
             <div className="mb-8">
               <div className="flex items-center space-x-2 mb-3">
@@ -402,10 +402,10 @@ export default function Catalog({ lang }: CatalogProps) {
             </div>
 
             {/* Comparison Grid Table */}
-            <div className="overflow-x-auto border border-[#242a35] rounded-sm bg-black/20">
+            <div className="overflow-x-auto border border-[#4f473d] rounded-sm bg-black/20">
               <table className="w-full text-left font-mono text-xs">
                 <thead>
-                  <tr className="bg-[#12151a] border-b border-[#242a35] text-[#8a99ad] uppercase tracking-wider">
+                  <tr className="bg-[#1d1915] border-b border-[#4f473d] text-[#8a99ad] uppercase tracking-wider">
                     <th className="p-4">{t[lang].tabFiber}</th>
                     <th className="p-4">{t[lang].length}</th>
                     <th className="p-4">{t[lang].weight}</th>
@@ -413,14 +413,14 @@ export default function Catalog({ lang }: CatalogProps) {
                     <th className="p-4">{t[lang].tensile}</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#242a35]/60 text-white">
+                <tbody className="divide-y divide-[#4f473d]/60 text-white">
                   {fiberProducts.map((p) => {
                     const lengthVal = p[lang].specs.find(s => s.label.includes('Length') || s.label.includes('Longitud'))?.value || 'N/A';
                     const weightVal = p[lang].specs.find(s => s.label.includes('Weight') || s.label.includes('Peso'))?.value || 'N/A';
                     const compatVal = p[lang].specs.find(s => s.label.includes('Compatibility') || s.label.includes('Compatibilidad'))?.value || 'N/A';
                     const tensileVal = p[lang].specs.find(s => s.label.includes('Tensile') || s.label.includes('Tensión'))?.value || 'N/A';
                     return (
-                      <tr key={p.id} className="hover:bg-[#12151a]/30 transition-colors">
+                      <tr key={p.id} className="hover:bg-[#1d1915]/30 transition-colors">
                         <td className="p-4 font-bold text-[#ff8f3d]">{p.name}</td>
                         <td className="p-4">{lengthVal}</td>
                         <td className="p-4">{weightVal}</td>
@@ -457,11 +457,11 @@ export default function Catalog({ lang }: CatalogProps) {
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className="relative w-full max-w-4xl max-h-[85vh] bg-[#0c0e12] border border-[#242a35] rounded-sm overflow-hidden flex flex-col justify-between shadow-2xl z-10 scanlines"
+              className="relative w-full max-w-4xl max-h-[85vh] bg-[#1c1815] border border-[#4f473d] rounded-sm overflow-hidden flex flex-col justify-between shadow-2xl z-10 scanlines"
             >
               
               {/* Modal Header */}
-              <div className="p-6 border-b border-[#242a35] flex justify-between items-center bg-[#12151a]">
+              <div className="p-6 border-b border-[#4f473d] flex justify-between items-center bg-[#1d1915]">
                 <div className="flex items-center space-x-2">
                   <span className="text-[10px] font-mono text-[#5e7a5e] border border-[#2d3a2d] px-2 py-0.5 rounded-sm">
                     {selectedProduct.category.toUpperCase()}
@@ -473,7 +473,7 @@ export default function Catalog({ lang }: CatalogProps) {
                 
                 <button
                   onClick={() => setSelectedProduct(null)}
-                  className="p-1 rounded-sm border border-[#242a35] text-[#8a99ad] hover:text-white hover:border-[#ff6b00]/40 transition-colors"
+                  className="p-1 rounded-sm border border-[#4f473d] text-[#8a99ad] hover:text-white hover:border-[#ff6b00]/40 transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -493,11 +493,11 @@ export default function Catalog({ lang }: CatalogProps) {
                       <FileText className="w-3.5 h-3.5" />
                       <span>{t[lang].specsHeader}</span>
                     </h4>
-                    <div className="border border-[#242a35] rounded-sm overflow-hidden bg-black/15 font-mono text-xs">
+                    <div className="border border-[#4f473d] rounded-sm overflow-hidden bg-black/15 font-mono text-xs">
                       {selectedProduct[lang].specs.map((spec, idx) => (
                         <div 
                           key={idx} 
-                          className="flex justify-between items-center p-3 border-b border-[#242a35]/40 last:border-b-0 hover:bg-[#12151a]/20"
+                          className="flex justify-between items-center p-3 border-b border-[#4f473d]/40 last:border-b-0 hover:bg-[#1d1915]/20"
                         >
                           <span className="text-[#8a99ad]">{spec.label}</span>
                           <span className="text-white font-bold">{spec.value}</span>
@@ -533,7 +533,7 @@ export default function Catalog({ lang }: CatalogProps) {
                           {selectedProduct[lang].capabilities.map((cap, idx) => (
                             <span 
                               key={idx} 
-                              className="text-[10px] font-mono text-[#8a99ad] border border-[#242a35] bg-[#12151a]/60 px-3 py-1.5 rounded-sm"
+                              className="text-[10px] font-mono text-[#8a99ad] border border-[#4f473d] bg-[#1d1915]/60 px-3 py-1.5 rounded-sm"
                             >
                               {cap}
                             </span>
@@ -546,10 +546,10 @@ export default function Catalog({ lang }: CatalogProps) {
               </div>
 
               {/* Close Button Footer */}
-              <div className="p-4 border-t border-[#242a35] flex justify-end bg-[#0a0c10]">
+              <div className="p-4 border-t border-[#4f473d] flex justify-end bg-[#161411]">
                 <button
                   onClick={() => setSelectedProduct(null)}
-                  className="px-6 py-2.5 bg-[#12151a] hover:bg-[#242a35] border border-[#242a35] text-white font-mono text-xs font-bold uppercase tracking-wider rounded-sm transition-all"
+                  className="px-6 py-2.5 bg-[#1d1915] hover:bg-[#4f473d] border border-[#4f473d] text-white font-mono text-xs font-bold uppercase tracking-wider rounded-sm transition-all"
                 >
                   {t[lang].close}
                 </button>
@@ -579,17 +579,17 @@ export default function Catalog({ lang }: CatalogProps) {
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className="relative w-full max-w-5xl max-h-[85vh] bg-[#0c0e12] border border-[#242a35] rounded-sm overflow-hidden flex flex-col justify-between shadow-2xl z-10 scanlines"
+              className="relative w-full max-w-5xl max-h-[85vh] bg-[#1c1815] border border-[#4f473d] rounded-sm overflow-hidden flex flex-col justify-between shadow-2xl z-10 scanlines"
             >
               
               {/* Header */}
-              <div className="p-6 border-b border-[#242a35] flex justify-between items-center bg-[#12151a]">
+              <div className="p-6 border-b border-[#4f473d] flex justify-between items-center bg-[#1d1915]">
                 <h3 className="text-lg font-bold font-mono text-white tracking-widest uppercase">
                   // REAPER FPV TACTICAL MATRIX COMPARISON
                 </h3>
                 <button
                   onClick={() => setShowFPVCompare(false)}
-                  className="p-1 rounded-sm border border-[#242a35] text-[#8a99ad] hover:text-white hover:border-[#ff6b00]/40 transition-colors"
+                  className="p-1 rounded-sm border border-[#4f473d] text-[#8a99ad] hover:text-white hover:border-[#ff6b00]/40 transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -597,79 +597,79 @@ export default function Catalog({ lang }: CatalogProps) {
 
               {/* Scrollable table content */}
               <div className="p-8 overflow-y-auto overflow-x-auto flex-grow">
-                <table className="w-full text-left font-mono text-xs border border-[#242a35]/60 bg-black/10 rounded-sm">
+                <table className="w-full text-left font-mono text-xs border border-[#4f473d]/60 bg-black/10 rounded-sm">
                   <thead>
-                    <tr className="bg-[#12151a] border-b border-[#242a35] text-[#8a99ad] uppercase tracking-wider text-[10px]">
+                    <tr className="bg-[#1d1915] border-b border-[#4f473d] text-[#8a99ad] uppercase tracking-wider text-[10px]">
                       <th className="p-4">SPEC / MODEL</th>
                       {fpvProducts.map(p => (
-                        <th key={p.id} className="p-4 text-center border-l border-[#242a35]/60 font-bold text-white">
+                        <th key={p.id} className="p-4 text-center border-l border-[#4f473d]/60 font-bold text-white">
                           {p.name}
                         </th>
                       ))}
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#242a35]/40 text-white">
+                  <tbody className="divide-y divide-[#4f473d]/40 text-white">
                     {/* Rows */}
-                    <tr className="hover:bg-[#12151a]/20">
+                    <tr className="hover:bg-[#1d1915]/20">
                       <td className="p-4 font-bold text-[#8a99ad]">Wheelbase</td>
                       {fpvProducts.map(p => (
-                        <td key={p.id} className="p-4 text-center border-l border-[#242a35]/40">
+                        <td key={p.id} className="p-4 text-center border-l border-[#4f473d]/40">
                           {p[lang].specs.find(s => s.label.includes('Wheelbase') || s.label.includes('Ejes'))?.value || 'N/A'}
                         </td>
                       ))}
                     </tr>
-                    <tr className="hover:bg-[#12151a]/20">
+                    <tr className="hover:bg-[#1d1915]/20">
                       <td className="p-4 font-bold text-[#8a99ad]">Max Speed</td>
                       {fpvProducts.map(p => (
-                        <td key={p.id} className="p-4 text-center border-l border-[#242a35]/40">
+                        <td key={p.id} className="p-4 text-center border-l border-[#4f473d]/40">
                           {p[lang].specs.find(s => s.label.includes('Max Speed') || s.label.includes('Máxima'))?.value || 'N/A'}
                         </td>
                       ))}
                     </tr>
-                    <tr className="hover:bg-[#12151a]/20">
+                    <tr className="hover:bg-[#1d1915]/20">
                       <td className="p-4 font-bold text-[#8a99ad]">Rated Payload</td>
                       {fpvProducts.map(p => (
-                        <td key={p.id} className="p-4 text-center border-l border-[#242a35]/40">
+                        <td key={p.id} className="p-4 text-center border-l border-[#4f473d]/40">
                           {p[lang].specs.find(s => s.label.includes('Rated Payload') || s.label.includes('Nominal'))?.value || 'N/A'}
                         </td>
                       ))}
                     </tr>
-                    <tr className="hover:bg-[#12151a]/20">
+                    <tr className="hover:bg-[#1d1915]/20">
                       <td className="p-4 font-bold text-[#8a99ad]">Max Payload</td>
                       {fpvProducts.map(p => (
-                        <td key={p.id} className="p-4 text-center border-l border-[#242a35]/40">
+                        <td key={p.id} className="p-4 text-center border-l border-[#4f473d]/40">
                           {p[lang].specs.find(s => s.label.includes('Max Payload') || s.label.includes('Máxima'))?.value || 'N/A'}
                         </td>
                       ))}
                     </tr>
-                    <tr className="hover:bg-[#12151a]/20">
+                    <tr className="hover:bg-[#1d1915]/20">
                       <td className="p-4 font-bold text-[#8a99ad]">Endurance (No-load)</td>
                       {fpvProducts.map(p => (
-                        <td key={p.id} className="p-4 text-center border-l border-[#242a35]/40">
+                        <td key={p.id} className="p-4 text-center border-l border-[#4f473d]/40">
                           {p[lang].specs.find(s => s.label.includes('No-load') || s.label.includes('sin Carga'))?.value || 'N/A'}
                         </td>
                       ))}
                     </tr>
-                    <tr className="hover:bg-[#12151a]/20">
+                    <tr className="hover:bg-[#1d1915]/20">
                       <td className="p-4 font-bold text-[#8a99ad]">Endurance (Loaded)</td>
                       {fpvProducts.map(p => (
-                        <td key={p.id} className="p-4 text-center border-l border-[#242a35]/40">
+                        <td key={p.id} className="p-4 text-center border-l border-[#4f473d]/40">
                           {p[lang].specs.find(s => s.label.includes('Loaded Flight') || s.label.includes('con Carga'))?.value || 'N/A'}
                         </td>
                       ))}
                     </tr>
-                    <tr className="hover:bg-[#12151a]/20">
+                    <tr className="hover:bg-[#1d1915]/20">
                       <td className="p-4 font-bold text-[#8a99ad]">Motor Model</td>
                       {fpvProducts.map(p => (
-                        <td key={p.id} className="p-4 text-center border-l border-[#242a35]/40 text-[#8a99ad]">
+                        <td key={p.id} className="p-4 text-center border-l border-[#4f473d]/40 text-[#8a99ad]">
                           {p[lang].specs.find(s => s.label === 'Motor')?.value || 'N/A'}
                         </td>
                       ))}
                     </tr>
-                    <tr className="hover:bg-[#12151a]/20">
+                    <tr className="hover:bg-[#1d1915]/20">
                       <td className="p-4 font-bold text-[#8a99ad]">Propeller Type</td>
                       {fpvProducts.map(p => (
-                        <td key={p.id} className="p-4 text-center border-l border-[#242a35]/40 text-[#8a99ad]">
+                        <td key={p.id} className="p-4 text-center border-l border-[#4f473d]/40 text-[#8a99ad]">
                           {p[lang].specs.find(s => s.label === 'Propeller' || s.label === 'Hélice')?.value || 'N/A'}
                         </td>
                       ))}
@@ -679,10 +679,10 @@ export default function Catalog({ lang }: CatalogProps) {
               </div>
 
               {/* Close Footer */}
-              <div className="p-4 border-t border-[#242a35] flex justify-end bg-[#0a0c10]">
+              <div className="p-4 border-t border-[#4f473d] flex justify-end bg-[#161411]">
                 <button
                   onClick={() => setShowFPVCompare(false)}
-                  className="px-6 py-2.5 bg-[#12151a] hover:bg-[#242a35] border border-[#242a35] text-white font-mono text-xs font-bold uppercase tracking-wider rounded-sm transition-all"
+                  className="px-6 py-2.5 bg-[#1d1915] hover:bg-[#4f473d] border border-[#4f473d] text-white font-mono text-xs font-bold uppercase tracking-wider rounded-sm transition-all"
                 >
                   {t[lang].close}
                 </button>

@@ -103,7 +103,7 @@ export default function Infographics({ lang }: InfographicsProps) {
   };
 
   return (
-    <section className="relative bg-[#0d0f12] py-24 border-b border-[#242a35]/40" id="infographics">
+    <section className="relative bg-[#25211c] py-24 border-b border-[#4f473d]/40" id="infographics">
       <div className="absolute inset-0 grid-overlay opacity-[0.15] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -139,10 +139,10 @@ export default function Infographics({ lang }: InfographicsProps) {
                 className="glass-panel p-6 rounded-sm flex flex-col justify-between hover:border-[#ff6b00]/40 transition-all duration-300 relative group"
               >
                 {/* Accent line on card */}
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-[#242a35] group-hover:bg-[#ff6b00] transition-colors duration-300" />
+                <div className="absolute top-0 left-0 w-full h-[2px] bg-[#4f473d] group-hover:bg-[#ff6b00] transition-colors duration-300" />
                 
                 <div>
-                  <div className="w-10 h-10 rounded-sm bg-[#12151a] border border-[#242a35] flex items-center justify-center mb-6 group-hover:border-[#ff6b00]/30 transition-colors">
+                  <div className="w-10 h-10 rounded-sm bg-[#1d1915] border border-[#4f473d] flex items-center justify-center mb-6 group-hover:border-[#ff6b00]/30 transition-colors">
                     <Icon className="w-5 h-5 text-[#8a99ad] group-hover:text-[#ff6b00] transition-colors" />
                   </div>
                   <h3 className="font-mono text-sm text-white font-bold tracking-wider uppercase mb-2">
@@ -153,7 +153,7 @@ export default function Infographics({ lang }: InfographicsProps) {
                   </p>
                 </div>
 
-                <div className="border-t border-[#242a35] pt-4 mt-auto">
+                <div className="border-t border-[#4f473d] pt-4 mt-auto">
                   <span className="font-mono text-lg font-bold text-[#ff8f3d] tracking-tight">
                     {card.metric}
                   </span>
@@ -164,7 +164,7 @@ export default function Infographics({ lang }: InfographicsProps) {
         </motion.div>
 
         {/* Visual Line Divider */}
-        <div className="mt-16 border-b border-[#242a35]/40 flex justify-between font-mono text-[9px] text-[#5e7a5e] pb-1">
+        <div className="mt-16 border-b border-[#4f473d]/40 flex justify-between font-mono text-[9px] text-[#5e7a5e] pb-1">
           <span>SECURED // ENCRYPTED DATASTREAM</span>
           <span>REAPER DEFENCE SYSTEM GRID V2.0</span>
         </div>

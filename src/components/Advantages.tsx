@@ -96,7 +96,7 @@ export default function Advantages({ lang }: AdvantagesProps) {
   };
 
   return (
-    <section className="relative bg-[#0d0f12] py-24 border-b border-[#242a35]/40" id="advantages">
+    <section className="relative bg-[#25211c] py-24 border-b border-[#4f473d]/40" id="advantages">
       <div className="absolute inset-0 grid-overlay opacity-[0.05] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -124,7 +124,7 @@ export default function Advantages({ lang }: AdvantagesProps) {
                 key={idx}
                 className="glass-panel p-6 rounded-sm flex space-x-5 hover:border-[#ff6b00]/40 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 rounded-sm bg-[#12151a] border border-[#242a35] flex items-center justify-center flex-shrink-0 group-hover:border-[#ff6b00]/30 transition-colors">
+                <div className="w-12 h-12 rounded-sm bg-[#1d1915] border border-[#4f473d] flex items-center justify-center flex-shrink-0 group-hover:border-[#ff6b00]/30 transition-colors">
                   <Icon className="w-6 h-6 text-[#8a99ad] group-hover:text-[#ff6b00] transition-colors" />
                 </div>
                 

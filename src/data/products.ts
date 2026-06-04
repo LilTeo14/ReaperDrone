@@ -673,7 +673,7 @@ export const products: Product[] = [
     name: "LIB MI1",
     model: "Commercial Drone Release System",
     category: "release",
-    image: "/wp-content/uploads/2025/09/pk.webp",
+    image: "/catalogo/Herramientas tacticas/herratac - copia.jpeg",
     en: {
       description: "High-precision explosive release system designed to integrate seamlessly into commercial drone platforms. Allows safe carrying and remote dropping of tactical loads.",
       features: [

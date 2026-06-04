@@ -242,7 +242,7 @@ export const products: Product[] = [
     name: "MARK IV FPV 15\"",
     model: "15-Inch Heavy Assault FPV",
     category: "fpv",
-    image: "/wp-content/uploads/2025/09/advance-1.jpg",
+    image: "/wp-content/uploads/2025/09/advance-1-dark.png",
     en: {
       description: "Our largest tactical FPV platform, designed for heavy assault payloads and long-endurance flights. Employs high-power 8S battery architecture for maximum stability.",
       features: [
@@ -372,7 +372,7 @@ export const products: Product[] = [
     name: "UAV H1 LONG RANGE",
     model: "Tactical Long-Range Fixed Wing",
     category: "fixed-wing",
-    image: "/wp-content/uploads/2025/09/advance-1.jpg",
+    image: "/wp-content/uploads/2025/09/advance-1-dark.png",
     en: {
       description: "High-performance fixed-wing tactical UAV engineered for persistent surveillance and border patrol. Features long-range stabilized zoom optics and optimized composite aerodynamics.",
       features: [

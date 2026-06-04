@@ -84,7 +84,7 @@ export default function Catalog({ lang }: CatalogProps) {
         es: "Plataformas FPV"
       },
       model: "Tactical FPV Drones",
-      image: "/wp-content/uploads/2025/09/advance-1.jpg",
+      image: "/wp-content/uploads/2025/09/advance-1-dark.png",
       description: {
         en: "Tactical first-person view drone platforms, including 7\", 8\", 10\", and 15\" models optimized for high-speed assault, heavy payload delivery, and reconnaissance.",
         es: "Plataformas tácticas de drones en primera persona (FPV), incluyendo modelos de 7\", 8\", 10\" y 15\" optimizados para asalto de alta velocidad, transporte pesado y reconocimiento."
@@ -98,7 +98,7 @@ export default function Catalog({ lang }: CatalogProps) {
         es: "Sistemas UAV"
       },
       model: "VTOL & Fixed Wing",
-      image: "/wp-content/uploads/2025/09/advance-1.jpg",
+      image: "/wp-content/uploads/2025/09/advance-1-dark.png",
       description: {
         en: "Long-range tactical fixed-wing and VTOL reconnaissance platforms designed for persistent border patrol, target mapping, and over-the-horizon intelligence.",
         es: "Plataformas tácticas de ala fija y VTOL de largo alcance diseñadas para patrullaje persistente, mapeo de objetivos e inteligencia más allá del horizonte."

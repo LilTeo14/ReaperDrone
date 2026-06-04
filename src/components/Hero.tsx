@@ -12,7 +12,7 @@ interface HeroProps {
 export default function Hero({ lang }: HeroProps) {
   const t = {
     en: {
-      headline: "REAPER DEFENCE",
+      headline: "",
       subheadline: "Advanced Unmanned Systems & Electronic Warfare Solutions",
       support: "Modern conflicts and security challenges have demonstrated the decisive role of unmanned systems, electronic warfare and real-time intelligence. Reaper Defence develops next-generation technologies designed to enhance operational awareness, force protection and mission effectiveness.",
       btnExplore: "Explore Products",
@@ -21,7 +21,7 @@ export default function Hero({ lang }: HeroProps) {
       latencies: "LATENCY: 0.8ms // LINK: FIBER-OPTIC"
     },
     es: {
-      headline: "REAPER DEFENCE",
+      headline: "",
       subheadline: "Sistemas No Tripulados Avanzados y Soluciones de Guerra Electrónica",
       support: "Los conflictos modernos y los desafíos de seguridad han demostrado el papel decisivo de los sistemas no tripulados, la guerra electrónica y la inteligencia en tiempo real. Reaper Defence desarrolla tecnologías de próxima generación diseñadas para mejorar la conciencia operativa, la protección de fuerzas y la efectividad de las misiones.",
       btnExplore: "Explorar Productos",
@@ -91,12 +91,14 @@ export default function Hero({ lang }: HeroProps) {
           </motion.div>
 
           {/* Headline */}
-          <motion.h1 
-            variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight font-mono"
-          >
-            {t[lang].headline}
-          </motion.h1>
+          {t[lang].headline && (
+            <motion.h1 
+              variants={itemVariants}
+              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight font-mono"
+            >
+              {t[lang].headline}
+            </motion.h1>
+          )}
 
           {/* Subheadline */}
           <motion.p 

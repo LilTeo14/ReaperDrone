@@ -16,7 +16,7 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
 
   const t = {
     en: {
-      tag: "FLAGSHIP VTOL VEHICLE",
+      tag: "FEATURED PRODUCT",
       centerpieceTitle: "AERIAL SENTRY 120 BLUEPRINT",
       specHeader: "AIRCRAFT SPECIFICATIONS",
       modularityHeader: "QUICK-RELEASE MODULAR ARCHITECTURE",
@@ -28,7 +28,7 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
       modularText: "Engineered for high-tempo tactical environments, the Aerial Sentry 120 incorporates an advanced snap-locking joint mechanism allowing field operators to deploy or unpack the unit in under 90 seconds without specialized tools."
     },
     es: {
-      tag: "VEHÍCULO VTOL INSIGNIA",
+      tag: "PRODUCTO DESTACADO",
       centerpieceTitle: "PLANO DEL AERIAL SENTRY 120",
       specHeader: "ESPECIFICACIONES DEL AVIÓN",
       modularityHeader: "ARQUITECTURA MODULAR DE LIBERACIÓN RÁPIDA",

@@ -140,10 +140,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
               </h3>
               <div className="flex space-x-3">
                 {[
-                  { icon: Linkedin, url: "https://linkedin.com/company/reaper-defence", label: "LinkedIn" },
-                  { icon: Youtube, url: "https://youtube.com/@reaperdefence", label: "YouTube" },
-                  { icon: Instagram, url: "https://instagram.com/reaperdefence", label: "Instagram" },
-                  { icon: Twitter, url: "https://x.com/reaperdefence", label: "X" }
+                  { icon: Instagram, url: "https://www.instagram.com/reaper_defense?igsh=MTI5Nmw4YzI3ZDJ2NQ%3D%3D", label: "Instagram" }
                 ].map((social, idx) => {
                   const Icon = social.icon;
                   return (

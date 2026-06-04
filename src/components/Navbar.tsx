@@ -15,9 +15,8 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
 
   const t = {
     en: {
-      products: "Products",
-      flagship: "VTOL Flagship",
-      netgun: "Netgun R1",
+      products: "Catalog",
+      flagship: "Featured Product",
       capabilities: "Capabilities",
       media: "Gallery",
       contact: "Contact Us",
@@ -25,9 +24,8 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
       status: "SECURE COMMS"
     },
     es: {
-      products: "Productos",
-      flagship: "VTOL Insignia",
-      netgun: "Netgun R1",
+      products: "Catálogo",
+      flagship: "Producto Destacado",
       capabilities: "Capacidades",
       media: "Galería",
       contact: "Contacto",
@@ -39,7 +37,6 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
   const navLinks = [
     { href: "#catalog", label: t[lang].products },
     { href: "#vtol-flagship", label: t[lang].flagship },
-    { href: "#netgun-r1", label: t[lang].netgun },
     { href: "#capabilities", label: t[lang].capabilities },
     { href: "#gallery", label: t[lang].media },
     { href: "#contact", label: t[lang].contact },

@@ -314,7 +314,6 @@ export const products: Product[] = [
     model: "VTOL Reconnaissance UAV",
     category: "vtol",
     image: "/wp-content/uploads/2025/09/advance-2-hero.png",
-    price: "US $1800",
     en: {
       description: "Compact VTOL (Vertical Take-Off and Landing) drone designed for military reconnaissance, surveillance, and tactical operations. Fully modular structure allows rapid assembly and deployment in confined spaces without runways.",
       features: [
@@ -662,12 +661,11 @@ export const products: Product[] = [
     }
   },
   {
-    id: "viper-ne1",
-    name: "VIPER NE1",
+    id: "lib-mi1",
+    name: "LIB MI1",
     model: "Commercial Drone Release System",
     category: "release",
     image: "/wp-content/uploads/2025/09/pk.webp",
-    price: "US $350",
     en: {
       description: "High-precision explosive release system designed to integrate seamlessly into commercial drone platforms. Allows safe carrying and remote dropping of tactical loads.",
       features: [

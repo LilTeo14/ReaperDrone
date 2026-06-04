@@ -6,7 +6,6 @@ import Hero from '../components/Hero';
 import Infographics from '../components/Infographics';
 import Catalog from '../components/Catalog';
 import AerialSentrySection from '../components/AerialSentrySection';
-import NetgunSection from '../components/NetgunSection';
 import Capabilities from '../components/Capabilities';
 import Advantages from '../components/Advantages';
 import MediaGallery from '../components/MediaGallery';
@@ -36,9 +35,6 @@ export default function Home() {
       
       {/* Premium Flagship Centerpiece Sentry 120 (VTOL Cruza) */}
       <AerialSentrySection lang={lang} />
-      
-      {/* Featured Netgun R1 skycaptor */}
-      <NetgunSection lang={lang} />
       
       {/* Capabilities cards */}
       <Capabilities lang={lang} />

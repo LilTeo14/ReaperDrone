@@ -86,7 +86,7 @@ export default function MediaGallery({ lang }: MediaGalleryProps) {
       title: "Aerial Sentry 73 Assembly Check",
       category: "vtol",
       type: "image",
-      thumbnailUrl: "/wp-content/uploads/2025/09/advance-2-hero.png",
+      thumbnailUrl: "/aerial_sentry_73.png",
       meta: "DISPATCH TIMER: 42S"
     },
     {

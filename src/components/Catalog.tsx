@@ -42,7 +42,9 @@ export default function Catalog({ lang }: CatalogProps) {
       compatibility: "System Compatibility",
       weight: "Module Weight",
       length: "Coil Length",
-      tensile: "Tensile Strength"
+      tensile: "Tensile Strength",
+      btnExplore: "Explore Category",
+      categoryTag: "CATEGORY"
     },
     es: {
       title: "CATÁLOGO TÁCTICO",
@@ -67,9 +69,70 @@ export default function Catalog({ lang }: CatalogProps) {
       compatibility: "Compatibilidad del Sistema",
       weight: "Peso del Módulo",
       length: "Longitud de Bobina",
-      tensile: "Resistencia a la Tensión"
+      tensile: "Resistencia a la Tensión",
+      btnExplore: "Explorar Categoría",
+      categoryTag: "CATEGORÍA"
     }
   };
+
+  const categories = [
+    {
+      id: 'cat-fpv',
+      targetTab: 'fpv' as const,
+      name: {
+        en: "FPV Platforms",
+        es: "Plataformas FPV"
+      },
+      model: "Tactical FPV Drones",
+      image: "/wp-content/uploads/2025/09/frame-249.webp",
+      description: {
+        en: "Tactical first-person view drone platforms, including 7\", 8\", 10\", and 15\" models optimized for high-speed assault, heavy payload delivery, and reconnaissance.",
+        es: "Plataformas tácticas de drones en primera persona (FPV), incluyendo modelos de 7\", 8\", 10\" y 15\" optimizados para asalto de alta velocidad, transporte pesado y reconocimiento."
+      }
+    },
+    {
+      id: 'cat-uav',
+      targetTab: 'uav' as const,
+      name: {
+        en: "UAV Systems",
+        es: "Sistemas UAV"
+      },
+      model: "VTOL & Fixed Wing",
+      image: "/wp-content/uploads/2025/09/advance-1.jpg",
+      description: {
+        en: "Long-range tactical fixed-wing and VTOL reconnaissance platforms designed for persistent border patrol, target mapping, and over-the-horizon intelligence.",
+        es: "Plataformas tácticas de ala fija y VTOL de largo alcance diseñadas para patrullaje persistente, mapeo de objetivos e inteligencia más allá del horizonte."
+      }
+    },
+    {
+      id: 'cat-fiber',
+      targetTab: 'fiber' as const,
+      name: {
+        en: "EW Fiber Optic Link",
+        es: "Fibra Óptica EW"
+      },
+      model: "Jamming-Resistant Control",
+      image: "/wp-content/uploads/2025/09/13-o-cta-1024x795.webp",
+      description: {
+        en: "Micro-diameter fiber optic spools for secure, zero-emission communications immune to active radio frequency jamming and electronic countermeasures.",
+        es: "Carretes de fibra óptica de microdiámetro para comunicaciones seguras y sin emisiones, inmunes a inhibidores de radiofrecuencia activos y contramedidas electrónicas."
+      }
+    },
+    {
+      id: 'cat-other',
+      targetTab: 'other' as const,
+      name: {
+        en: "Tactical Tools",
+        es: "Herramientas Tácticas"
+      },
+      model: "Capture & Release Tools",
+      image: "/wp-content/uploads/2025/09/pk.webp",
+      description: {
+        en: "Drone capture interceptors, release systems, and auxiliary payloads designed to expand drone security and offensive/defensive operations.",
+        es: "Interceptores de captura de drones, sistemas de liberación y cargas útiles auxiliares diseñados para expandir la seguridad y operaciones ofensivas y defensivas."
+      }
+    }
+  ];
 
   const filteredProducts = products.filter(p => {
     if (activeTab === 'all') return p.id !== 'aerial-sentry-120'; // Handled in dedicated section
@@ -142,83 +205,162 @@ export default function Catalog({ lang }: CatalogProps) {
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProducts.map((product) => (
-            <motion.div
-              layoutId={`card-${product.id}`}
-              key={product.id}
-              className="glass-panel rounded-sm overflow-hidden flex flex-col justify-between hover:border-[#ff6b00]/40 transition-all duration-300 group"
-            >
-              
-              {/* Product Thumbnail Section */}
-              <div className="relative aspect-video bg-black/40 border-b border-[#242a35]/50 flex items-center justify-center overflow-hidden">
-                <div className="absolute top-3 left-3 bg-[#12151a]/90 border border-[#242a35] px-2.5 py-1 rounded-sm z-10 font-mono text-[9px] text-[#5e7a5e] font-bold">
-                  {product.category.toUpperCase()}
-                </div>
+          {activeTab === 'all' ? (
+            categories.map((category) => (
+              <motion.div
+                layoutId={`card-${category.id}`}
+                key={category.id}
+                className="glass-panel rounded-sm overflow-hidden flex flex-col justify-between hover:border-[#ff6b00]/40 transition-all duration-300 group cursor-pointer"
+                onClick={() => setActiveTab(category.targetTab)}
+              >
                 
-                {/* Visual grid inside image slot */}
-                <div className="absolute inset-0 grid-overlay opacity-[0.2] pointer-events-none" />
-                
-                {!failedImages[product.id] && (
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    width={400}
-                    height={225}
-                    className="absolute inset-0 object-cover w-full h-full opacity-80 group-hover:scale-102 group-hover:opacity-100 transition-all duration-500 z-10"
-                    onLoad={() => {
-                      setLoadedImages(prev => ({ ...prev, [product.id]: true }));
-                    }}
-                    onError={() => {
-                      setFailedImages(prev => ({ ...prev, [product.id]: true }));
-                    }}
-                  />
-                )}
-                
-                {/* Fallback Display if image error or loading */}
-                {(!loadedImages[product.id] || failedImages[product.id]) && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-[#12151a] text-center font-mono select-none group-hover:bg-[#151921] transition-all z-0">
-                    <div className="w-12 h-12 border border-[#242a35] rounded-sm flex items-center justify-center mb-2 group-hover:border-[#ff6b00]/30 transition-colors">
-                      <Cpu className="w-6 h-6 text-[#8a99ad] group-hover:text-[#ff6b00] transition-colors" />
+                {/* Product Thumbnail Section */}
+                <div className="relative aspect-video bg-black/40 border-b border-[#242a35]/50 flex items-center justify-center overflow-hidden">
+                  <div className="absolute top-3 left-3 bg-[#12151a]/90 border border-[#242a35] px-2.5 py-1 rounded-sm z-10 font-mono text-[9px] text-[#ff6b00] font-bold">
+                    {t[lang].categoryTag}
+                  </div>
+                  
+                  {/* Visual grid inside image slot */}
+                  <div className="absolute inset-0 grid-overlay opacity-[0.2] pointer-events-none" />
+                  
+                  {!failedImages[category.id] && (
+                    <Image
+                      src={category.image}
+                      alt={category.name[lang]}
+                      width={400}
+                      height={225}
+                      className="absolute inset-0 object-cover w-full h-full opacity-80 group-hover:scale-102 group-hover:opacity-100 transition-all duration-500 z-10"
+                      onLoad={() => {
+                        setLoadedImages(prev => ({ ...prev, [category.id]: true }));
+                      }}
+                      onError={() => {
+                        setFailedImages(prev => ({ ...prev, [category.id]: true }));
+                      }}
+                    />
+                  )}
+                  
+                  {/* Fallback Display if image error or loading */}
+                  {(!loadedImages[category.id] || failedImages[category.id]) && (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-[#12151a] text-center font-mono select-none group-hover:bg-[#151921] transition-all z-0">
+                      <div className="w-12 h-12 border border-[#242a35] rounded-sm flex items-center justify-center mb-2 group-hover:border-[#ff6b00]/30 transition-colors">
+                        <Cpu className="w-6 h-6 text-[#8a99ad] group-hover:text-[#ff6b00] transition-colors" />
+                      </div>
+                      <span className="text-[10px] text-[#8a99ad] font-bold uppercase tracking-wider">{category.model}</span>
                     </div>
-                    <span className="text-[10px] text-[#8a99ad] font-bold uppercase tracking-wider">{product.model}</span>
-                  </div>
-                )}
+                  )}
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
-              </div>
-
-              {/* Product Info Section */}
-              <div className="p-6 flex-grow flex flex-col justify-between">
-                <div>
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-lg font-bold text-white font-mono tracking-wider group-hover:text-[#ff6b00] transition-colors">
-                      {product.name}
-                    </h3>
-                    {product.price && (
-                      <span className="font-mono text-xs font-bold text-[#ff8f3d] bg-[#ff8f3d]/5 px-2 py-0.5 border border-[#ff8f3d]/25 rounded-sm">
-                        {product.price}
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-xs text-[#8a99ad] leading-relaxed mb-6">
-                    {product[lang].description}
-                  </p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
                 </div>
 
-                {/* Micro Action Bar */}
-                <div className="border-t border-[#242a35]/60 pt-4 flex gap-4">
-                  <button
-                    onClick={() => setSelectedProduct(product)}
-                    className="flex-grow py-2.5 bg-[#12151a] hover:bg-[#ff6b00]/10 border border-[#242a35] hover:border-[#ff6b00] text-[#8a99ad] hover:text-white font-mono text-xs font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    <Eye className="w-4 h-4 text-[#ff6b00]" />
-                    <span>{t[lang].btnDetails}</span>
-                  </button>
-                </div>
-              </div>
+                {/* Product Info Section */}
+                <div className="p-6 flex-grow flex flex-col justify-between">
+                  <div>
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="text-lg font-bold text-white font-mono tracking-wider group-hover:text-[#ff6b00] transition-colors">
+                        {category.name[lang]}
+                      </h3>
+                    </div>
+                    <p className="text-xs text-[#8a99ad] leading-relaxed mb-6">
+                      {category.description[lang]}
+                    </p>
+                  </div>
 
-            </motion.div>
-          ))}
+                  {/* Micro Action Bar */}
+                  <div className="border-t border-[#242a35]/60 pt-4 flex gap-4">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setActiveTab(category.targetTab);
+                      }}
+                      className="flex-grow py-2.5 bg-[#12151a] hover:bg-[#ff6b00]/10 border border-[#242a35] hover:border-[#ff6b00] text-[#8a99ad] hover:text-white font-mono text-xs font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center space-x-2"
+                    >
+                      <Eye className="w-4 h-4 text-[#ff6b00]" />
+                      <span>{t[lang].btnExplore}</span>
+                    </button>
+                  </div>
+                </div>
+
+              </motion.div>
+            ))
+          ) : (
+            filteredProducts.map((product) => (
+              <motion.div
+                layoutId={`card-${product.id}`}
+                key={product.id}
+                className="glass-panel rounded-sm overflow-hidden flex flex-col justify-between hover:border-[#ff6b00]/40 transition-all duration-300 group"
+              >
+                
+                {/* Product Thumbnail Section */}
+                <div className="relative aspect-video bg-black/40 border-b border-[#242a35]/50 flex items-center justify-center overflow-hidden">
+                  <div className="absolute top-3 left-3 bg-[#12151a]/90 border border-[#242a35] px-2.5 py-1 rounded-sm z-10 font-mono text-[9px] text-[#5e7a5e] font-bold">
+                    {product.category.toUpperCase()}
+                  </div>
+                  
+                  {/* Visual grid inside image slot */}
+                  <div className="absolute inset-0 grid-overlay opacity-[0.2] pointer-events-none" />
+                  
+                  {!failedImages[product.id] && (
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      width={400}
+                      height={225}
+                      className="absolute inset-0 object-cover w-full h-full opacity-80 group-hover:scale-102 group-hover:opacity-100 transition-all duration-500 z-10"
+                      onLoad={() => {
+                        setLoadedImages(prev => ({ ...prev, [product.id]: true }));
+                      }}
+                      onError={() => {
+                        setFailedImages(prev => ({ ...prev, [product.id]: true }));
+                      }}
+                    />
+                  )}
+                  
+                  {/* Fallback Display if image error or loading */}
+                  {(!loadedImages[product.id] || failedImages[product.id]) && (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-[#12151a] text-center font-mono select-none group-hover:bg-[#151921] transition-all z-0">
+                      <div className="w-12 h-12 border border-[#242a35] rounded-sm flex items-center justify-center mb-2 group-hover:border-[#ff6b00]/30 transition-colors">
+                        <Cpu className="w-6 h-6 text-[#8a99ad] group-hover:text-[#ff6b00] transition-colors" />
+                      </div>
+                      <span className="text-[10px] text-[#8a99ad] font-bold uppercase tracking-wider">{product.model}</span>
+                    </div>
+                  )}
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
+                </div>
+
+                {/* Product Info Section */}
+                <div className="p-6 flex-grow flex flex-col justify-between">
+                  <div>
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="text-lg font-bold text-white font-mono tracking-wider group-hover:text-[#ff6b00] transition-colors">
+                        {product.name}
+                      </h3>
+                      {product.price && (
+                        <span className="font-mono text-xs font-bold text-[#ff8f3d] bg-[#ff8f3d]/5 px-2 py-0.5 border border-[#ff8f3d]/25 rounded-sm">
+                          {product.price}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-xs text-[#8a99ad] leading-relaxed mb-6">
+                      {product[lang].description}
+                    </p>
+                  </div>
+
+                  {/* Micro Action Bar */}
+                  <div className="border-t border-[#242a35]/60 pt-4 flex gap-4">
+                    <button
+                      onClick={() => setSelectedProduct(product)}
+                      className="flex-grow py-2.5 bg-[#12151a] hover:bg-[#ff6b00]/10 border border-[#242a35] hover:border-[#ff6b00] text-[#8a99ad] hover:text-white font-mono text-xs font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center space-x-2"
+                    >
+                      <Eye className="w-4 h-4 text-[#ff6b00]" />
+                      <span>{t[lang].btnDetails}</span>
+                    </button>
+                  </div>
+                </div>
+
+              </motion.div>
+            ))
+          )}
         </div>
 
         {/* Dedicated Fiber Optic Subsection Comparison */}

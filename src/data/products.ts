@@ -10,7 +10,7 @@ export interface Product {
   id: string;
   name: string;
   model: string;
-  category: 'fpv' | 'vtol' | 'fixed-wing' | 'fiber' | 'netgun' | 'release';
+  category: 'fpv' | 'vtol' | 'fixed-wing' | 'fiber' | 'netgun' | 'release' | 'ew';
   image: string;
   price?: string;
   en: ProductDetails;
@@ -428,7 +428,7 @@ export const products: Product[] = [
     id: "fiber-5",
     name: "FIBER OPTIC SPOOL 5 KM",
     model: "5km EW-Resilient Link",
-    category: "fiber",
+    category: "ew",
     image: "/wp-content/uploads/2025/09/15-o-cta-1024x795.webp",
     en: {
       description: "High-tensile optical fiber spool designed for short-range drone control. Fully eliminates radio frequency emissions, making the connected platform immune to RF jamming, spoofing, and detection.",
@@ -483,7 +483,7 @@ export const products: Product[] = [
     id: "fiber-10",
     name: "FIBER OPTIC SPOOL 10 KM",
     model: "10km EW-Resilient Link",
-    category: "fiber",
+    category: "ew",
     image: "/wp-content/uploads/2025/09/10-o-cta-1024x795.webp",
     en: {
       description: "Medium-range fiber optic spool designed for deep-penetration tactical operations. Provides reliable control signals and telemetry without radio frequency links.",
@@ -538,7 +538,7 @@ export const products: Product[] = [
     id: "fiber-15",
     name: "FIBER OPTIC SPOOL 15 KM",
     model: "15km EW-Resilient Link",
-    category: "fiber",
+    category: "ew",
     image: "/wp-content/uploads/2025/09/13-o-cta-1024x795.webp",
     en: {
       description: "Long-range tactical optical spool. Features reinforced coating to withstand high deployment speeds and abrasive environments while maintaining a secure, zero-emission data connection.",
@@ -708,6 +708,212 @@ export const products: Product[] = [
         "Caída táctica de precisión de dispositivos defensivos",
         "Liberación remota de carga en áreas de alto peligro",
         "Contramedidas tácticas de infiltración y sabotaje"
+      ]
+    }
+  },
+  {
+    id: "ew-mini2",
+    name: "1MINI2 (60W) Handheld Drone Jammer",
+    model: "Handheld Tactical Jammer",
+    category: "ew",
+    image: "/extracted/page_1_img_0.png",
+    en: {
+      description: "Compact handheld drone jammer providing 360-degree omnidirectional coverage up to 200 meters. Extremely portable and lightweight for rapid active protection.",
+      features: [
+        "Provides 360° omnidirectional jamming protection",
+        "Dual-band interference: 700-1050MHz (30W) and 2400-2500MHz (30W)",
+        "Ultra-lightweight portable handheld design (2 kg)",
+        "Interferes with DJI, Autel, FPV, and general civilian/military drone models"
+      ],
+      specs: [
+        { label: "Total Power Output", value: "60W" },
+        { label: "Effective Range", value: "≤ 200 meters" },
+        { label: "Interference Type", value: "DJI, Autel, FPV, civilian/military drones" },
+        { label: "Coverage Angle", value: "360° Omnidirectional" },
+        { label: "Frequencies", value: "700-1050MHz (30W), 2400-2500MHz (30W)" },
+        { label: "Power Supply", value: "24V 3.2A" },
+        { label: "Dimensions & Weight", value: "20 x 8.5 x 4.2 cm / 2.0 kg" }
+      ],
+      capabilities: [
+        "Omnidirectional drone suppression",
+        "Personal defense in contested areas",
+        "Rapid deployment security checkpoints"
+      ]
+    },
+    es: {
+      description: "Inhibidor de drones portátil y compacto que proporciona cobertura omnidireccional de 360 grados hasta 200 metros. Extremadamente ligero para protección táctica inmediata.",
+      features: [
+        "Proporciona protección de interferencia omnidireccional de 360°",
+        "Interferencia de doble banda: 700-1050MHz (30W) y 2400-2500MHz (30W)",
+        "Diseño portátil de mano ultra ligero (2 kg)",
+        "Interfiere con modelos de drones DJI, Autel, FPV y drones civiles/militares"
+      ],
+      specs: [
+        { label: "Potencia de Salida", value: "60W" },
+        { label: "Alcance Efectivo", value: "≤ 200 metros" },
+        { label: "Tipo de Interferencia", value: "DJI, Autel, FPV, drones civiles/militares" },
+        { label: "Ángulo de Cobertura", value: "360° Omnidireccional" },
+        { label: "Frecuencias", value: "700-1050MHz (30W), 2400-2500MHz (30W)" },
+        { label: "Alimentación", value: "24V 3.2A" },
+        { label: "Dimensiones y Peso", value: "20 x 8.5 x 4.2 cm / 2.0 kg" }
+      ],
+      capabilities: [
+        "Supresión de drones omnidireccional",
+        "Defensa personal en áreas en disputa",
+        "Despliegue rápido en puntos de control de seguridad"
+      ]
+    }
+  },
+  {
+    id: "ew-dk5",
+    name: "DK-5 (250W) Car Drone Jammer System",
+    model: "Vehicular Tactical Suppression System",
+    category: "ew",
+    image: "/extracted/page_2_img_0.png",
+    en: {
+      description: "High-power vehicle-mounted suppression system with 250W output. Specifically engineered for convoys, providing remote control and video feed block up to 1000m.",
+      features: [
+        "High-performance vehicular multi-band drone suppression",
+        "Total 250W output across 5 critical frequency bands (50W per band)",
+        "Suppresses DJI, Autel, FPV, and civilian/military drones",
+        "Includes rugged vehicle antennas and DC power integration"
+      ],
+      specs: [
+        { label: "Total Power Output", value: "250W (5x 50W bands)" },
+        { label: "Effective Range", value: "≤ 1000 meters" },
+        { label: "Interference Type", value: "DJI, Autel, FPV, civilian/military drones" },
+        { label: "Frequencies", value: "400-500MHz, 500-650MHz, 650-800MHz, 800-950MHz, 950-1100MHz" },
+        { label: "Power Supply", value: "DC12V - DC24V vehicular input" },
+        { label: "Host Dimensions & Weight", value: "50 x 35 cm / 10.0 kg" }
+      ],
+      capabilities: [
+        "Mobile convoy electronic shield",
+        "High-power drone signal interception",
+        "Multi-band tactical suppression"
+      ]
+    },
+    es: {
+      description: "Sistema de supresión de alta potencia montado en vehículos con salida de 250W. Específicamente diseñado para convoyes, bloqueando control remoto y video hasta 1000m.",
+      features: [
+        "Supresión de drones multibanda vehicular de alto rendimiento",
+        "Potencia total de 250W repartida en 5 bandas críticas (50W por banda)",
+        "Suprime drones DJI, Autel, FPV y drones civiles/militares",
+        "Incluye antenas vehiculares robustas e integración de alimentación de CC"
+      ],
+      specs: [
+        { label: "Potencia de Salida", value: "250W (5 bandas de 50W)" },
+        { label: "Alcance Efectivo", value: "≤ 1000 metros" },
+        { label: "Tipo de Interferencia", value: "DJI, Autel, FPV, drones civiles/militares" },
+        { label: "Frecuencias", value: "400-500MHz, 500-650MHz, 650-800MHz, 800-950MHz, 950-1100MHz" },
+        { label: "Alimentación", value: "DC12V - DC24V entrada vehicular" },
+        { label: "Dimensiones y Peso", value: "50 x 35 cm / 10.0 kg" }
+      ],
+      capabilities: [
+        "Escudo electrónico para convoyes móviles",
+        "Intercepción de señales de drones a alta potencia",
+        "Supresión táctica multibanda"
+      ]
+    }
+  },
+  {
+    id: "ew-mini6",
+    name: "7MINI-6 (300W) Car Drone Jammer System",
+    model: "Advanced Vehicular Jammer System",
+    category: "ew",
+    image: "/extracted/page_7_img_0.png",
+    en: {
+      description: "Next-generation vehicular drone jammer with 6 frequency bands and 300W total output. Equipped with magnetic suction cups for rapid installation on vehicle roofs.",
+      features: [
+        "300W high-power output (6 bands of 50W each)",
+        "Magnetic suction mounting for quick security vehicle installation",
+        "Covers key bands: GPS L1, 2.4GHz, 5.8GHz, and lower control frequencies",
+        "Rugged, shockproof build suitable for operations in rough terrains"
+      ],
+      specs: [
+        { label: "Total Power Output", value: "300W (6x 50W bands)" },
+        { label: "Effective Range", value: "≤ 1000 meters" },
+        { label: "Antenna Spares", value: "6x Omnidirectional high-gain antennas" },
+        { label: "Frequencies", value: "650-800MHz, 800-950MHz, 950-1100MHz, 1550-1620MHz, 2400-2500MHz, 5725-5875MHz" },
+        { label: "Power Supply", value: "AC220V / DC12V - DC24V" },
+        { label: "Dimensions & Weight", value: "35 x 22 x 12 cm / 30.0 kg" }
+      ],
+      capabilities: [
+        "Tactical vehicle defense bubble",
+        "Convoy protective escorts",
+        "High-density signal interception"
+      ]
+    },
+    es: {
+      description: "Inhibidor de drones vehicular de última generación con 6 bandas de frecuencia y 300W de potencia total. Equipado con ventosas magnéticas para una instalación rápida en techos de vehículos.",
+      features: [
+        "Potencia de salida alta de 300W (6 bandas de 50W cada una)",
+        "Montaje por succión magnética para instalación inmediata en vehículos de seguridad",
+        "Cubre bandas clave: GPS L1, 2.4GHz, 5.8GHz y frecuencias inferiores de control",
+        "Construcción robusta y a prueba de golpes para operaciones en terrenos difíciles"
+      ],
+      specs: [
+        { label: "Potencia de Salida", value: "300W (6 bandas de 50W)" },
+        { label: "Alcance Efectivo", value: "≤ 1000 metros" },
+        { label: "Antenas", value: "6 antenas omnidireccionales de alta ganancia" },
+        { label: "Frecuencias", value: "650-800MHz, 800-950MHz, 950-1100MHz, 1550-1620MHz, 2400-2500MHz, 5725-5875MHz" },
+        { label: "Alimentación", value: "AC220V / DC12V - DC24V" },
+        { label: "Dimensiones y Peso", value: "35 x 22 x 12 cm / 30.0 kg" }
+      ],
+      capabilities: [
+        "Burbuja de defensa vehicular táctica",
+        "Escoltas de protección de convoyes",
+        "Intercepción de señales de alta densidad"
+      ]
+    }
+  },
+  {
+    id: "ew-gt6",
+    name: "GT-6 Silencer Pistol-Type Drone Jammer",
+    model: "Pistol-Type Directional Drone Jammer",
+    category: "ew",
+    image: "/extracted/page_19_img_0.png",
+    en: {
+      description: "Ergonomic pistol-style directional jammer with integrated sighting scope. Designed for quick targeting and neutralization of unauthorized civilian/military drones.",
+      features: [
+        "Tactical pistol-style lightweight design (4.5 kg)",
+        "6-band directional transmission for high precision jamming",
+        "Integrated sighting scope for accurate optical tracking",
+        "Directional signal transmission prevents interference behind the operator"
+      ],
+      specs: [
+        { label: "Total Power Output", value: "120W (6x 20W bands)" },
+        { label: "Effective Range", value: "≤ 1.0 km (Directional)" },
+        { label: "Included Sights", value: "Optical Sighting Telescope" },
+        { label: "Frequencies", value: "400-500MHz, 1100-1280MHz, 1550-1620MHz, 2400-2500MHz, 5150-5350MHz, 5725-5850MHz" },
+        { label: "Power Supply", value: "AC220V / DC24V - DC30V" },
+        { label: "Dimensions & Weight", value: "65 x 37 x 10 cm / 4.5 kg" }
+      ],
+      capabilities: [
+        "Targeted directional suppression",
+        "Lightweight infantry operation",
+        "Covert perimeter air space defense"
+      ]
+    },
+    es: {
+      description: "Inhibidor direccional tipo pistola ergonómico con mira telescópica integrada. Diseñado para apuntado rápido y neutralización de drones civiles y militares no autorizados.",
+      features: [
+        "Diseño táctico ligero tipo pistola (4.5 kg)",
+        "Transmisión direccional de 6 bandas para interferencia de alta precisión",
+        "Telescopio de mira integrado para rastreo óptico preciso",
+        "La transmisión de señal direccional evita interferencias detrás del operador"
+      ],
+      specs: [
+        { label: "Potencia de Salida", value: "120W (6 bandas de 20W)" },
+        { label: "Alcance Efectivo", value: "≤ 1.0 km (Direccional)" },
+        { label: "Mira Incluida", value: "Telescopio de mira óptica" },
+        { label: "Frecuencias", value: "400-500MHz, 1100-1280MHz, 1550-1620MHz, 2400-2500MHz, 5150-5350MHz, 5725-5850MHz" },
+        { label: "Alimentación", value: "AC220V / DC24V - DC30V" },
+        { label: "Dimensiones y Peso", value: "65 x 37 x 10 cm / 4.5 kg" }
+      ],
+      capabilities: [
+        "Supresión direccional de precisión",
+        "Operación de infantería ligera",
+        "Defensa del espacio aéreo perimetral encubierta"
       ]
     }
   }

@@ -70,56 +70,49 @@ export default function Hero({ lang }: HeroProps) {
       </div>
 
       {/* Main Container */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center lg:items-stretch">
         
         {/* Left Content Column */}
         <motion.div 
-          className="lg:col-span-7 flex flex-col space-y-6"
+          className="lg:col-span-7 flex flex-col justify-between space-y-6 lg:space-y-0"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          {/* Tag Header */}
-          <motion.div 
-            variants={itemVariants}
-            className="inline-flex items-center space-x-2 border border-[#ff6b00]/30 bg-[#ff6b00]/5 px-3 py-1 rounded-sm max-w-max"
-          >
-            <Shield className="w-4 h-4 text-[#ff6b00] animate-pulse" />
-            <span className="text-xs text-[#ff6b00] font-mono font-bold tracking-widest uppercase">
-              Military Grade Aerospace Systems
-            </span>
-          </motion.div>
-
-          {/* Headline */}
-          {t[lang].headline && (
-            <motion.h1 
+          {/* Top Group: Tag and Subheadline */}
+          <div className="flex flex-col space-y-4">
+            {/* Tag Header */}
+            <motion.div 
               variants={itemVariants}
-              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight font-mono"
+              className="inline-flex items-center space-x-2 border border-[#ff6b00]/30 bg-[#ff6b00]/5 px-3 py-1 rounded-sm max-w-max"
             >
-              {t[lang].headline}
-            </motion.h1>
-          )}
+              <Shield className="w-4 h-4 text-[#ff6b00] animate-pulse" />
+              <span className="text-xs text-[#ff6b00] font-mono font-bold tracking-widest uppercase">
+                Military Grade Aerospace Systems
+              </span>
+            </motion.div>
 
-          {/* Subheadline */}
+            {/* Subheadline */}
+            <motion.p 
+              variants={itemVariants}
+              className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#ff8f3d]/90 font-mono tracking-wide"
+            >
+              {t[lang].subheadline}
+            </motion.p>
+          </div>
+
+          {/* Middle Group: Supporting Text */}
           <motion.p 
             variants={itemVariants}
-            className="text-xl sm:text-2xl font-bold text-[#ff8f3d]/90 font-mono tracking-wide"
-          >
-            {t[lang].subheadline}
-          </motion.p>
-
-          {/* Supporting Text */}
-          <motion.p 
-            variants={itemVariants}
-            className="text-base text-[#8a99ad] leading-relaxed max-w-2xl"
+            className="text-base text-[#8a99ad] leading-relaxed max-w-2xl lg:py-4"
           >
             {t[lang].support}
           </motion.p>
 
-          {/* Buttons */}
+          {/* Bottom Group: Buttons */}
           <motion.div 
             variants={itemVariants}
-            className="flex flex-wrap gap-4 pt-4"
+            className="flex flex-wrap gap-4"
           >
             <a 
               href="#catalog"

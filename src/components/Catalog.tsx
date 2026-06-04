@@ -86,7 +86,7 @@ export default function Catalog({ lang }: CatalogProps) {
         es: "Plataformas FPV"
       },
       model: "Tactical FPV Drones",
-      image: "/catalogo/Plataformas FPV/FPV 15 e - copia.jpeg",
+      image: "/catalogo/Plataformas FPV/FPV 15 e - copia2.jpeg",
       objectPosition: "object-bottom",
       description: {
         en: "Tactical first-person view drone platforms, including 7\", 8\", 10\", and 15\" models optimized for high-speed assault, heavy payload delivery, and reconnaissance.",

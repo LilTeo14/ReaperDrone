@@ -372,7 +372,7 @@ export const products: Product[] = [
     name: "UAV H1 LONG RANGE",
     model: "Tactical Long-Range Fixed Wing",
     category: "fixed-wing",
-    image: "/wp-content/uploads/2025/09/advance-1-dark.png",
+    image: "/h1_long_range.jpg",
     en: {
       description: "High-performance fixed-wing tactical UAV engineered for persistent surveillance and border patrol. Features long-range stabilized zoom optics and optimized composite aerodynamics.",
       features: [

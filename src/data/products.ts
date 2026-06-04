@@ -242,7 +242,7 @@ export const products: Product[] = [
     name: "MARK IV FPV 15\"",
     model: "15-Inch Heavy Assault FPV",
     category: "fpv",
-    image: "/wp-content/uploads/2025/09/frame-249.webp",
+    image: "/wp-content/uploads/2025/09/advance-1.jpg",
     en: {
       description: "Our largest tactical FPV platform, designed for heavy assault payloads and long-endurance flights. Employs high-power 8S battery architecture for maximum stability.",
       features: [

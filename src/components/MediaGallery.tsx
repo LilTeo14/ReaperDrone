@@ -86,7 +86,7 @@ export default function MediaGallery({ lang }: MediaGalleryProps) {
       title: "Aerial Sentry 73 Assembly Check",
       category: "vtol",
       type: "image",
-      thumbnailUrl: "/aerial_sentry_73.png",
+      thumbnailUrl: "/catalogo/Sistemas UAV/as 73.webp",
       meta: "DISPATCH TIMER: 42S"
     },
     {

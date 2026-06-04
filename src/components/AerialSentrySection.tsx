@@ -62,10 +62,10 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
         </div>
 
         {/* Blueprint Layout grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
-          {/* Left Column - Large Diagnostic Image Panel */}
-          <div className="lg:col-span-6 flex flex-col justify-center items-center relative glass-panel rounded-sm p-8 scanlines min-h-[400px]">
+          {/* Top Row - Large Diagnostic Image Panel (Full Width, Doubled Image Size) */}
+          <div className="lg:col-span-12 flex flex-col justify-center items-center relative glass-panel rounded-sm p-8 scanlines min-h-[500px]">
             {/* Corner Blueprint indicators */}
             <div className="absolute top-3 left-3 font-mono text-[9px] text-[#5e7a5e] leading-none">
               BLUEPRINT FILE // VTOL-SENTRY-120
@@ -79,19 +79,19 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
             <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-[#4f473d]" />
             <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-[#ff6b00]" />
 
-            {/* Drone Render */}
-            <div className="relative w-full max-w-[420px] aspect-video transition-transform hover:scale-102 duration-500">
+            {/* Drone Render - DOUBLED SIZE */}
+            <div className="relative w-full max-w-[840px] aspect-video transition-transform hover:scale-102 duration-500 my-4">
               <Image 
                 src={product.image}
                 alt={product.name}
                 fill
                 priority
-                className="object-contain filter drop-shadow-[0_0_30px_rgba(255,107,0,0.1)] brightness-105"
+                className="object-contain filter drop-shadow-[0_0_40px_rgba(255,107,0,0.15)] brightness-105"
               />
             </div>
 
             {/* Core Diagnostics Overlays */}
-            <div className="w-full mt-8 grid grid-cols-2 gap-4 border-t border-[#4f473d] pt-6 font-mono text-[10px]">
+            <div className="w-full max-w-[840px] mt-8 grid grid-cols-2 gap-4 border-t border-[#4f473d] pt-6 font-mono text-[10px]">
               <div className="flex items-center space-x-2 text-[#8a99ad]">
                 <Cpu className="w-4 h-4 text-[#ff6b00]/60" />
                 <span>Wingspan: 1200 mm</span>
@@ -103,9 +103,26 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
             </div>
           </div>
 
-          {/* Right Column - Tech Specs, Capabilities & Modularity */}
-          <div className="lg:col-span-6 space-y-8">
-            
+          {/* Bottom Row - Left Column: Tech Specs */}
+          <div className="lg:col-span-6 space-y-6">
+            <h3 className="font-mono text-xs text-[#ff6b00] tracking-widest uppercase">
+              // {t[lang].specHeader}
+            </h3>
+            <div className="border border-[#4f473d] bg-black/10 rounded-sm overflow-hidden text-xs font-mono">
+              {content.specs.map((spec, idx) => (
+                <div 
+                  key={idx} 
+                  className="flex justify-between items-center p-3 border-b border-[#4f473d]/40 last:border-b-0 hover:bg-[#1d1915]/30"
+                >
+                  <span className="text-[#8a99ad]">{spec.label}</span>
+                  <span className="text-white font-bold">{spec.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom Row - Right Column: Modularity & Counters */}
+          <div className="lg:col-span-6 space-y-6">
             {/* Operational profile counters */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm text-center">
@@ -158,25 +175,6 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
                 </li>
               </ul>
             </div>
-
-            {/* Specifications Listing */}
-            <div>
-              <h3 className="font-mono text-xs text-[#ff6b00] tracking-widest uppercase mb-4">
-                // {t[lang].specHeader}
-              </h3>
-              <div className="border border-[#4f473d] bg-black/10 rounded-sm overflow-hidden text-xs font-mono">
-                {content.specs.slice(0, 6).map((spec, idx) => (
-                  <div 
-                    key={idx} 
-                    className="flex justify-between items-center p-3 border-b border-[#4f473d]/40 last:border-b-0 hover:bg-[#1d1915]/30"
-                  >
-                    <span className="text-[#8a99ad]">{spec.label}</span>
-                    <span className="text-white font-bold">{spec.value}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
           </div>
 
         </div>

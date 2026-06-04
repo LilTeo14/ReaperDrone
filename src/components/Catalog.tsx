@@ -143,7 +143,7 @@ export default function Catalog({ lang }: CatalogProps) {
         es: "Herramientas Tácticas"
       },
       model: "Capture & Release Tools",
-      image: "",
+      image: "/catalogo/Herramientas tacticas/skycap2.jpeg",
       description: {
         en: "Drone capture interceptors, release systems, and auxiliary payloads designed to expand drone security and offensive/defensive operations.",
         es: "Interceptores de captura de drones, sistemas de liberación y cargas útiles auxiliares diseñados para expandir la seguridad y operaciones ofensivas y defensivas."

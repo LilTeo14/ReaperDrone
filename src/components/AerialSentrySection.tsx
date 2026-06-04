@@ -1,10 +1,10 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { flagshipVTOL } from '../data/products';
-import { Shield, Hammer, Compass, Cpu, Battery, Eye } from 'lucide-react';
+import { Shield, Hammer, Compass, Cpu, Battery, Eye, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface AerialSentrySectionProps {
   lang: 'en' | 'es';
@@ -13,6 +13,13 @@ interface AerialSentrySectionProps {
 export default function AerialSentrySection({ lang }: AerialSentrySectionProps) {
   const product = flagshipVTOL;
   const content = product[lang];
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  const images = [
+    product.image,
+    "/catalogo/Sistemas UAV/as120 33.jpeg",
+    "/catalogo/Sistemas UAV/as1202.jpeg"
+  ];
 
   const t = {
     en: {
@@ -79,15 +86,69 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
             <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-[#4f473d]" />
             <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-[#ff6b00]" />
 
-            {/* Drone Render - DOUBLED SIZE */}
-            <div className="relative w-full max-w-[840px] aspect-video transition-transform hover:scale-102 duration-500 my-4">
-              <Image 
-                src={product.image}
-                alt={product.name}
-                fill
-                priority
-                className="object-contain filter drop-shadow-[0_0_40px_rgba(255,107,0,0.15)] brightness-105"
-              />
+            {/* Drone Render - DOUBLED SIZE WITH GALLERY */}
+            <div className="relative w-full max-w-[840px] aspect-video my-4 group/gallery flex items-center justify-center">
+              
+              {/* Prev Button */}
+              <button 
+                onClick={() => setActiveImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))}
+                className="absolute left-2 z-20 p-2 rounded-sm border border-[#4f473d] bg-black/60 hover:bg-[#ff6b00]/20 hover:border-[#ff6b00] text-[#8a99ad] hover:text-white transition-all duration-300 opacity-60 group-hover/gallery:opacity-100"
+                aria-label="Previous image"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+
+              <div className="relative w-full h-full overflow-hidden flex items-center justify-center">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeImageIndex}
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.98 }}
+                    transition={{ duration: 0.25 }}
+                    className="relative w-full h-full"
+                  >
+                    <Image 
+                      src={images[activeImageIndex]}
+                      alt={`${product.name} - Slide ${activeImageIndex + 1}`}
+                      fill
+                      priority
+                      className="object-contain filter drop-shadow-[0_0_40px_rgba(255,107,0,0.15)] brightness-105"
+                    />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              {/* Next Button */}
+              <button 
+                onClick={() => setActiveImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))}
+                className="absolute right-2 z-20 p-2 rounded-sm border border-[#4f473d] bg-black/60 hover:bg-[#ff6b00]/20 hover:border-[#ff6b00] text-[#8a99ad] hover:text-white transition-all duration-300 opacity-60 group-hover/gallery:opacity-100"
+                aria-label="Next image"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Thumbnail Indicators */}
+            <div className="flex gap-4 mb-4">
+              {images.map((img, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActiveImageIndex(idx)}
+                  className={`relative w-20 h-12 rounded-sm overflow-hidden border transition-all duration-300 bg-black/40 ${
+                    activeImageIndex === idx 
+                      ? 'border-[#ff6b00] shadow-md shadow-[#ff6b00]/10 scale-105' 
+                      : 'border-[#4f473d] hover:border-[#ff6b00]/50 opacity-60 hover:opacity-100'
+                  }`}
+                >
+                  <Image 
+                    src={img}
+                    alt={`Thumbnail ${idx + 1}`}
+                    fill
+                    className="object-cover"
+                  />
+                </button>
+              ))}
             </div>
 
             {/* Core Diagnostics Overlays */}

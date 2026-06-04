@@ -11,7 +11,7 @@ interface CatalogProps {
 }
 
 export default function Catalog({ lang }: CatalogProps) {
-  const [activeTab, setActiveTab] = useState<'all' | 'fpv' | 'uav' | 'ew' | 'other'>('all');
+  const [activeTab, setActiveTab] = useState<'all' | 'fpv' | 'uav' | 'fiber' | 'ew' | 'other'>('all');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [showFPVCompare, setShowFPVCompare] = useState(false);
   const [expandedSpecs, setExpandedSpecs] = useState<string | null>(null);
@@ -25,6 +25,7 @@ export default function Catalog({ lang }: CatalogProps) {
       tabAll: "All Equipment",
       tabFPV: "FPV Platforms",
       tabUAV: "UAV Systems",
+      tabFiber: "EW Fiber Optic",
       tabEW: "Electronic Warfare",
       tabOther: "Tactical Tools",
       btnDetails: "Expand Tech Card",
@@ -52,6 +53,7 @@ export default function Catalog({ lang }: CatalogProps) {
       tabAll: "Todo el Equipo",
       tabFPV: "Plataformas FPV",
       tabUAV: "Sistemas UAV",
+      tabFiber: "Fibra Óptica EW",
       tabEW: "Guerra Electrónica",
       tabOther: "Herramientas Tácticas",
       btnDetails: "Ficha Técnica",
@@ -105,17 +107,31 @@ export default function Catalog({ lang }: CatalogProps) {
       }
     },
     {
+      id: 'cat-fiber',
+      targetTab: 'fiber' as const,
+      name: {
+        en: "EW Fiber Optic",
+        es: "Fibra Óptica EW"
+      },
+      model: "Secure Control Links",
+      image: "/wp-content/uploads/2025/09/15-o-cta-1024x795.webp",
+      description: {
+        en: "Secure bend-insensitive fiber optic control spools that provide high-tensile, zero-emission connection immune to radio frequency jamming.",
+        es: "Carretes de fibra óptica de control seguros y resistentes a la flexión que proporcionan una conexión de alta resistencia y cero emisiones, inmune a inhibiciones de radiofrecuencia."
+      }
+    },
+    {
       id: 'cat-ew',
       targetTab: 'ew' as const,
       name: {
         en: "Electronic Warfare",
         es: "Guerra Electrónica"
       },
-      model: "Active Jammers & Fiber Links",
+      model: "Active Jammers",
       image: "/wp-content/uploads/2025/10/ews.webp",
       description: {
-        en: "Active RF jammers, handheld anti-drone silencers, vehicular suppression systems, and secure bend-insensitive fiber optic control spools.",
-        es: "Inhibidores de RF activos, silenciadores portátiles anti-drones, sistemas de supresión vehiculares y carretes de fibra óptica de control seguros."
+        en: "Active RF jammers, handheld anti-drone silencers, and vehicular drone suppression systems.",
+        es: "Inhibidores de RF activos, silenciadores portátiles anti-drones y sistemas de supresión de drones vehiculares."
       }
     },
     {
@@ -138,13 +154,14 @@ export default function Catalog({ lang }: CatalogProps) {
     if (activeTab === 'all') return p.id !== 'aerial-sentry-120'; // Handled in dedicated section
     if (activeTab === 'fpv') return p.category === 'fpv';
     if (activeTab === 'uav') return p.category === 'vtol' || p.category === 'fixed-wing';
+    if (activeTab === 'fiber') return p.category === 'fiber';
     if (activeTab === 'ew') return p.category === 'ew';
     if (activeTab === 'other') return p.category === 'netgun' || p.category === 'release';
     return true;
   });
 
   const fpvProducts = products.filter(p => p.category === 'fpv');
-  const fiberProducts = products.filter(p => p.category === 'ew' && p.id.startsWith('fiber'));
+  const fiberProducts = products.filter(p => p.category === 'fiber');
 
   return (
     <section className="relative bg-[#090b0e] py-24 border-b border-[#242a35]/40" id="catalog">
@@ -179,11 +196,12 @@ export default function Catalog({ lang }: CatalogProps) {
 
         {/* Tab Filters */}
         <div className="flex flex-wrap gap-2 border-b border-[#242a35]/50 pb-6 mb-10">
-          {(['all', 'fpv', 'uav', 'ew', 'other'] as const).map((tab) => {
+          {(['all', 'fpv', 'uav', 'fiber', 'ew', 'other'] as const).map((tab) => {
             const labels = {
               all: t[lang].tabAll,
               fpv: t[lang].tabFPV,
               uav: t[lang].tabUAV,
+              fiber: t[lang].tabFiber,
               ew: t[lang].tabEW,
               other: t[lang].tabOther,
             };
@@ -364,7 +382,7 @@ export default function Catalog({ lang }: CatalogProps) {
         </div>
 
         {/* Dedicated Fiber Optic Subsection Comparison */}
-        {activeTab === 'ew' && (
+        {activeTab === 'fiber' && (
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -388,7 +406,7 @@ export default function Catalog({ lang }: CatalogProps) {
               <table className="w-full text-left font-mono text-xs">
                 <thead>
                   <tr className="bg-[#12151a] border-b border-[#242a35] text-[#8a99ad] uppercase tracking-wider">
-                    <th className="p-4">{t[lang].tabEW}</th>
+                    <th className="p-4">{t[lang].tabFiber}</th>
                     <th className="p-4">{t[lang].length}</th>
                     <th className="p-4">{t[lang].weight}</th>
                     <th className="p-4">{t[lang].compatibility}</th>

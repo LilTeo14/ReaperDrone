@@ -428,7 +428,7 @@ export const products: Product[] = [
     id: "fiber-5",
     name: "FIBER OPTIC SPOOL 5 KM",
     model: "5km EW-Resilient Link",
-    category: "ew",
+    category: "fiber",
     image: "/wp-content/uploads/2025/09/15-o-cta-1024x795.webp",
     en: {
       description: "High-tensile optical fiber spool designed for short-range drone control. Fully eliminates radio frequency emissions, making the connected platform immune to RF jamming, spoofing, and detection.",
@@ -483,7 +483,7 @@ export const products: Product[] = [
     id: "fiber-10",
     name: "FIBER OPTIC SPOOL 10 KM",
     model: "10km EW-Resilient Link",
-    category: "ew",
+    category: "fiber",
     image: "/wp-content/uploads/2025/09/10-o-cta-1024x795.webp",
     en: {
       description: "Medium-range fiber optic spool designed for deep-penetration tactical operations. Provides reliable control signals and telemetry without radio frequency links.",
@@ -538,7 +538,7 @@ export const products: Product[] = [
     id: "fiber-15",
     name: "FIBER OPTIC SPOOL 15 KM",
     model: "15km EW-Resilient Link",
-    category: "ew",
+    category: "fiber",
     image: "/wp-content/uploads/2025/09/13-o-cta-1024x795.webp",
     en: {
       description: "Long-range tactical optical spool. Features reinforced coating to withstand high deployment speeds and abrasive environments while maintaining a secure, zero-emission data connection.",

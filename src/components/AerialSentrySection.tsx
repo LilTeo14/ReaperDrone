@@ -109,15 +109,15 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
             {/* Operational profile counters */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="border border-[#242a35] bg-black/25 p-4 rounded-sm text-center">
-                <span className="block text-xl font-bold font-mono text-[#ff8f3d]">{product[lang].operationalProfile.endurance}</span>
+                <span className="block text-xl font-bold font-mono text-[#ff8f3d]">{product[lang].operationalProfile!.endurance}</span>
                 <span className="text-[9px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].endurance}</span>
               </div>
               <div className="border border-[#242a35] bg-black/25 p-4 rounded-sm text-center">
-                <span className="block text-xl font-bold font-mono text-[#ff8f3d]">{product[lang].operationalProfile.payload}</span>
+                <span className="block text-xl font-bold font-mono text-[#ff8f3d]">{product[lang].operationalProfile!.payload}</span>
                 <span className="text-[9px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].payload}</span>
               </div>
               <div className="border border-[#242a35] bg-black/25 p-4 rounded-sm text-center">
-                <span className="block text-xl font-bold font-mono text-[#ff8f3d]">{product[lang].operationalProfile.range}</span>
+                <span className="block text-xl font-bold font-mono text-[#ff8f3d]">{product[lang].operationalProfile!.range}</span>
                 <span className="text-[9px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].range}</span>
               </div>
               <div className="border border-[#242a35] bg-black/25 p-4 rounded-sm text-center">

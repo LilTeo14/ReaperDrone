@@ -4,6 +4,12 @@ export interface ProductDetails {
   specs: { label: string; value: string }[];
   capabilities?: string[];
   deployment?: string[];
+  operationalProfile?: {
+    endurance: string;
+    payload: string;
+    range: string;
+    propulsion: string;
+  };
 }
 
 export interface Product {
@@ -310,7 +316,7 @@ export const products: Product[] = [
   },
   {
     id: "vtol-t1",
-    name: "UAV T1 RANGER",
+    name: "AERIAL SENTRY 73",
     model: "VTOL Reconnaissance UAV",
     category: "vtol",
     image: "/wp-content/uploads/2025/09/advance-2-hero.png",
@@ -446,7 +452,7 @@ export const products: Product[] = [
         { label: "Data Interface", value: "Fiber Optic to Ethernet (integrated media converter)" },
         { label: "Latency", value: "<1 ms" },
         { label: "Bandwidth", value: "Up to 10 Gbps" },
-        { label: "Compatibility", value: "MARK IV FPV 7\" / 8\" / 10\", UAV T1" }
+        { label: "Compatibility", value: "MARK IV FPV 7\" / 8\" / 10\", AERIAL SENTRY 73" }
       ],
       capabilities: [
         "Operations in active EW jamming environments",
@@ -470,7 +476,7 @@ export const products: Product[] = [
         { label: "Interfaz de Datos", value: "Fibra óptica a Ethernet (conversión integrada)" },
         { label: "Latencia", value: "<1 ms" },
         { label: "Ancho de Banda", value: "Hasta 10 Gbps" },
-        { label: "Compatibilidad", value: "MARK IV FPV 7\" / 8\" / 10\", UAV T1" }
+        { label: "Compatibilidad", value: "MARK IV FPV 7\" / 8\" / 10\", AERIAL SENTRY 73" }
       ],
       capabilities: [
         "Operaciones en entornos con jamming activo de EW",
@@ -916,85 +922,86 @@ export const products: Product[] = [
         "Defensa del espacio aéreo perimetral encubierta"
       ]
     }
+  },
+  {
+    id: "aerial-sentry-120",
+    name: "AERIAL SENTRY 120",
+    model: "Hee Wing T2 Cruza Tactical Fixed Wing FPV PNP",
+    category: "vtol",
+    image: "/aerial_sentry_120.png",
+    en: {
+      description: "The Aerial Sentry 120 offers an exceptional tactical flying experience. With its impressive 1200 mm wingspan and EPP twin-motor wing, it features a fully modular design that enables effortless assembly and disassembly for rapid deployment. Internally, it provides generous space for advanced electronics, quick-release connectors, and tail-boom pins for operational personalization.",
+      features: [
+        "Fully modular design for toolless, rapid assembly and disassembly",
+        "Quick-release mobile rudder (easily removable with a single button press)",
+        "Quick-release horizontal stabilizer (plano de profundidad) and tail boom connectors",
+        "Twin-motor layout with double main wingspan spars for high aerodynamic structural integrity",
+        "Specially designed electronics bays in both the fuselage and main wings",
+        "Detachable nose with active fan mounts for video transmitter (VTX) cooling",
+        "Integrated landing gear supports and capability for float mount upgrades"
+      ],
+      specs: [
+        { label: "Wingspan (Envergadura)", value: "1200 mm" },
+        { label: "Length (Longitud)", value: "1090 mm" },
+        { label: "Motors", value: "2x DroView/Heewing 2216 Brushless" },
+        { label: "ESCs", value: "2x 6S 25A BLS" },
+        { label: "Propellers", value: "8-Inch high-efficiency props" },
+        { label: "Servos", value: "4x Heewing 041S-MG metal gear digital servos" },
+        { label: "Material", value: "High-grade EPP / Polypropylene (polipropileno)" },
+        { label: "Recommended Takeoff Weight", value: "1.5 kg to 2.5 kg" },
+        { label: "Recommended Battery", value: "LiPo 6S 2000mAh - 20,000mAh" },
+        { label: "Control Channels Required", value: "Minimum 4 channels (6+ recommended for flaps)" }
+      ],
+      capabilities: [
+        "Long-range persistent tactical ISR missions",
+        "Tool-free rapid deployment behind lines",
+        "Stable FPV flights in high-altitude environments",
+        "Over-water operations (with optional float mounts)"
+      ],
+      operationalProfile: {
+        endurance: "Up to 80 minutes (with 6S 20,000mAh LiPo/Li-Ion)",
+        payload: "Up to 1.0 kg (optics, release systems, sensors)",
+        range: "Up to 30 km telemetry line-of-sight",
+        propulsion: "Twin-engine layout with differential thrust capabilities"
+      }
+    },
+    es: {
+      description: "El Aerial Sentry 120 ofrece una experiencia de vuelo táctico excepcional. Con su impresionante envergadura de 1200 mm y su ala bimotor de EPP, cuenta con un diseño totalmente modular que facilita el montaje y desmontaje sin herramientas para un despliegue rápido. En su interior, ofrece un generoso espacio para electrónica avanzada, conectores rápidos y pasadores integrados en el tubo de cola para personalización operativa.",
+      features: [
+        "Diseño completamente modular para montaje y desmontaje rápido sin herramientas",
+        "Timón móvil de liberación rápida (fácilmente desmontable presionando un solo botón)",
+        "Estabilizador horizontal (plano de profundidad) y conectores de tubo de cola de liberación rápida",
+        "Configuración bimotor con larguero principal doble para una alta integridad estructural",
+        "Bahías de electrónica diseñadas a medida en fuselaje y alas principales",
+        "Frontal extraíble con soportes para ventilador para enfriamiento activo del VTX",
+        "Soportes integrados para tren de aterrizaje y compatibilidad con flotadores de agua"
+      ],
+      specs: [
+        { label: "Envergadura", value: "1200 mm" },
+        { label: "Longitud", value: "1090 mm" },
+        { label: "Motores", value: "2x DroView/Heewing 2216 Brushless" },
+        { label: "ESCs", value: "2x 6S 25A BLS" },
+        { label: "Hélices", value: "Hélices de alta eficiencia de 8 pulgadas" },
+        { label: "Servos", value: "4x Servos de engranaje metálico Heewing 041S-MG" },
+        { label: "Material", value: "EPP de alta densidad / Polipropileno" },
+        { label: "Peso al Despegue Recomendado", value: "1.5 kg a 2.5 kg" },
+        { label: "Batería Recomendada", value: "LiPo 6S 2000mAh - 20,000mAh" },
+        { label: "Canales de Control Requeridos", value: "Mínimo 4 canales (6+ recomendado para flaps)" }
+      ],
+      capabilities: [
+        "Misiones ISR tácticas persistentes de largo alcance",
+        "Despliegue rápido sin herramientas detrás de líneas",
+        "Vuelos FPV estables en entornos de gran altitud",
+        "Operaciones sobre el agua (con flotadores opcionales)"
+      ],
+      operationalProfile: {
+        endurance: "Hasta 80 minutos (con LiPo/Li-Ion 6S 20,000mAh)",
+        payload: "Hasta 1.0 kg (ópticas, sistemas de liberación, sensores)",
+        range: "Hasta 30 km de alcance de telemetría de línea de visión",
+        propulsion: "Configuración de doble motor con capacidades de empuje diferencial"
+      }
+    }
   }
 ];
 
-export const flagshipVTOL = {
-  id: "aerial-sentry-120",
-  name: "AERIAL SENTRY 120",
-  model: "Hee Wing T2 Cruza Tactical FFixed Wing FPV PNP",
-  category: "vtol" as const,
-  image: "/aerial_sentry_120.png",
-  en: {
-    description: "The Aerial Sentry 120 offers an exceptional tactical flying experience. With its impressive 1200 mm wingspan and EPP twin-motor wing, it features a fully modular design that enables effortless assembly and disassembly for rapid deployment. Internally, it provides generous space for advanced electronics, quick-release connectors, and tail-boom pins for operational personalization.",
-    features: [
-      "Fully modular design for toolless, rapid assembly and disassembly",
-      "Quick-release mobile rudder (easily removable with a single button press)",
-      "Quick-release horizontal stabilizer (plano de profundidad) and tail boom connectors",
-      "Twin-motor layout with double main wingspan spars for high aerodynamic structural integrity",
-      "Specially designed electronics bays in both the fuselage and main wings",
-      "Detachable nose with active fan mounts for video transmitter (VTX) cooling",
-      "Integrated landing gear supports and capability for float mount upgrades"
-    ],
-    specs: [
-      { label: "Wingspan (Envergadura)", value: "1200 mm" },
-      { label: "Length (Longitud)", value: "1090 mm" },
-      { label: "Motors", value: "2x DroView/Heewing 2216 Brushless" },
-      { label: "ESCs", value: "2x 6S 25A BLS" },
-      { label: "Propellers", value: "8-Inch high-efficiency props" },
-      { label: "Servos", value: "4x Heewing 041S-MG metal gear digital servos" },
-      { label: "Material", value: "High-grade EPP / Polypropylene (polipropileno)" },
-      { label: "Recommended Takeoff Weight", value: "1.5 kg to 2.5 kg" },
-      { label: "Recommended Battery", value: "LiPo 6S 2000mAh - 20,000mAh" },
-      { label: "Control Channels Required", value: "Minimum 4 channels (6+ recommended for flaps)" }
-    ],
-    capabilities: [
-      "Long-range persistent tactical ISR missions",
-      "Tool-free rapid deployment behind lines",
-      "Stable FPV flights in high-altitude environments",
-      "Over-water operations (with optional float mounts)"
-    ],
-    operationalProfile: {
-      endurance: "Up to 80 minutes (with 6S 20,000mAh LiPo/Li-Ion)",
-      payload: "Up to 1.0 kg (optics, release systems, sensors)",
-      range: "Up to 30 km telemetry line-of-sight",
-      propulsion: "Twin-engine layout with differential thrust capabilities"
-    }
-  },
-  es: {
-    description: "El Aerial Sentry 120 ofrece una experiencia de vuelo táctico excepcional. Con su impresionante envergadura de 1200 mm y su ala bimotor de EPP, cuenta con un diseño totalmente modular que facilita el montaje y desmontaje sin herramientas para un despliegue rápido. En su interior, ofrece un generoso espacio para electrónica avanzada, conectores rápidos y pasadores integrados en el tubo de cola para personalización operativa.",
-    features: [
-      "Diseño completamente modular para montaje y desmontaje rápido sin herramientas",
-      "Timón móvil de liberación rápida (fácilmente desmontable presionando un solo botón)",
-      "Estabilizador horizontal (plano de profundidad) y conectores de tubo de cola de liberación rápida",
-      "Configuración bimotor con larguero principal doble para una alta integridad estructural",
-      "Bahías de electrónica diseñadas a medida en fuselaje y alas principales",
-      "Frontal extraíble con soportes para ventilador para enfriamiento activo del VTX",
-      "Soportes integrados para tren de aterrizaje y compatibilidad con flotadores de agua"
-    ],
-    specs: [
-      { label: "Envergadura", value: "1200 mm" },
-      { label: "Longitud", value: "1090 mm" },
-      { label: "Motores", value: "2x DroView/Heewing 2216 Brushless" },
-      { label: "ESCs", value: "2x 6S 25A BLS" },
-      { label: "Hélices", value: "Hélices de alta eficiencia de 8 pulgadas" },
-      { label: "Servos", value: "4x Servos de engranaje metálico Heewing 041S-MG" },
-      { label: "Material", value: "EPP de alta densidad / Polipropileno" },
-      { label: "Peso al Despegue Recomendado", value: "1.5 kg a 2.5 kg" },
-      { label: "Batería Recomendada", value: "LiPo 6S 2000mAh - 20,000mAh" },
-      { label: "Canales de Control Requeridos", value: "Mínimo 4 canales (6+ recomendado para flaps)" }
-    ],
-    capabilities: [
-      "Misiones ISR tácticas persistentes de largo alcance",
-      "Despliegue rápido sin herramientas detrás de líneas",
-      "Vuelos FPV estables en entornos de gran altitud",
-      "Operaciones sobre el agua (con flotadores opcionales)"
-    ],
-    operationalProfile: {
-      endurance: "Hasta 80 minutos (con LiPo/Li-Ion 6S 20,000mAh)",
-      payload: "Hasta 1.0 kg (ópticas, sistemas de liberación, sensores)",
-      range: "Hasta 30 km de alcance de telemetría de línea de visión",
-      propulsion: "Configuración de doble motor con capacidades de empuje diferencial"
-    }
-  }
-};
+export const flagshipVTOL = products.find(p => p.id === "aerial-sentry-120")!;

@@ -151,7 +151,7 @@ export default function Catalog({ lang }: CatalogProps) {
   ];
 
   const filteredProducts = products.filter(p => {
-    if (activeTab === 'all') return p.id !== 'aerial-sentry-120'; // Handled in dedicated section
+    if (activeTab === 'all') return true;
     if (activeTab === 'fpv') return p.category === 'fpv';
     if (activeTab === 'uav') return p.category === 'vtol' || p.category === 'fixed-wing';
     if (activeTab === 'fiber') return p.category === 'fiber';

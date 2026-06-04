@@ -83,7 +83,7 @@ export default function MediaGallery({ lang }: MediaGalleryProps) {
     },
     {
       id: "feed-3",
-      title: "T1 Ranger Assembly Check",
+      title: "Aerial Sentry 73 Assembly Check",
       category: "vtol",
       type: "image",
       thumbnailUrl: "/wp-content/uploads/2025/09/advance-2-hero.png",

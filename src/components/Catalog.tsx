@@ -115,7 +115,7 @@ export default function Catalog({ lang }: CatalogProps) {
         es: "Fibra Óptica EW"
       },
       model: "Secure Control Links",
-      image: "/wp-content/uploads/2025/09/15-o-cta-1024x795.webp",
+      image: "/catalogo/Fibra optica/Fibra optica.jpeg",
       description: {
         en: "Secure bend-insensitive fiber optic control spools that provide high-tensile, zero-emission connection immune to radio frequency jamming.",
         es: "Carretes de fibra óptica de control seguros y resistentes a la flexión que proporcionan una conexión de alta resistencia y cero emisiones, inmune a inhibiciones de radiofrecuencia."

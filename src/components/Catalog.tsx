@@ -86,7 +86,8 @@ export default function Catalog({ lang }: CatalogProps) {
         es: "Plataformas FPV"
       },
       model: "Tactical FPV Drones",
-      image: "/fpv_15_e.jpeg",
+      image: "/catalogo/Plataformas FPV/FPV 15 e.jpeg",
+      objectPosition: "object-bottom",
       description: {
         en: "Tactical first-person view drone platforms, including 7\", 8\", 10\", and 15\" models optimized for high-speed assault, heavy payload delivery, and reconnaissance.",
         es: "Plataformas tácticas de drones en primera persona (FPV), incluyendo modelos de 7\", 8\", 10\" y 15\" optimizados para asalto de alta velocidad, transporte pesado y reconocimiento."
@@ -247,7 +248,7 @@ export default function Catalog({ lang }: CatalogProps) {
                       alt={category.name[lang]}
                       width={400}
                       height={225}
-                      className="absolute inset-0 object-cover w-full h-full opacity-80 group-hover:scale-102 group-hover:opacity-100 transition-all duration-500 z-10"
+                      className={`absolute inset-0 object-cover w-full h-full opacity-80 group-hover:scale-102 group-hover:opacity-100 transition-all duration-500 z-10 ${(category as any).objectPosition || ''}`}
                       onLoad={() => {
                         setLoadedImages(prev => ({ ...prev, [category.id]: true }));
                       }}

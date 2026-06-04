@@ -128,7 +128,7 @@ export default function Catalog({ lang }: CatalogProps) {
         es: "Guerra Electrónica"
       },
       model: "Active Jammers",
-      image: "/wp-content/uploads/2025/10/ews.webp",
+      image: "",
       description: {
         en: "Active RF jammers, handheld anti-drone silencers, and vehicular drone suppression systems.",
         es: "Inhibidores de RF activos, silenciadores portátiles anti-drones y sistemas de supresión de drones vehiculares."
@@ -142,7 +142,7 @@ export default function Catalog({ lang }: CatalogProps) {
         es: "Herramientas Tácticas"
       },
       model: "Capture & Release Tools",
-      image: "/wp-content/uploads/2025/09/pk.webp",
+      image: "",
       description: {
         en: "Drone capture interceptors, release systems, and auxiliary payloads designed to expand drone security and offensive/defensive operations.",
         es: "Interceptores de captura de drones, sistemas de liberación y cargas útiles auxiliares diseñados para expandir la seguridad y operaciones ofensivas y defensivas."
@@ -241,7 +241,7 @@ export default function Catalog({ lang }: CatalogProps) {
                   {/* Visual grid inside image slot */}
                   <div className="absolute inset-0 grid-overlay opacity-[0.2] pointer-events-none" />
                   
-                  {!failedImages[category.id] && (
+                  {category.image && !failedImages[category.id] && (
                     <Image
                       src={category.image}
                       alt={category.name[lang]}
@@ -258,7 +258,7 @@ export default function Catalog({ lang }: CatalogProps) {
                   )}
                   
                   {/* Fallback Display if image error or loading */}
-                  {(!loadedImages[category.id] || failedImages[category.id]) && (
+                  {(!category.image || !loadedImages[category.id] || failedImages[category.id]) && (
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-[#1d1915] text-center font-mono select-none group-hover:bg-[#221f1a] transition-all z-0">
                       <div className="w-12 h-12 border border-[#4f473d] rounded-sm flex items-center justify-center mb-2 group-hover:border-[#ff6b00]/30 transition-colors">
                         <Cpu className="w-6 h-6 text-[#8a99ad] group-hover:text-[#ff6b00] transition-colors" />
@@ -317,7 +317,7 @@ export default function Catalog({ lang }: CatalogProps) {
                   {/* Visual grid inside image slot */}
                   <div className="absolute inset-0 grid-overlay opacity-[0.2] pointer-events-none" />
                   
-                  {!failedImages[product.id] && (
+                  {product.image && !failedImages[product.id] && (
                     <Image
                       src={product.image}
                       alt={product.name}
@@ -334,7 +334,7 @@ export default function Catalog({ lang }: CatalogProps) {
                   )}
                   
                   {/* Fallback Display if image error or loading */}
-                  {(!loadedImages[product.id] || failedImages[product.id]) && (
+                  {(!product.image || !loadedImages[product.id] || failedImages[product.id]) && (
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-[#1d1915] text-center font-mono select-none group-hover:bg-[#221f1a] transition-all z-0">
                       <div className="w-12 h-12 border border-[#4f473d] rounded-sm flex items-center justify-center mb-2 group-hover:border-[#ff6b00]/30 transition-colors">
                         <Cpu className="w-6 h-6 text-[#8a99ad] group-hover:text-[#ff6b00] transition-colors" />

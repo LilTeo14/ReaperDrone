@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Video, Camera, Play, Radio, Eye } from 'lucide-react';
 
@@ -183,9 +184,11 @@ export default function MediaGallery({ lang }: MediaGalleryProps) {
 
                 {/* Image element */}
                 {!failedFeeds[item.id] && (
-                  <img
+                  <Image
                     src={item.thumbnailUrl}
                     alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-102 group-hover:opacity-85 transition-all duration-500 z-10"
                     onLoad={() => {
                       setLoadedFeeds(prev => ({ ...prev, [item.id]: true }));

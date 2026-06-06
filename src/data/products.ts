@@ -412,10 +412,10 @@ export const products: Product[] = [
       "/catalogo/Sistemas UAV/DSC08527.JPG"
     ],
     en: {
-      description: "High-performance fixed-wing tactical UAV engineered for persistent surveillance and border patrol. Features long-range stabilized zoom optics and optimized composite aerodynamics.",
+      description: "High-performance fixed-wing tactical UAV engineered for persistent surveillance and border patrol. It is a polyvalent equipment according to the mission requirements.",
       features: [
         "Fixed-wing design for maximum aerodynamic efficiency and range",
-        "30x stabilized optical zoom camera for over-the-horizon intelligence",
+        "Adaptable payload bay to support various tactical configurations",
         "Carbon fiber and fiberglass composite fuselage for lightweight rigidity",
         "Resilient communication link with telemetry range up to 20 km"
       ],
@@ -426,7 +426,7 @@ export const products: Product[] = [
         { label: "Max Range", value: "20 km" },
         { label: "Payload Capacity", value: "2.0 kg" },
         { label: "Flight Endurance", value: "60 min" },
-        { label: "Camera/Video", value: "FPV 4K 60fps (30x Zoom)" },
+        { label: "Camera/Video", value: "Configurable payload system" },
         { label: "Stabilization", value: "Three-axis active gimbal" }
       ],
       capabilities: [
@@ -437,10 +437,10 @@ export const products: Product[] = [
       ]
     },
     es: {
-      description: "UAV táctico de ala fija de alto rendimiento diseñado para patrullaje fronterizo y vigilancia persistente. Equipado con cámara de zoom óptico estabilizada de largo alcance y fuselaje aerodinámico de compuestos avanzados.",
+      description: "UAV táctico de ala fija de alto rendimiento diseñado para patrullaje fronterizo y vigilancia persistente. Es un equipo polivalente según los requerimientos de la misión.",
       features: [
         "Diseño de ala fija para máxima eficiencia aerodinámica y alcance",
-        "Cámara con zoom óptico estabilizado de 30x para inteligencia más allá del horizonte",
+        "Compartimento de carga adaptable para diversas configuraciones tácticas",
         "Fuselaje compuesto de fibra de vidrio y carbono 3K para rigidez ligera",
         "Enlace de comunicación de alta resiliencia con alcance de telemetría de hasta 20 km"
       ],
@@ -451,7 +451,7 @@ export const products: Product[] = [
         { label: "Alcance Máximo", value: "20 km" },
         { label: "Carga Útil", value: "2.0 kg" },
         { label: "Autonomía de Vuelo", value: "60 min" },
-        { label: "Cámara / Video", value: "FPV 4K 60fps (Zoom 30x)" },
+        { label: "Cámara / Video", value: "Sistema de carga modular configurable" },
         { label: "Estabilización", value: "Gimbal activo de tres ejes" }
       ],
       capabilities: [

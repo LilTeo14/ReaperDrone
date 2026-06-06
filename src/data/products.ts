@@ -957,9 +957,9 @@ export const products: Product[] = [
     name: "AERIAL SENTRY 120",
     model: "Hee Wing T2 Cruza Tactical Fixed Wing FPV PNP",
     category: "vtol",
-    image: "/aerial_sentry_120.png",
+    image: "/catalogo/Sistemas UAV/as120 catt.png",
     gallery: [
-      "/aerial_sentry_120.png",
+      "/catalogo/Sistemas UAV/as120 catt.png",
       "/catalogo/Sistemas UAV/as1202.jpeg",
       "/catalogo/Sistemas UAV/as120 33.jpeg"
     ],

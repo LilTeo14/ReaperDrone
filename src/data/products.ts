@@ -401,9 +401,9 @@ export const products: Product[] = [
     name: "UAV H1 LONG RANGE",
     model: "Tactical Long-Range Fixed Wing",
     category: "fixed-wing",
-    image: "/h1_long_range.jpg",
+    image: "/catalogo/Sistemas UAV/H1 cat.png",
     gallery: [
-      "/h1_long_range.jpg",
+      "/catalogo/Sistemas UAV/H1 cat.png",
       "/catalogo/Sistemas UAV/DSC08542.JPG",
       "/catalogo/Sistemas UAV/DSC08545.jpg",
       "/catalogo/Sistemas UAV/DSC08527.JPG"

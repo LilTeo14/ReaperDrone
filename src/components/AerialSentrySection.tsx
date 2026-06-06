@@ -185,22 +185,21 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
           {/* Bottom Row - Right Column: Modularity & Counters */}
           <div className="lg:col-span-6 space-y-6">
             {/* Operational profile counters */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm text-center">
-                <span className="block text-xl font-bold font-mono text-[#ff8f3d]">{product[lang].operationalProfile!.endurance}</span>
-                <span className="text-[9px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].endurance}</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm text-center flex items-center justify-center min-h-[72px]">
+                <span className="block text-sm font-bold font-mono text-[#ff8f3d] uppercase tracking-wide">
+                  {product[lang].operationalProfile!.endurance}
+                </span>
               </div>
-              <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm text-center">
-                <span className="block text-xl font-bold font-mono text-[#ff8f3d]">{product[lang].operationalProfile!.payload}</span>
-                <span className="text-[9px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].payload}</span>
+              <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm text-center flex items-center justify-center min-h-[72px]">
+                <span className="block text-sm font-bold font-mono text-[#ff8f3d] uppercase tracking-wide">
+                  {product[lang].operationalProfile!.payload}
+                </span>
               </div>
-              <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm text-center">
-                <span className="block text-xl font-bold font-mono text-[#ff8f3d]">{product[lang].operationalProfile!.range}</span>
-                <span className="text-[9px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].range}</span>
-              </div>
-              <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm text-center">
-                <span className="block text-xl font-bold font-mono text-[#ff8f3d]">2x 2216 / 8"</span>
-                <span className="text-[9px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].propulsion}</span>
+              <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm text-center flex items-center justify-center min-h-[72px]">
+                <span className="block text-sm font-bold font-mono text-[#ff8f3d] uppercase tracking-wide">
+                  {product[lang].operationalProfile!.range}
+                </span>
               </div>
             </div>
 

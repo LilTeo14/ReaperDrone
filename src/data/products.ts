@@ -1017,10 +1017,10 @@ export const products: Product[] = [
         "Over-water operations (with optional float mounts)"
       ],
       operationalProfile: {
-        endurance: "Up to 80 minutes (with 6S 20,000mAh LiPo/Li-Ion)",
-        payload: "Up to 1.0 kg (optics, release systems, sensors)",
-        range: "Up to 30 km telemetry line-of-sight",
-        propulsion: "Twin-engine layout with differential thrust capabilities"
+        endurance: "2 Hours of Endurance",
+        payload: "1.0Kg of Payload",
+        range: "30Km range",
+        propulsion: ""
       }
     },
     es: {
@@ -1053,10 +1053,10 @@ export const products: Product[] = [
         "Operaciones sobre el agua (con flotadores opcionales)"
       ],
       operationalProfile: {
-        endurance: "Hasta 80 minutos (con LiPo/Li-Ion 6S 20,000mAh)",
-        payload: "Hasta 1.0 kg (ópticas, sistemas de liberación, sensores)",
-        range: "Hasta 30 km de alcance de telemetría de línea de visión",
-        propulsion: "Configuración de doble motor con capacidades de empuje diferencial"
+        endurance: "2 Horas de autonomia",
+        payload: "1.0Kg de Payload",
+        range: "30Km de alcance",
+        propulsion: ""
       }
     }
   }

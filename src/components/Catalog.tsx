@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { products, Product } from '../data/products';
-import { Eye, ShieldAlert, Cpu, ArrowUpDown, X, Check, FileText } from 'lucide-react';
+import { Eye, ShieldAlert, Cpu, ArrowUpDown, X, Check, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface CatalogProps {
   lang: 'en' | 'es';
@@ -17,6 +17,11 @@ export default function Catalog({ lang }: CatalogProps) {
   const [expandedSpecs, setExpandedSpecs] = useState<string | null>(null);
   const [failedImages, setFailedImages] = useState<Record<string, boolean>>({});
   const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
+  const [modalImageIdx, setModalImageIdx] = useState(0);
+
+  useEffect(() => {
+    setModalImageIdx(0);
+  }, [selectedProduct]);
 
   const t = {
     en: {
@@ -482,6 +487,75 @@ export default function Catalog({ lang }: CatalogProps) {
 
               {/* Scrollable details */}
               <div className="p-8 overflow-y-auto space-y-8 flex-grow">
+                
+                {/* Product Image Gallery slideshow */}
+                {selectedProduct.gallery && selectedProduct.gallery.length > 0 && (
+                  <div className="relative w-full aspect-video rounded-sm overflow-hidden border border-[#4f473d]/50 bg-black/40 flex flex-col justify-between group/modal-gallery scanlines">
+                    <div className="absolute inset-0 grid-overlay opacity-[0.1] pointer-events-none" />
+                    
+                    {/* Navigation buttons */}
+                    <div className="absolute inset-0 flex items-center justify-between px-4 z-20 pointer-events-none">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setModalImageIdx(prev => (prev === 0 ? selectedProduct.gallery!.length - 1 : prev - 1));
+                        }}
+                        className="pointer-events-auto p-2 rounded-sm border border-[#4f473d] bg-black/80 hover:bg-[#ff6b00]/20 hover:border-[#ff6b00] text-[#8a99ad] hover:text-white transition-all duration-300 opacity-60 group-hover/modal-gallery:opacity-100"
+                        aria-label="Previous image"
+                      >
+                        <ChevronLeft className="w-5 h-5" />
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setModalImageIdx(prev => (prev === selectedProduct.gallery!.length - 1 ? 0 : prev + 1));
+                        }}
+                        className="pointer-events-auto p-2 rounded-sm border border-[#4f473d] bg-black/80 hover:bg-[#ff6b00]/20 hover:border-[#ff6b00] text-[#8a99ad] hover:text-white transition-all duration-300 opacity-60 group-hover/modal-gallery:opacity-100"
+                        aria-label="Next image"
+                      >
+                        <ChevronRight className="w-5 h-5" />
+                      </button>
+                    </div>
+
+                    {/* Slideshow image viewport */}
+                    <div className="relative w-full h-full flex items-center justify-center">
+                      <AnimatePresence mode="wait">
+                        <motion.div
+                          key={modalImageIdx}
+                          initial={{ opacity: 0, scale: 0.98 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0.98 }}
+                          transition={{ duration: 0.25 }}
+                          className="relative w-full h-full"
+                        >
+                          <Image
+                            src={selectedProduct.gallery[modalImageIdx]}
+                            alt={selectedProduct.name}
+                            fill
+                            className="object-contain filter drop-shadow-[0_0_20px_rgba(0,0,0,0.8)]"
+                          />
+                        </motion.div>
+                      </AnimatePresence>
+                    </div>
+
+                    {/* Miniature selector dot indicators */}
+                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2 z-20 bg-black/60 px-3 py-1.5 rounded-sm border border-[#4f473d]/50">
+                      {selectedProduct.gallery.map((_, idx) => (
+                        <button
+                          key={idx}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setModalImageIdx(idx);
+                          }}
+                          className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                            modalImageIdx === idx ? 'bg-[#ff6b00] scale-125' : 'bg-[#8a99ad]/40 hover:bg-[#ff6b00]/60'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <p className="text-sm text-[#8a99ad] leading-relaxed border-l-2 border-[#ff6b00] pl-4">
                   {selectedProduct[lang].description}
                 </p>

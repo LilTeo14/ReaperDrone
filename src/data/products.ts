@@ -19,6 +19,7 @@ export interface Product {
   category: 'fpv' | 'vtol' | 'fixed-wing' | 'fiber' | 'netgun' | 'release' | 'ew';
   image: string;
   objectPosition?: string;
+  gallery?: string[];
   price?: string;
   en: ProductDetails;
   es: ProductDetails;
@@ -381,6 +382,12 @@ export const products: Product[] = [
     model: "Tactical Long-Range Fixed Wing",
     category: "fixed-wing",
     image: "/h1_long_range.jpg",
+    gallery: [
+      "/h1_long_range.jpg",
+      "/catalogo/Sistemas UAV/DSC08542.JPG",
+      "/catalogo/Sistemas UAV/DSC08545.jpg",
+      "/catalogo/Sistemas UAV/DSC08527.JPG"
+    ],
     en: {
       description: "High-performance fixed-wing tactical UAV engineered for persistent surveillance and border patrol. Features long-range stabilized zoom optics and optimized composite aerodynamics.",
       features: [

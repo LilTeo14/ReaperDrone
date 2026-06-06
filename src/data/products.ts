@@ -31,7 +31,11 @@ export const products: Product[] = [
     name: "MARK IV FPV 7\"",
     model: "7-Inch Tactical FPV",
     category: "fpv",
-    image: "/wp-content/uploads/2025/09/7_main-cta.webp", // Will fallback gracefully
+    image: "/catalogo/Plataformas FPV/fpv 7 cat.png",
+    gallery: [
+      "/catalogo/Plataformas FPV/fpv 7 cat.png",
+      "/catalogo/Plataformas FPV/fpv7.jpeg"
+    ],
     en: {
       description: "First-person perspective tactical platform with high-efficiency propulsion, optimized for short-range precision operations and rapid deployment.",
       features: [

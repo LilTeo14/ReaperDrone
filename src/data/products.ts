@@ -751,7 +751,11 @@ export const products: Product[] = [
     name: "1MINI2 (60W) Handheld Drone Jammer",
     model: "Handheld Tactical Jammer",
     category: "ew",
-    image: "/catalogo/Herramientas tacticas/jmr.png",
+    image: "/catalogo/Herramientas tacticas/jmr30.png",
+    gallery: [
+      "/catalogo/Herramientas tacticas/jmr30.png",
+      "/catalogo/Herramientas tacticas/jmr.png"
+    ],
     en: {
       description: "Compact handheld drone jammer providing 360-degree omnidirectional coverage up to 200 meters. Extremely portable and lightweight for rapid active protection.",
       features: [
@@ -804,7 +808,11 @@ export const products: Product[] = [
     name: "DK-5 (250W) Car Drone Jammer System",
     model: "Vehicular Tactical Suppression System",
     category: "ew",
-    image: "/extracted/page_2_img_0.png",
+    image: "/catalogo/Herramientas tacticas/jmr 2.png",
+    gallery: [
+      "/catalogo/Herramientas tacticas/jmr 2.png",
+      "/extracted/page_2_img_0.png"
+    ],
     en: {
       description: "High-power vehicle-mounted suppression system with 250W output. Specifically engineered for convoys, providing remote control and video feed block up to 1000m.",
       features: [

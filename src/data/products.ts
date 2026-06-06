@@ -31,9 +31,9 @@ export const products: Product[] = [
     name: "MARK IV FPV 7\"",
     model: "7-Inch Tactical FPV",
     category: "fpv",
-    image: "/catalogo/Plataformas FPV/fpv7cat.png",
+    image: "/catalogo/Plataformas FPV/fpv7cat2.png",
     gallery: [
-      "/catalogo/Plataformas FPV/fpv7cat.png",
+      "/catalogo/Plataformas FPV/fpv7cat2.png",
       "/catalogo/Plataformas FPV/fpv7.jpeg"
     ],
     en: {

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
+import Image from './Image';
 import { motion } from 'framer-motion';
 import { Shield, Radio, Anchor, Crosshair } from 'lucide-react';
 

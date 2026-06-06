@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image from './Image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { flagshipVTOL } from '../data/products';
 import { Shield, Hammer, Compass, Cpu, Battery, Eye, ChevronLeft, ChevronRight } from 'lucide-react';

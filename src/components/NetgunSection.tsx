@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image from './Image';
 import { motion } from 'framer-motion';
 import { products } from '../data/products';
 import { ShieldAlert, Crosshair, Target, Package } from 'lucide-react';

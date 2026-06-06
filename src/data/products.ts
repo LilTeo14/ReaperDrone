@@ -104,7 +104,12 @@ export const products: Product[] = [
     name: "MARK IV FPV 8\"",
     model: "8-Inch Heavy FPV",
     category: "fpv",
-    image: "/wp-content/uploads/2025/09/8-cta.webp",
+    image: "/catalogo/Plataformas FPV/fpv8 cat.png",
+    gallery: [
+      "/catalogo/Plataformas FPV/fpv8 cat.png",
+      "/catalogo/Plataformas FPV/rdm8 1.png",
+      "/catalogo/Plataformas FPV/fpvrdm8b.png"
+    ],
     en: {
       description: "Medium tactical FPV platform offering increased torque and lift, allowing for heavier payloads and longer hover times under operational conditions.",
       features: [

@@ -938,6 +938,11 @@ export const products: Product[] = [
     model: "Hee Wing T2 Cruza Tactical Fixed Wing FPV PNP",
     category: "vtol",
     image: "/aerial_sentry_120.png",
+    gallery: [
+      "/aerial_sentry_120.png",
+      "/catalogo/Sistemas UAV/as1202.jpeg",
+      "/catalogo/Sistemas UAV/as120 33.jpeg"
+    ],
     en: {
       description: "The Aerial Sentry 120 offers an exceptional tactical flying experience. With its impressive 1200 mm wingspan and EPP twin-motor wing, it features a fully modular design that enables effortless assembly and disassembly for rapid deployment. Internally, it provides generous space for advanced electronics, quick-release connectors, and tail-boom pins for operational personalization.",
       features: [

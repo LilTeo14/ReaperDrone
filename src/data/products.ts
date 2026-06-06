@@ -34,6 +34,9 @@ export const products: Product[] = [
     image: "/catalogo/Plataformas FPV/fpv7cat2.png",
     gallery: [
       "/catalogo/Plataformas FPV/fpv7cat2.png",
+      "/catalogo/Plataformas FPV/fpv7c.png",
+      "/catalogo/Plataformas FPV/fpv7b.png",
+      "/catalogo/Plataformas FPV/fpv7b2.png",
       "/catalogo/Plataformas FPV/fpv7.jpeg"
     ],
     en: {

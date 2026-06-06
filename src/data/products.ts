@@ -629,7 +629,11 @@ export const products: Product[] = [
     name: "NETGUN R1 SKYCAPTOR",
     model: "Tactical Net Launcher",
     category: "netgun",
-    image: "/catalogo/Herramientas tacticas/skyc.png",
+    image: "/catalogo/Herramientas tacticas/skycaptor cat.png",
+    gallery: [
+      "/catalogo/Herramientas tacticas/skycaptor cat.png",
+      "/catalogo/Herramientas tacticas/skyc.png"
+    ],
     en: {
       description: "Portable non-lethal drone capture device utilizing high-speed CO2 gas canisters. Deployed to neutralize small-to-medium unauthorized drones by physical entanglement in flight.",
       features: [

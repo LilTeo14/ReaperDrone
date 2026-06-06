@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Image from './Image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { products, Product } from '../data/products';
 import { Eye, ShieldAlert, Cpu, ArrowUpDown, X, Check, FileText, ChevronLeft, ChevronRight } from 'lucide-react';

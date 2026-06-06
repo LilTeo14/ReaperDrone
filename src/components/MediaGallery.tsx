@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image from './Image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Video, Camera, Play, Radio, Eye } from 'lucide-react';
 

@@ -250,9 +250,10 @@ export const products: Product[] = [
     name: "MARK IV FPV 15\"",
     model: "15-Inch Heavy Assault FPV",
     category: "fpv",
-    image: "/catalogo/Plataformas FPV/rd m15.png",
+    image: "/catalogo/Plataformas FPV/fpv15 cat - copia.png",
     objectPosition: "object-bottom",
     gallery: [
+      "/catalogo/Plataformas FPV/fpv15 cat - copia.png",
       "/catalogo/Plataformas FPV/rd m15.png",
       "/catalogo/Plataformas FPV/fpv15 cat.png"
     ],

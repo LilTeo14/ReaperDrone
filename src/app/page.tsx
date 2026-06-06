@@ -8,7 +8,7 @@ import Catalog from '../components/Catalog';
 import AerialSentrySection from '../components/AerialSentrySection';
 import Capabilities from '../components/Capabilities';
 import Advantages from '../components/Advantages';
-
+import TrainingPrograms from '../components/TrainingPrograms';
 import ContactForm from '../components/ContactForm';
 
 export default function Home() {
@@ -42,7 +42,8 @@ export default function Home() {
       {/* Advantages registry */}
       <Advantages lang={lang} />
       
-
+      {/* Training Programs instruction cards */}
+      <TrainingPrograms lang={lang} />
       
       {/* Contact submission system & copyright Footer */}
       <ContactForm lang={lang} />

@@ -18,7 +18,7 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
       products: "Catalog",
       flagship: "Featured Product",
       capabilities: "Capabilities",
-      media: "Gallery",
+      training: "Training",
       contact: "Contact Us",
       tagline: "TACTICAL FEED",
       status: "SECURE COMMS"
@@ -27,7 +27,7 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
       products: "Catálogo",
       flagship: "Producto Destacado",
       capabilities: "Capacidades",
-      media: "Galería",
+      training: "Capacitación",
       contact: "Contacto",
       tagline: "SEÑAL TÁCTICA",
       status: "COMUNICACIÓN SEGURA"
@@ -38,6 +38,7 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
     { href: "#catalog", label: t[lang].products },
     { href: "#vtol-flagship", label: t[lang].flagship },
     { href: "#capabilities", label: t[lang].capabilities },
+    { href: "#training", label: t[lang].training },
     { href: "#contact", label: t[lang].contact },
   ];
 

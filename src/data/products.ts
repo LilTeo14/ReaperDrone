@@ -339,7 +339,11 @@ export const products: Product[] = [
     name: "AERIAL SENTRY 73",
     model: "VTOL Reconnaissance UAV",
     category: "vtol",
-    image: "/catalogo/Sistemas UAV/as 73.jpg",
+    image: "/catalogo/Sistemas UAV/AS7333.png",
+    gallery: [
+      "/catalogo/Sistemas UAV/AS7333.png",
+      "/catalogo/Sistemas UAV/as 73.jpg"
+    ],
     en: {
       description: "Compact VTOL (Vertical Take-Off and Landing) drone designed for military reconnaissance, surveillance, and tactical operations. Fully modular structure allows rapid assembly and deployment in confined spaces without runways.",
       features: [

@@ -38,7 +38,6 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
     { href: "#catalog", label: t[lang].products },
     { href: "#vtol-flagship", label: t[lang].flagship },
     { href: "#capabilities", label: t[lang].capabilities },
-    { href: "#gallery", label: t[lang].media },
     { href: "#contact", label: t[lang].contact },
   ];
 

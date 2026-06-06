@@ -8,7 +8,7 @@ import Catalog from '../components/Catalog';
 import AerialSentrySection from '../components/AerialSentrySection';
 import Capabilities from '../components/Capabilities';
 import Advantages from '../components/Advantages';
-import MediaGallery from '../components/MediaGallery';
+
 import ContactForm from '../components/ContactForm';
 
 export default function Home() {
@@ -42,8 +42,7 @@ export default function Home() {
       {/* Advantages registry */}
       <Advantages lang={lang} />
       
-      {/* Tactical Media registry */}
-      <MediaGallery lang={lang} />
+
       
       {/* Contact submission system & copyright Footer */}
       <ContactForm lang={lang} />

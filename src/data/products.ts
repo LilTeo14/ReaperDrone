@@ -182,7 +182,10 @@ export const products: Product[] = [
     name: "MARK IV FPV 10\"",
     model: "10-Inch Heavy Payload FPV",
     category: "fpv",
-    image: "/wp-content/uploads/2025/09/8.1-main-1024x795.webp",
+    image: "/catalogo/Plataformas FPV/fpv10cat.png",
+    gallery: [
+      "/catalogo/Plataformas FPV/fpv10cat.png"
+    ],
     en: {
       description: "Heavy-duty 10-inch tactical FPV platform. Also available in X6 (six-axis) and X8 (coaxial eight-motor) heavy structures to enable maximum load carrying and range.",
       features: [

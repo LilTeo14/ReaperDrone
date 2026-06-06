@@ -863,7 +863,11 @@ export const products: Product[] = [
     name: "7MINI-6 (300W) Car Drone Jammer System",
     model: "Advanced Vehicular Jammer System",
     category: "ew",
-    image: "/extracted/page_7_img_0.png",
+    image: "/catalogo/Herramientas tacticas/jmr34.png",
+    gallery: [
+      "/catalogo/Herramientas tacticas/jmr34.png",
+      "/extracted/page_7_img_0.png"
+    ],
     en: {
       description: "Next-generation vehicular drone jammer with 6 frequency bands and 300W total output. Equipped with magnetic suction cups for rapid installation on vehicle roofs.",
       features: [

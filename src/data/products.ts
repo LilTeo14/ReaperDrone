@@ -918,7 +918,11 @@ export const products: Product[] = [
     name: "GT-6 Silencer Pistol-Type Drone Jammer",
     model: "Pistol-Type Directional Drone Jammer",
     category: "ew",
-    image: "/extracted/page_19_img_0.png",
+    image: "/catalogo/Herramientas tacticas/jmr4.png",
+    gallery: [
+      "/catalogo/Herramientas tacticas/jmr4.png",
+      "/extracted/page_19_img_0.png"
+    ],
     en: {
       description: "Ergonomic pistol-style directional jammer with integrated sighting scope. Designed for quick targeting and neutralization of unauthorized civilian/military drones.",
       features: [

@@ -1,0 +1,1 @@
+sectionJS(".promo",function(e){e.forEach(function(e){let i=e.querySelector(".swiper"),n=new Swiper(i,{slidesPerView:1,spaceBetween:8,speed:600,a11y:!1});dynamicListener("click",".promo .swiper-pagination-bullet:not(.swiper-pagination-bullet-active)",function(){n.slideTo(indexOf(this))})})});

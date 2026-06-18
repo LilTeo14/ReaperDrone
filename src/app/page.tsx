@@ -9,6 +9,7 @@ import AerialSentrySection from '../components/AerialSentrySection';
 import Capabilities from '../components/Capabilities';
 import Advantages from '../components/Advantages';
 import TrainingPrograms from '../components/TrainingPrograms';
+import AdvancedDevelopment from '../components/AdvancedDevelopment';
 import ContactForm from '../components/ContactForm';
 
 export default function Home() {
@@ -59,6 +60,9 @@ export default function Home() {
           
           {/* Training Programs instruction cards */}
           <TrainingPrograms lang={lang} />
+
+          {/* R&D Advanced Systems Development Division */}
+          <AdvancedDevelopment lang={lang} />
         </div>
         
       </div>

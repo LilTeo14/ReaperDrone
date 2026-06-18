@@ -52,11 +52,22 @@ export default function Hero({ lang }: HeroProps) {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#322d27] pt-12 pb-24 border-b border-[#4f473d]/40">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#161411] pt-12 pb-24 border-b border-[#4f473d]/40">
       
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-[0.22] pointer-events-none"
+      >
+        <source src="/reaper_defence_tactical.mp4" type="video/mp4" />
+      </video>
+
       {/* Background Telemetry Overlays */}
-      <div className="absolute inset-0 grid-overlay opacity-[0.25] pointer-events-none" />
-      <div className="absolute inset-0 dots-overlay opacity-[0.1] pointer-events-none" />
+      <div className="absolute inset-0 grid-overlay opacity-[0.25] pointer-events-none z-1" />
+      <div className="absolute inset-0 dots-overlay opacity-[0.1] pointer-events-none z-1" />
       
       {/* Absolute Tactical Box Elements */}
       <div className="absolute top-12 left-12 hidden xl:block font-mono text-[10px] text-[#5e7a5e] leading-relaxed">

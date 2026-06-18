@@ -33,17 +33,35 @@ export default function Home() {
       {/* Integrated Product Showcase & Comparison Catalog */}
       <Catalog lang={lang} />
       
-      {/* Premium Flagship Centerpiece Sentry 120 (VTOL Cruza) */}
-      <AerialSentrySection lang={lang} />
-      
-      {/* Capabilities cards */}
-      <Capabilities lang={lang} />
-      
-      {/* Advantages registry */}
-      <Advantages lang={lang} />
-      
-      {/* Training Programs instruction cards */}
-      <TrainingPrograms lang={lang} />
+      {/* Continuous Video Background Wrapper for Sentry -> Training */}
+      <div className="relative overflow-hidden bg-[#161411]">
+        
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-[0.14] pointer-events-none"
+        >
+          <source src="/VTOL1-1.mp4" type="video/mp4" />
+        </video>
+
+        <div className="relative z-10">
+          {/* Premium Flagship Centerpiece Sentry 120 (VTOL Cruza) */}
+          <AerialSentrySection lang={lang} />
+          
+          {/* Capabilities cards */}
+          <Capabilities lang={lang} />
+          
+          {/* Advantages registry */}
+          <Advantages lang={lang} />
+          
+          {/* Training Programs instruction cards */}
+          <TrainingPrograms lang={lang} />
+        </div>
+        
+      </div>
       
       {/* Contact submission system & copyright Footer */}
       <ContactForm lang={lang} />

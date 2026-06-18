@@ -126,7 +126,7 @@ export default function Capabilities({ lang }: CapabilitiesProps) {
   };
 
   return (
-    <section className="relative bg-[#322d27] py-24 border-b border-[#4f473d]/40" id="capabilities">
+    <section className="relative bg-transparent py-24 border-b border-[#4f473d]/40" id="capabilities">
       <div className="absolute inset-0 grid-overlay opacity-[0.05] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -96,7 +96,7 @@ export default function Advantages({ lang }: AdvantagesProps) {
   };
 
   return (
-    <section className="relative bg-[#25211c] py-24 border-b border-[#4f473d]/40" id="advantages">
+    <section className="relative bg-transparent py-24 border-b border-[#4f473d]/40" id="advantages">
       <div className="absolute inset-0 grid-overlay opacity-[0.05] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

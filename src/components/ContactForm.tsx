@@ -91,7 +91,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
   };
 
   return (
-    <footer className="relative bg-[#322d27] pt-24 pb-12 border-t border-[#4f473d]/60" id="contact">
+    <footer className="relative bg-[#25211c] pt-24 pb-12 border-t border-[#4f473d]/60" id="contact">
       <div className="absolute inset-0 grid-overlay opacity-[0.03] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

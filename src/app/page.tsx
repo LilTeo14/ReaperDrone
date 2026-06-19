@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import Infographics from '../components/Infographics';
 import Catalog from '../components/Catalog';
 import AerialSentrySection from '../components/AerialSentrySection';
 import Advantages from '../components/Advantages';
@@ -27,8 +26,7 @@ export default function Home() {
       {/* Cinematic Hero Segment */}
       <Hero lang={lang} />
       
-      {/* Tactical Infographics Analytics Grid */}
-      <Infographics lang={lang} />
+
       
       {/* Integrated Product Showcase & Comparison Catalog */}
       <Catalog lang={lang} />

@@ -250,7 +250,7 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
   ];
 
   return (
-    <section className="relative py-24 border-b border-[#4f473d]/40 bg-transparent text-white" id="advanced-development">
+    <section className="relative py-24 bg-transparent text-white" id="advanced-development">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-28">
         
         {/* Core R&D Presentation */}

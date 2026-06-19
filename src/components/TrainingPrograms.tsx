@@ -161,7 +161,7 @@ export default function TrainingPrograms({ lang }: TrainingProgramsProps) {
   ];
 
   return (
-    <section className="relative bg-transparent py-24 border-b border-[#4f473d]/40" id="training">
+    <section className="relative bg-transparent py-24" id="training">
       <div className="absolute inset-0 grid-overlay opacity-[0.05] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

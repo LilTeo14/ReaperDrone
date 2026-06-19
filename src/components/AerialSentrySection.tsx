@@ -49,7 +49,7 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
   };
 
   return (
-    <section className="relative bg-transparent py-24 border-b border-[#4f473d]/40" id="vtol-flagship">
+    <section className="relative bg-transparent py-24" id="vtol-flagship">
       <div className="absolute inset-0 grid-overlay opacity-[0.1] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

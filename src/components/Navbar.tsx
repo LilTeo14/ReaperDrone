@@ -37,7 +37,6 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
   const navLinks = [
     { href: "#catalog", label: t[lang].products },
     { href: "#vtol-flagship", label: t[lang].flagship },
-    { href: "#capabilities", label: t[lang].capabilities },
     { href: "#training", label: t[lang].training },
     { href: "#contact", label: t[lang].contact },
   ];

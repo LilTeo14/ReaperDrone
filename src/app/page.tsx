@@ -6,7 +6,6 @@ import Hero from '../components/Hero';
 import Infographics from '../components/Infographics';
 import Catalog from '../components/Catalog';
 import AerialSentrySection from '../components/AerialSentrySection';
-import Capabilities from '../components/Capabilities';
 import Advantages from '../components/Advantages';
 import TrainingPrograms from '../components/TrainingPrograms';
 import AdvancedDevelopment from '../components/AdvancedDevelopment';
@@ -35,7 +34,7 @@ export default function Home() {
       <Catalog lang={lang} />
       
       {/* Continuous Video Background Wrapper for Sentry -> Training */}
-      <div className="relative overflow-hidden bg-[#161411]">
+      <div className="relative overflow-hidden bg-[#161411]" style={{ clipPath: 'inset(0)' }}>
         
         {/* Video Background */}
         <video
@@ -43,7 +42,7 @@ export default function Home() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-[0.14] pointer-events-none"
+          className="fixed inset-0 w-full h-full object-cover z-0 opacity-[0.14] pointer-events-none"
         >
           <source src="/VTOL1-1.mp4" type="video/mp4" />
         </video>
@@ -51,9 +50,6 @@ export default function Home() {
         <div className="relative z-10">
           {/* Premium Flagship Centerpiece Sentry 120 (VTOL Cruza) */}
           <AerialSentrySection lang={lang} />
-          
-          {/* Capabilities cards */}
-          <Capabilities lang={lang} />
           
           {/* Advantages registry */}
           <Advantages lang={lang} />

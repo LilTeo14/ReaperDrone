@@ -210,44 +210,7 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
     }
   ];
 
-  const galleryItems = [
-    {
-      id: "gal-1",
-      label: t[lang].cadModel,
-      code: "CAD-73-V2",
-      path: "M10 20 L50 20 L30 80 Z M30 80 L70 20 L50 20 M10 20 L70 20"
-    },
-    {
-      id: "gal-2",
-      label: t[lang].printing3D,
-      code: "FDM-04",
-      path: "M10 80 L30 80 L30 60 L50 60 L50 40 L70 40 L70 20"
-    },
-    {
-      id: "gal-3",
-      label: t[lang].electronics,
-      code: "PCB-RF-E2",
-      path: "M10 50 H70 M25 20 V80 M55 20 V80 M25 50 L40 35 L55 50"
-    },
-    {
-      id: "gal-4",
-      label: t[lang].uavDev,
-      code: "UAV-WING-120",
-      path: "M5 45 C 20 20, 60 20, 75 45 C 60 70, 20 70, 5 45 M40 10 V80"
-    },
-    {
-      id: "gal-5",
-      label: t[lang].fieldTesting,
-      code: "FLIGHT-ENV-01",
-      path: "M10 70 Q 30 10, 50 40 T 70 20"
-    },
-    {
-      id: "gal-6",
-      label: t[lang].protoMfg,
-      code: "CNC-MILL-88",
-      path: "M15 15 H65 V65 H15 Z M15 15 L35 35 M65 65 L45 45"
-    }
-  ];
+
 
   return (
     <section className="relative py-24 bg-transparent text-white" id="advanced-development">
@@ -400,61 +363,7 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
           </div>
         </div>
 
-        {/* Future Media R&D Gallery */}
-        <div className="space-y-8">
-          <div>
-            <h3 className="font-mono text-xs text-[#5e7a5e] tracking-widest uppercase font-bold flex items-center space-x-2">
-              <Crosshair className="w-4 h-4" />
-              <span>// {t[lang].galleryLabel}</span>
-            </h3>
-            <p className="text-xs text-[#8a99ad] mt-2 font-sans">
-              {t[lang].gallerySubtitle}
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-            {galleryItems.map((item, idx) => (
-              <div 
-                key={item.id} 
-                className="glass-panel p-4 rounded-sm border border-[#4f473d]/40 relative overflow-hidden scanlines aspect-[4/5] flex flex-col justify-between group hover:border-[#ff6b00]/50 transition-all duration-300"
-              >
-                {/* Tech blueprint lines */}
-                <div className="absolute inset-0 grid-overlay opacity-[0.12] pointer-events-none z-0" />
-                
-                {/* CAD Grid Illustration Area */}
-                <div className="relative w-full h-[60%] border border-[#4f473d]/30 bg-black/40 rounded-sm flex items-center justify-center z-10 overflow-hidden">
-                  <div className="absolute inset-0 bg-[#ff6b00]/[0.01] pointer-events-none" />
-                  
-                  {/* SVG CAD blueprint schematic representation */}
-                  <svg className="w-20 h-20 text-[#ff6b00]/20 group-hover:text-[#ff6b00]/40 transition-colors duration-500" viewBox="0 0 80 80" fill="none" stroke="currentColor" strokeWidth="1">
-                    <circle cx="40" cy="40" r="30" strokeDasharray="3,3" />
-                    <path d={item.path} />
-                  </svg>
-                  
-                  <div className="absolute bottom-1 right-1 font-mono text-[7px] text-[#ff6b00]/40">
-                    DIAG_REF // {item.code}
-                  </div>
-                </div>
-
-                <div className="z-10 mt-3 flex flex-col justify-between flex-grow">
-                  <div className="space-y-1">
-                    <span className="font-mono text-[8px] text-[#5e7a5e] block font-bold tracking-widest uppercase">
-                      LAB FEED // 0{idx + 1}
-                    </span>
-                    <h4 className="font-mono text-xs text-white font-bold tracking-wider uppercase">
-                      {item.label}
-                    </h4>
-                  </div>
-                  
-                  <button className="w-full mt-4 py-2 border border-[#4f473d]/60 bg-black/40 text-[#8a99ad] hover:text-[#ff6b00] hover:border-[#ff6b00]/50 font-mono text-[8px] font-bold uppercase tracking-wider rounded-sm transition-all duration-300 flex items-center justify-center space-x-1">
-                    <span>{t[lang].viewCAD}</span>
-                    <ArrowRight className="w-2.5 h-2.5" />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
       </div>
     </section>

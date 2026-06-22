@@ -119,8 +119,8 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
         es: "Impresión 3D de piezas estructurales, mecanizado CNC de precisión y revisiones rápidas basadas en campo." 
       },
       highlights: {
-        en: ["Structural SLS/FDM Printing", "Precision Carbon Fiber Milling", "Iterative Design Optimization"],
-        es: ["Impresión Estructural SLS/FDM", "Fresado de Precisión Carbono", "Optimización de Diseño Iterativo"]
+        en: ["Structural FDM Printing", "Precision Carbon Fiber Milling", "Iterative Design Optimization"],
+        es: ["Impresión Estructural FDM", "Fresado de Precisión Carbono", "Optimización de Diseño Iterativo"]
       }
     },
     {
@@ -220,7 +220,7 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
     {
       id: "gal-2",
       label: t[lang].printing3D,
-      code: "FDM-SLS-04",
+      code: "FDM-04",
       path: "M10 80 L30 80 L30 60 L50 60 L50 40 L70 40 L70 20"
     },
     {
@@ -310,9 +310,9 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
                   <div className="border-t border-[#4f473d]/30 pt-3 mt-4">
                     <ul className="space-y-1 font-mono text-[8px] text-white/70">
                       {cap.highlights[lang].map((h, i) => (
-                        <li key={i} className="flex items-center space-x-1">
-                          <span className="w-1 h-1 bg-[#ff6b00] rotate-45 flex-shrink-0" />
-                          <span className="truncate">{h}</span>
+                        <li key={i} className="flex items-start space-x-1">
+                          <span className="w-1 h-1 bg-[#ff6b00] rotate-45 flex-shrink-0 mt-1" />
+                          <span className="break-words">{h}</span>
                         </li>
                       ))}
                     </ul>
@@ -386,7 +386,7 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
                   {item.title[lang]}
                 </h4>
                 
-                <p className="text-[10px] text-[#8a99ad] leading-relaxed font-sans line-clamp-3">
+                <p className="text-[10px] text-[#8a99ad] leading-relaxed font-sans">
                   {item.desc[lang]}
                 </p>
 
@@ -441,7 +441,7 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
                     <span className="font-mono text-[8px] text-[#5e7a5e] block font-bold tracking-widest uppercase">
                       LAB FEED // 0{idx + 1}
                     </span>
-                    <h4 className="font-mono text-xs text-white font-bold tracking-wider uppercase truncate">
+                    <h4 className="font-mono text-xs text-white font-bold tracking-wider uppercase">
                       {item.label}
                     </h4>
                   </div>

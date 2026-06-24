@@ -231,19 +231,25 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
               {t[lang].subtitle}
             </p>
           </div>
-          <div className="lg:col-span-6 relative w-full aspect-[16/10] lg:mt-6 border border-[#4f473d]/40 rounded-sm overflow-hidden glass-panel group">
-            <div className="absolute inset-0 bg-black/20 z-10 group-hover:bg-transparent transition-colors duration-300" />
-            <Image 
-              src="/workshop_rnd.jpg"
-              alt="Reaper Defence R&D Lab Workshop"
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-102"
-            />
+          <div className="lg:col-span-6 relative w-full aspect-[16/10] lg:mt-6 glass-panel rounded-sm p-4 overflow-hidden scanlines group">
+            <div className="absolute inset-0 bg-[#ff6b00]/[0.02] pointer-events-none z-10" />
+            
             {/* Corner Indicators */}
-            <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-[#ff6b00]/60 z-20" />
-            <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-[#4f473d]/60 z-20" />
-            <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-[#4f473d]/60 z-20" />
-            <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-[#ff6b00]/60 z-20" />
+            <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#5e7a5e] z-20" />
+            <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-[#5e7a5e] z-20" />
+            <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-[#5e7a5e] z-20" />
+            <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#ff6b00] z-20" />
+
+            {/* Inner Image Container */}
+            <div className="relative w-full h-full border border-[#4f473d]/60 rounded-sm overflow-hidden bg-black/30">
+              <div className="absolute inset-0 bg-black/15 z-10 group-hover:bg-transparent transition-colors duration-300" />
+              <Image 
+                src="/workshop_rnd.jpg"
+                alt="Reaper Defence R&D Lab Workshop"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-102"
+              />
+            </div>
           </div>
         </div>
 

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from './Image';
 import { 
   Cpu, Shield, Link, Settings, Wrench, Monitor, Brain, 
   ChevronRight, Terminal, Activity, Crosshair, ArrowRight
@@ -230,10 +231,19 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
               {t[lang].subtitle}
             </p>
           </div>
-          <div className="lg:col-span-6">
-            <p className="text-sm text-[#8a99ad] leading-relaxed pt-8 lg:pt-14 font-sans">
-              {t[lang].description}
-            </p>
+          <div className="lg:col-span-6 relative w-full aspect-[16/10] lg:mt-6 border border-[#4f473d]/40 rounded-sm overflow-hidden glass-panel group">
+            <div className="absolute inset-0 bg-black/20 z-10 group-hover:bg-transparent transition-colors duration-300" />
+            <Image 
+              src="/workshop_rnd.jpg"
+              alt="Reaper Defence R&D Lab Workshop"
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-102"
+            />
+            {/* Corner Indicators */}
+            <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-[#ff6b00]/60 z-20" />
+            <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-[#4f473d]/60 z-20" />
+            <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-[#4f473d]/60 z-20" />
+            <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-[#ff6b00]/60 z-20" />
           </div>
         </div>
 

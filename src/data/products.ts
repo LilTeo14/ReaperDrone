@@ -718,9 +718,8 @@ export const products: Product[] = [
         "Easy integration to DJI and other commercial quadcopters"
       ],
       specs: [
-        { label: "Control Range", value: "Up to 5 km (LoRa)" },
         { label: "Weight", value: "120 g" },
-        { label: "Communication", value: "LoRa 915 MHz" }
+        { label: "Payload Capacity", value: "0.1-1.6KG" }
       ],
       capabilities: [
         "Precision tactical dropping of defense devices",
@@ -737,9 +736,8 @@ export const products: Product[] = [
         "Fácil integración en DJI y otros cuadricópteros comerciales"
       ],
       specs: [
-        { label: "Alcance de Control", value: "Hasta 5 km (LoRa)" },
         { label: "Peso", value: "120 g" },
-        { label: "Comunicación", value: "LoRa 915 MHz" }
+        { label: "Capacidad de carga", value: "0.1-1,6KG" }
       ],
       capabilities: [
         "Caída táctica de precisión de dispositivos defensivos",

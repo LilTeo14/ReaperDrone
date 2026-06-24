@@ -40,6 +40,7 @@ interface ContactFormProps {
 
 export default function ContactForm({ lang }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const t = {
     en: {
@@ -51,6 +52,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
       labelEmail: "Secure Email",
       labelMsg: "Tactical Query",
       btnSubmit: "Encrypt & Transmit Request",
+      btnSubmitting: "Transmitting Securely...",
       successMsg: "Transmission Successful. Secure feedback channel established.",
       contactInfo: "COMMUNICATION DIRECTORY",
       email: "Email Liaison",
@@ -70,6 +72,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
       labelEmail: "Correo Seguro",
       labelMsg: "Mensaje",
       btnSubmit: "Cifrar y Transmitir Solicitud",
+      btnSubmitting: "Transmitiendo de Forma Segura...",
       successMsg: "Transmisión Exitosa. Canal seguro de comunicación establecido.",
       contactInfo: "DIRECTORIO DE COMUNICACIÓN",
       email: "Correo de Enlace",
@@ -82,12 +85,41 @@ export default function ContactForm({ lang }: ContactFormProps) {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 5000);
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    formData.append("_subject", "New Contact Inquiry - Reaper Defence");
+    formData.append("_template", "table");
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/matiasbarriosm@gmail.com", {
+        method: "POST",
+        body: formData
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        e.currentTarget.reset();
+      } else {
+        alert(lang === 'en' 
+          ? "Failed to transmit secure request. Please try again." 
+          : "Error al transmitir la solicitud segura. Por favor, inténtelo de nuevo."
+        );
+      }
+    } catch (error) {
+      console.error(error);
+      alert(lang === 'en' 
+        ? "Network connection error. Please try again." 
+        : "Error de conexión de red. Por favor, inténtelo de nuevo."
+      );
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 5000);
+    }
   };
 
   return (
@@ -195,6 +227,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
                       <label className="text-[#8a99ad] uppercase tracking-wider">{t[lang].labelName}</label>
                       <input 
                         type="text" 
+                        name="name"
                         required 
                         placeholder="John Doe"
                         className="w-full bg-[#1d1915] border border-[#4f473d] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors"
@@ -204,6 +237,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
                       <label className="text-[#8a99ad] uppercase tracking-wider">{t[lang].labelOrg}</label>
                       <input 
                         type="text" 
+                        name="organization"
                         required 
                         placeholder="Ministry of Defense / Private Security"
                         className="w-full bg-[#1d1915] border border-[#4f473d] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors"
@@ -215,6 +249,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
                     <label className="text-[#8a99ad] uppercase tracking-wider">{t[lang].labelEmail}</label>
                     <input 
                       type="email" 
+                      name="email"
                       required 
                       placeholder="jdoe@agency.gov"
                       className="w-full bg-[#1d1915] border border-[#4f473d] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors"
@@ -225,6 +260,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
                     <label className="text-[#8a99ad] uppercase tracking-wider">{t[lang].labelMsg}</label>
                     <textarea 
                       rows={4}
+                      name="message"
                       required 
                       placeholder="Input requested platform specs or operational mission scope..."
                       className="w-full bg-[#1d1915] border border-[#4f473d] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors resize-none"
@@ -233,10 +269,11 @@ export default function ContactForm({ lang }: ContactFormProps) {
 
                   <button
                     type="submit"
-                    className="w-full py-4 bg-[#ff6b00] hover:bg-[#e05e00] text-white font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-[#ff6b00]/15"
+                    disabled={isSubmitting}
+                    className="w-full py-4 bg-[#ff6b00] hover:bg-[#e05e00] disabled:bg-[#ff6b00]/50 disabled:cursor-not-allowed text-white font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-[#ff6b00]/15"
                   >
-                    <Send className="w-4 h-4" />
-                    <span>{t[lang].btnSubmit}</span>
+                    <Send className={`w-4 h-4 ${isSubmitting ? 'animate-pulse' : ''}`} />
+                    <span>{isSubmitting ? t[lang].btnSubmitting : t[lang].btnSubmit}</span>
                   </button>
 
                 </form>

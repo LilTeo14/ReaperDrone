@@ -720,9 +720,6 @@ export const products: Product[] = [
       specs: [
         { label: "Control Range", value: "Up to 5 km (LoRa)" },
         { label: "Weight", value: "120 g" },
-        { label: "Max Speed (on drone)", value: "70 km/h" },
-        { label: "Payload Support", value: "Up to 350 g (defensive or fragmentation grenade)" },
-        { label: "Battery Endurance", value: "35 min (active monitoring)" },
         { label: "Communication", value: "LoRa 915 MHz" }
       ],
       capabilities: [
@@ -742,9 +739,6 @@ export const products: Product[] = [
       specs: [
         { label: "Alcance de Control", value: "Hasta 5 km (LoRa)" },
         { label: "Peso", value: "120 g" },
-        { label: "Velocidad Máxima (en vuelo)", value: "70 km/h" },
-        { label: "Carga Útil Soportada", value: "Hasta 350 g (granada defensiva o de fragmentación)" },
-        { label: "Autonomía de Batería", value: "35 min (monitoreo activo)" },
         { label: "Comunicación", value: "LoRa 915 MHz" }
       ],
       capabilities: [

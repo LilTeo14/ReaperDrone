@@ -68,7 +68,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
       labelName: "Nombre Completo",
       labelOrg: "Agencia / Organización",
       labelEmail: "Correo Seguro",
-      labelMsg: "Consulta Táctica",
+      labelMsg: "Mensaje",
       btnSubmit: "Cifrar y Transmitir Solicitud",
       successMsg: "Transmisión Exitosa. Canal seguro de comunicación establecido.",
       contactInfo: "DIRECTORIO DE COMUNICACIÓN",

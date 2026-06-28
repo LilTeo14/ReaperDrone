@@ -16,6 +16,7 @@ export default function Hero({ lang }: HeroProps) {
       subheadline: "Advanced Unmanned Systems & Electronic Warfare Solutions",
       support: "Modern conflicts and security challenges have demonstrated the decisive role of unmanned systems, electronic warfare and real-time intelligence. Reaper Defence develops next-generation technologies designed to enhance operational awareness, force protection and mission effectiveness.",
       btnExplore: "Explore Products",
+      btnRD: "R&D Division",
       btnContact: "Contact Us",
       systemStatus: "SYS.STATUS: ACTIVE // CONNECTED",
       latencies: "LATENCY: 0.8ms // LINK: FIBER-OPTIC"
@@ -25,6 +26,7 @@ export default function Hero({ lang }: HeroProps) {
       subheadline: "Sistemas No Tripulados Avanzados y Soluciones de Guerra Electrónica",
       support: "Los conflictos modernos y los desafíos de seguridad han demostrado el papel decisivo de los sistemas no tripulados, la guerra electrónica y la inteligencia en tiempo real. Reaper Defence desarrolla tecnologías de próxima generación diseñadas para mejorar la conciencia operativa, la protección de fuerzas y la efectividad de las misiones.",
       btnExplore: "Explorar Productos",
+      btnRD: "División I+D",
       btnContact: "Contáctanos",
       systemStatus: "SYS.STATUS: ACTIVO // CONECTADO",
       latencies: "LATENCIA: 0.8ms // ENLACE: FIBRA ÓPTICA"
@@ -130,6 +132,12 @@ export default function Hero({ lang }: HeroProps) {
               className="px-8 py-4 bg-[#ff6b00] hover:bg-[#e05e00] text-white font-bold text-sm tracking-widest uppercase font-mono rounded-sm transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-[#ff6b00]/20 flex items-center justify-center border border-[#ff6b00]"
             >
               {t[lang].btnExplore}
+            </a>
+            <a 
+              href="#advanced-development"
+              className="px-8 py-4 bg-[#ff6b00] hover:bg-[#e05e00] text-white font-bold text-sm tracking-widest uppercase font-mono rounded-sm transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-[#ff6b00]/20 flex items-center justify-center border border-[#ff6b00]"
+            >
+              {t[lang].btnRD}
             </a>
             <a 
               href="#contact"

@@ -72,12 +72,12 @@ export default function Hero({ lang }: HeroProps) {
       <div className="absolute inset-0 dots-overlay opacity-[0.1] pointer-events-none z-1" />
       
       {/* Absolute Tactical Box Elements */}
-      <div className="absolute top-12 left-12 hidden xl:block font-mono text-[10px] text-[#5e7a5e] leading-relaxed">
+      <div className="absolute top-12 left-12 hidden xl:block font-mono text-[12px] text-[#5e7a5e] leading-relaxed">
         <div>[TELEMETRY CORE V24.16]</div>
         <div>POS: 33.4489 S // 70.6693 W</div>
         <div>ALT: 520M // HDG: 180 N</div>
       </div>
-      <div className="absolute top-12 right-12 hidden xl:block font-mono text-[10px] text-[#ff6b00]/70 text-right leading-relaxed">
+      <div className="absolute top-12 right-12 hidden xl:block font-mono text-[12px] text-[#ff6b00]/70 text-right leading-relaxed">
         <div>{t[lang].systemStatus}</div>
         <div>{t[lang].latencies}</div>
       </div>

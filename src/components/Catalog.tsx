@@ -240,7 +240,7 @@ export default function Catalog({ lang }: CatalogProps) {
                 
                 {/* Product Thumbnail Section */}
                 <div className="relative aspect-video bg-black/40 border-b border-[#4f473d]/50 flex items-center justify-center overflow-hidden">
-                  <div className="absolute top-3 left-3 bg-[#1d1915]/90 border border-[#4f473d] px-2.5 py-1 rounded-sm z-10 font-mono text-[9px] text-[#ff6b00] font-bold">
+                  <div className="absolute top-3 left-3 bg-[#1d1915]/90 border border-[#4f473d] px-2.5 py-1 rounded-sm z-10 font-mono text-[11px] text-[#ff6b00] font-bold">
                     {t[lang].categoryTag}
                   </div>
                   
@@ -269,7 +269,7 @@ export default function Catalog({ lang }: CatalogProps) {
                       <div className="w-12 h-12 border border-[#4f473d] rounded-sm flex items-center justify-center mb-2 group-hover:border-[#ff6b00]/30 transition-colors">
                         <Cpu className="w-6 h-6 text-[#8a99ad] group-hover:text-[#ff6b00] transition-colors" />
                       </div>
-                      <span className="text-[10px] text-[#8a99ad] font-bold uppercase tracking-wider">{category.model}</span>
+                      <span className="text-[12px] text-[#8a99ad] font-bold uppercase tracking-wider">{category.model}</span>
                     </div>
                   )}
 
@@ -284,7 +284,7 @@ export default function Catalog({ lang }: CatalogProps) {
                         {category.name[lang]}
                       </h3>
                     </div>
-                    <p className="text-xs text-[#8a99ad] leading-relaxed mb-6">
+                    <p className="text-[13.5px] text-[#8a99ad] leading-relaxed mb-6">
                       {category.description[lang]}
                     </p>
                   </div>
@@ -296,7 +296,7 @@ export default function Catalog({ lang }: CatalogProps) {
                         e.stopPropagation();
                         setActiveTab(category.targetTab);
                       }}
-                      className="flex-grow py-2.5 bg-[#1d1915] hover:bg-[#ff6b00]/10 border border-[#4f473d] hover:border-[#ff6b00] text-[#8a99ad] hover:text-white font-mono text-xs font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center space-x-2"
+                      className="flex-grow py-2.5 bg-[#1d1915] hover:bg-[#ff6b00]/10 border border-[#4f473d] hover:border-[#ff6b00] text-[#8a99ad] hover:text-white font-mono text-[13px] font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       <Eye className="w-4 h-4 text-[#ff6b00]" />
                       <span>{t[lang].btnExplore}</span>
@@ -316,7 +316,7 @@ export default function Catalog({ lang }: CatalogProps) {
                 
                 {/* Product Thumbnail Section */}
                 <div className="relative aspect-video bg-black/40 border-b border-[#4f473d]/50 flex items-center justify-center overflow-hidden">
-                  <div className="absolute top-3 left-3 bg-[#1d1915]/90 border border-[#4f473d] px-2.5 py-1 rounded-sm z-10 font-mono text-[9px] text-[#5e7a5e] font-bold">
+                  <div className="absolute top-3 left-3 bg-[#1d1915]/90 border border-[#4f473d] px-2.5 py-1 rounded-sm z-10 font-mono text-[11px] text-[#5e7a5e] font-bold">
                     {product.category.toUpperCase()}
                   </div>
                   
@@ -345,7 +345,7 @@ export default function Catalog({ lang }: CatalogProps) {
                       <div className="w-12 h-12 border border-[#4f473d] rounded-sm flex items-center justify-center mb-2 group-hover:border-[#ff6b00]/30 transition-colors">
                         <Cpu className="w-6 h-6 text-[#8a99ad] group-hover:text-[#ff6b00] transition-colors" />
                       </div>
-                      <span className="text-[10px] text-[#8a99ad] font-bold uppercase tracking-wider">{product.model}</span>
+                      <span className="text-[12px] text-[#8a99ad] font-bold uppercase tracking-wider">{product.model}</span>
                     </div>
                   )}
 
@@ -469,7 +469,7 @@ export default function Catalog({ lang }: CatalogProps) {
               {/* Modal Header */}
               <div className="p-6 border-b border-[#4f473d] flex justify-between items-center bg-[#1d1915]">
                 <div className="flex items-center space-x-2">
-                  <span className="text-[10px] font-mono text-[#5e7a5e] border border-[#2d3a2d] px-2 py-0.5 rounded-sm">
+                  <span className="text-[12px] font-mono text-[#5e7a5e] border border-[#2d3a2d] px-2 py-0.5 rounded-sm">
                     {selectedProduct.category.toUpperCase()}
                   </span>
                   <h3 className="text-xl font-bold font-mono text-white tracking-wider uppercase">
@@ -564,11 +564,11 @@ export default function Catalog({ lang }: CatalogProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {/* Technical card Specs */}
                   <div>
-                    <h4 className="text-xs font-mono text-[#ff6b00] font-bold tracking-widest uppercase mb-4 flex items-center space-x-1.5">
+                    <h4 className="text-sm font-mono text-[#ff6b00] font-bold tracking-widest uppercase mb-4 flex items-center space-x-1.5">
                       <FileText className="w-3.5 h-3.5" />
                       <span>{t[lang].specsHeader}</span>
                     </h4>
-                    <div className="border border-[#4f473d] rounded-sm overflow-hidden bg-black/15 font-mono text-xs">
+                    <div className="border border-[#4f473d] rounded-sm overflow-hidden bg-black/15 font-mono text-[13px]">
                       {selectedProduct[lang].specs.map((spec, idx) => (
                         <div 
                           key={idx} 
@@ -584,13 +584,13 @@ export default function Catalog({ lang }: CatalogProps) {
                   {/* Capabilities & Deployments list */}
                   <div className="space-y-6">
                     <div>
-                      <h4 className="text-xs font-mono text-[#ff6b00] font-bold tracking-widest uppercase mb-4 flex items-center space-x-1.5">
+                      <h4 className="text-sm font-mono text-[#ff6b00] font-bold tracking-widest uppercase mb-4 flex items-center space-x-1.5">
                         <Cpu className="w-3.5 h-3.5" />
                         <span>{t[lang].featuresHeader}</span>
                       </h4>
                       <ul className="space-y-3">
                         {selectedProduct[lang].features.map((feat, idx) => (
-                          <li key={idx} className="flex items-start text-xs text-[#8a99ad]">
+                          <li key={idx} className="flex items-start text-[13.5px] text-[#8a99ad]">
                             <Check className="w-4 h-4 text-[#ff8f3d] mr-2.5 flex-shrink-0 mt-0.5" />
                             <span className="leading-relaxed">{feat}</span>
                           </li>
@@ -600,7 +600,7 @@ export default function Catalog({ lang }: CatalogProps) {
 
                     {selectedProduct[lang].capabilities && (
                       <div>
-                        <h4 className="text-xs font-mono text-[#ff6b00] font-bold tracking-widest uppercase mb-4 flex items-center space-x-1.5">
+                        <h4 className="text-sm font-mono text-[#ff6b00] font-bold tracking-widest uppercase mb-4 flex items-center space-x-1.5">
                           <ShieldAlert className="w-3.5 h-3.5" />
                           <span>{t[lang].deploymentHeader}</span>
                         </h4>
@@ -608,7 +608,7 @@ export default function Catalog({ lang }: CatalogProps) {
                           {selectedProduct[lang].capabilities.map((cap, idx) => (
                             <span 
                               key={idx} 
-                              className="text-[10px] font-mono text-[#8a99ad] border border-[#4f473d] bg-[#1d1915]/60 px-3 py-1.5 rounded-sm"
+                              className="text-[12px] font-mono text-[#8a99ad] border border-[#4f473d] bg-[#1d1915]/60 px-3 py-1.5 rounded-sm"
                             >
                               {cap}
                             </span>
@@ -672,9 +672,9 @@ export default function Catalog({ lang }: CatalogProps) {
 
               {/* Scrollable table content */}
               <div className="p-8 overflow-y-auto overflow-x-auto flex-grow">
-                <table className="w-full text-left font-mono text-xs border border-[#4f473d]/60 bg-black/10 rounded-sm">
+                <table className="w-full text-left font-mono text-[13.5px] border border-[#4f473d]/60 bg-black/10 rounded-sm">
                   <thead>
-                    <tr className="bg-[#1d1915] border-b border-[#4f473d] text-[#8a99ad] uppercase tracking-wider text-[10px]">
+                    <tr className="bg-[#1d1915] border-b border-[#4f473d] text-[#8a99ad] uppercase tracking-wider text-[12px]">
                       <th className="p-4">SPEC / MODEL</th>
                       {fpvProducts.map(p => (
                         <th key={p.id} className="p-4 text-center border-l border-[#4f473d]/60 font-bold text-white">

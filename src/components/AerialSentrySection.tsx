@@ -74,10 +74,10 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
           {/* Top Row - Large Diagnostic Image Panel (Full Width, Doubled Image Size) */}
           <div className="lg:col-span-12 flex flex-col justify-center items-center relative glass-panel rounded-sm p-8 scanlines min-h-[500px]">
             {/* Corner Blueprint indicators */}
-            <div className="absolute top-3 left-3 font-mono text-[9px] text-[#5e7a5e] leading-none">
+            <div className="absolute top-3 left-3 font-mono text-[11px] text-[#5e7a5e] leading-none">
               BLUEPRINT FILE // VTOL-SENTRY-120
             </div>
-            <div className="absolute bottom-3 right-3 font-mono text-[9px] text-[#ff6b00] leading-none">
+            <div className="absolute bottom-3 right-3 font-mono text-[11px] text-[#ff6b00] leading-none">
               TWIN PROPULSION VECTOR // ACTIVE
             </div>
 
@@ -135,11 +135,7 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
                 <button
                   key={idx}
                   onClick={() => setActiveImageIndex(idx)}
-                  className={`relative w-20 h-12 rounded-sm overflow-hidden border transition-all duration-300 bg-black/40 ${
-                    activeImageIndex === idx 
-                      ? 'border-[#ff6b00] shadow-md shadow-[#ff6b00]/10 scale-105' 
-                      : 'border-[#4f473d] hover:border-[#ff6b00]/50 opacity-60 hover:opacity-100'
-                  }`}
+                  className="relative w-20 h-12 rounded-sm overflow-hidden border transition-all duration-300 bg-black/40 border-[#4f473d] hover:border-[#ff6b00]/50 opacity-60 hover:opacity-100"
                 >
                   <Image 
                     src={img}
@@ -152,7 +148,7 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
             </div>
 
             {/* Core Diagnostics Overlays */}
-            <div className="w-full max-w-[840px] mt-8 grid grid-cols-2 gap-4 border-t border-[#4f473d] pt-6 font-mono text-[10px]">
+            <div className="w-full max-w-[840px] mt-8 grid grid-cols-2 gap-4 border-t border-[#4f473d] pt-6 font-mono text-[12px]">
               <div className="flex items-center space-x-2 text-[#8a99ad]">
                 <Cpu className="w-4 h-4 text-[#ff6b00]/60" />
                 <span>Wingspan: 1200 mm</span>
@@ -166,10 +162,10 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
 
           {/* Bottom Row - Left Column: Tech Specs */}
           <div className="lg:col-span-6 space-y-6">
-            <h3 className="font-mono text-xs text-[#ff6b00] tracking-widest uppercase">
+            <h3 className="font-mono text-sm text-[#ff6b00] tracking-widest uppercase">
               // {t[lang].specHeader}
             </h3>
-            <div className="border border-[#4f473d] bg-black/10 rounded-sm overflow-hidden text-xs font-mono">
+            <div className="border border-[#4f473d] bg-black/10 rounded-sm overflow-hidden text-[13px] font-mono">
               {content.specs.map((spec, idx) => (
                 <div 
                   key={idx} 
@@ -211,12 +207,12 @@ export default function AerialSentrySection({ lang }: AerialSentrySectionProps) 
                   {t[lang].modularityHeader}
                 </h3>
               </div>
-              <p className="text-xs text-[#8a99ad] leading-relaxed">
+              <p className="text-[13px] text-[#8a99ad] leading-relaxed">
                 {t[lang].modularText}
               </p>
               
               {/* Checklist details */}
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2.5 font-mono text-[10px] text-white pt-2">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2.5 font-mono text-[12px] text-white pt-2">
                 <li className="flex items-center space-x-2">
                   <div className="w-1.5 h-1.5 bg-[#ff6b00] rounded-full" />
                   <span>Quick-release mobile rudders</span>

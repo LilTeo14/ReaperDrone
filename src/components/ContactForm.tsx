@@ -147,7 +147,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
 
             {/* Direct directory cards */}
             <div className="space-y-4">
-              <h3 className="font-mono text-[10px] text-[#5e7a5e] tracking-widest uppercase font-bold">
+              <h3 className="font-mono text-[12px] text-[#5e7a5e] tracking-widest uppercase font-bold">
                 // {t[lang].contactInfo}
               </h3>
               
@@ -167,7 +167,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
 
             {/* Social Links Networks */}
             <div className="space-y-4">
-              <h3 className="font-mono text-[10px] text-[#5e7a5e] tracking-widest uppercase font-bold">
+              <h3 className="font-mono text-[12px] text-[#5e7a5e] tracking-widest uppercase font-bold">
                 // {t[lang].socials}
               </h3>
               <div className="flex space-x-3">
@@ -285,10 +285,10 @@ export default function ContactForm({ lang }: ContactFormProps) {
         </div>
 
         {/* Brand Copyright footer details */}
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-center space-y-4 md:space-y-0 font-mono text-[10px] text-[#8a99ad]">
+        <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-center space-y-4 md:space-y-0 font-mono text-[12px] text-[#8a99ad]">
           <div className="flex flex-col md:items-start text-center md:text-left space-y-1">
             <span className="font-bold text-white text-xs tracking-widest">REAPER DEFENCE</span>
-            <span className="text-[9px] text-[#5e7a5e]">{t[lang].footerTagline}</span>
+            <span className="text-[11px] text-[#5e7a5e]">{t[lang].footerTagline}</span>
           </div>
           
           <div>

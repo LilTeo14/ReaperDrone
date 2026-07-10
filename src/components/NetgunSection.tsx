@@ -84,15 +84,15 @@ export default function NetgunSection({ lang }: NetgunSectionProps) {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm">
                 <span className="block text-lg font-bold font-mono text-[#ff8f3d]">12 m² (4 x 3 m)</span>
-                <span className="text-[10px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].netSize}</span>
+                <span className="text-[12px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].netSize}</span>
               </div>
               <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm">
                 <span className="block text-lg font-bold font-mono text-[#ff8f3d]">Up to 20m</span>
-                <span className="text-[10px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].range}</span>
+                <span className="text-[12px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].range}</span>
               </div>
               <div className="border border-[#4f473d] bg-black/25 p-4 rounded-sm">
                 <span className="block text-lg font-bold font-mono text-[#ff8f3d]">10-12g CO₂ Canister</span>
-                <span className="text-[10px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].co2}</span>
+                <span className="text-[12px] font-mono text-[#8a99ad] uppercase tracking-wider">{t[lang].co2}</span>
               </div>
             </div>
 
@@ -102,7 +102,7 @@ export default function NetgunSection({ lang }: NetgunSectionProps) {
                 <ShieldAlert className="w-4 h-4 text-[#ff6b00]" />
                 <span>{t[lang].specsHeader}</span>
               </h3>
-              <div className="border border-[#4f473d] bg-black/10 rounded-sm overflow-hidden text-xs font-mono">
+              <div className="border border-[#4f473d] bg-black/10 rounded-sm overflow-hidden text-[13.5px] font-mono">
                 {content.specs.slice(4, 9).map((spec, idx) => (
                   <div 
                     key={idx} 
@@ -121,7 +121,7 @@ export default function NetgunSection({ lang }: NetgunSectionProps) {
                 <Crosshair className="w-4 h-4 text-[#ff6b00]" />
                 <span>{t[lang].scenarioHeader}</span>
               </h3>
-              <ul className="space-y-3 font-sans text-xs text-[#8a99ad]">
+              <ul className="space-y-3 font-sans text-[13.5px] text-[#8a99ad]">
                 {t[lang].scenarios.map((scene, idx) => (
                   <li key={idx} className="flex items-start">
                     <Target className="w-4 h-4 text-[#ff8f3d] mr-2.5 flex-shrink-0 mt-0.5" />
@@ -158,12 +158,12 @@ export default function NetgunSection({ lang }: NetgunSectionProps) {
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center font-mono bg-[#25211c] z-0">
                   <Package className="w-12 h-12 text-[#ff6b00]/70 mb-2" />
                   <span className="text-xs text-white uppercase font-bold tracking-wider">{netgunProduct.name}</span>
-                  <span className="text-[9px] text-[#8a99ad] mt-1">Manual Launcher Shell</span>
+                  <span className="text-[11px] text-[#8a99ad] mt-1">Manual Launcher Shell</span>
                 </div>
               )}
             </div>
 
-            <div className="w-full mt-6 text-center border-t border-[#4f473d] pt-4 font-mono text-[9px] text-[#5e7a5e]">
+            <div className="w-full mt-6 text-center border-t border-[#4f473d] pt-4 font-mono text-[11px] text-[#5e7a5e]">
               CAPTURE DISCHARGE SYSTEM // STANDBY
             </div>
           </div>

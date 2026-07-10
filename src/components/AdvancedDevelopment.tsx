@@ -220,7 +220,7 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
         {/* Core R&D Presentation */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-6 space-y-6">
-            <span className="text-xs text-[#ff6b00] font-mono font-bold tracking-widest uppercase block mb-3 animate-pulse">
+            <span className="text-sm text-[#ff6b00] font-mono font-bold tracking-widest uppercase block mb-3 animate-pulse">
               // {t[lang].tag}
             </span>
             <h2 className="text-3xl sm:text-4xl font-black font-mono text-white tracking-tight uppercase leading-tight">
@@ -244,8 +244,8 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
             <div className="relative w-full h-full border border-[#4f473d]/60 rounded-sm overflow-hidden bg-black/30">
               <div className="absolute inset-0 bg-black/15 z-10 group-hover:bg-transparent transition-colors duration-300" />
               <Image 
-                src="/workshop_rnd.jpg"
-                alt="Reaper Defence R&D Lab Workshop"
+                src="/simdelta.jpg"
+                alt="Reaper Defence R&D Lab Simulation"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-102"
               />
@@ -255,7 +255,7 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
 
         {/* 7 Capabilities Grid */}
         <div className="space-y-8">
-          <h3 className="font-mono text-xs text-[#5e7a5e] tracking-widest uppercase font-bold flex items-center space-x-2">
+          <h3 className="font-mono text-sm text-[#5e7a5e] tracking-widest uppercase font-bold flex items-center space-x-2">
             <Terminal className="w-4 h-4" />
             <span>// {t[lang].highlightsLabel}</span>
           </h3>
@@ -278,16 +278,16 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
                     <div className="w-8 h-8 rounded-sm bg-black/40 border border-[#4f473d]/60 flex items-center justify-center mb-4 group-hover:border-[#ff6b00]/40 transition-colors">
                       <Icon className="w-4 h-4 text-[#8a99ad] group-hover:text-[#ff6b00] transition-colors" />
                     </div>
-                    <h4 className="font-mono text-xs text-white font-bold tracking-wider uppercase mb-3 leading-tight min-h-[32px]">
+                    <h4 className="font-mono text-sm text-white font-bold tracking-wider uppercase mb-3 leading-tight min-h-[32px]">
                       {cap.title[lang]}
                     </h4>
-                    <p className="text-[10px] text-[#8a99ad] leading-relaxed font-sans mb-4 min-h-[60px]">
+                    <p className="text-[12px] text-[#8a99ad] leading-relaxed font-sans mb-4 min-h-[60px]">
                       {cap.desc[lang]}
                     </p>
                   </div>
 
                   <div className="border-t border-[#4f473d]/30 pt-3 mt-4">
-                    <ul className="space-y-1 font-mono text-[8px] text-white/70">
+                    <ul className="space-y-1 font-mono text-[10.5px] text-white/70">
                       {cap.highlights[lang].map((h, i) => (
                         <li key={i} className="flex items-start space-x-1">
                           <span className="w-1 h-1 bg-[#ff6b00] rotate-45 flex-shrink-0 mt-1" />
@@ -304,7 +304,7 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
 
         {/* Custom Solutions Subsection */}
         <div className="border border-[#4f473d]/50 bg-[#161411]/60 p-8 rounded-sm relative overflow-hidden scanlines">
-          <div className="absolute top-3 right-3 font-mono text-[9px] text-[#5e7a5e]">
+          <div className="absolute top-3 right-3 font-mono text-[11px] text-[#5e7a5e]">
             SYSTEMS // DEPLOYMENT LEVEL 3
           </div>
           <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-[#4f473d]" />
@@ -314,7 +314,7 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-5 space-y-4">
-              <span className="text-xs text-[#ff6b00] font-mono font-bold tracking-widest uppercase block">
+              <span className="text-sm text-[#ff6b00] font-mono font-bold tracking-widest uppercase block">
                 [ {t[lang].customTitle} ]
               </span>
               <h3 className="text-2xl font-black font-mono text-white tracking-tight uppercase leading-none">
@@ -322,7 +322,7 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
               </h3>
             </div>
             <div className="lg:col-span-7">
-              <p className="text-xs text-[#8a99ad] leading-relaxed font-sans">
+              <p className="text-[13.5px] text-[#8a99ad] leading-relaxed font-sans">
                 {t[lang].customDesc}
               </p>
             </div>
@@ -331,7 +331,7 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
 
         {/* Workflow Timeline */}
         <div className="space-y-8">
-          <h3 className="font-mono text-xs text-[#5e7a5e] tracking-widest uppercase font-bold flex items-center space-x-2">
+          <h3 className="font-mono text-sm text-[#5e7a5e] tracking-widest uppercase font-bold flex items-center space-x-2">
             <Activity className="w-4 h-4 text-[#ff6b00]/60 animate-pulse" />
             <span>// {t[lang].workflowLabel}</span>
           </h3>
@@ -351,7 +351,7 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
                 }`}
               >
                 <div className="flex justify-between items-center mb-3">
-                  <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-sm border ${
+                  <span className={`text-[11.5px] font-mono font-bold px-2 py-0.5 rounded-sm border ${
                     activeStep === idx 
                       ? 'border-[#ff6b00] text-[#ff6b00] bg-[#ff6b00]/5' 
                       : 'border-[#4f473d]/60 text-[#8a99ad]'
@@ -361,11 +361,11 @@ export default function AdvancedDevelopment({ lang }: AdvancedDevelopmentProps) 
                   <div className="w-1.5 h-1.5 rounded-full bg-[#5e7a5e]/60" />
                 </div>
 
-                <h4 className="font-mono text-xs text-white font-bold tracking-wider uppercase mb-2">
+                <h4 className="font-mono text-sm text-white font-bold tracking-wider uppercase mb-2">
                   {item.title[lang]}
                 </h4>
                 
-                <p className="text-[10px] text-[#8a99ad] leading-relaxed font-sans">
+                <p className="text-[12px] text-[#8a99ad] leading-relaxed font-sans">
                   {item.desc[lang]}
                 </p>
 

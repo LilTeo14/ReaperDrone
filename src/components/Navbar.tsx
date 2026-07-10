@@ -60,7 +60,7 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
             <span className="text-white font-bold text-lg tracking-wider font-mono group-hover:text-[#ff6b00] transition-colors duration-300">
               REAPER DEFENCE
             </span>
-            <span className="text-[10px] text-[#5e7a5e] tracking-widest font-mono font-bold leading-none">
+            <span className="text-[12px] text-[#5e7a5e] tracking-widest font-mono font-bold leading-none">
               {t[lang].tagline} // {t[lang].status}
             </span>
           </div>
@@ -93,7 +93,7 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
           {/* Tactical Status Indicator */}
           <div className="flex items-center space-x-2 border border-[#2d3a2d] bg-[#1a221a]/30 px-3 py-1.5 rounded-sm">
             <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-[11px] text-emerald-400 font-mono font-bold tracking-wider">ONLINE</span>
+            <span className="text-[13px] text-emerald-400 font-mono font-bold tracking-wider">ONLINE</span>
           </div>
         </div>
 
@@ -137,10 +137,10 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
               </a>
             ))}
             <div className="pt-4 flex items-center justify-between border-t border-[#4f473d]/40 px-3">
-              <span className="text-[11px] text-[#5e7a5e] font-mono font-bold">SYSTEM STATUS: SECURED</span>
+              <span className="text-[13px] text-[#5e7a5e] font-mono font-bold">SYSTEM STATUS: SECURED</span>
               <div className="flex items-center space-x-1.5">
                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-[11px] text-emerald-400 font-mono font-bold">GRID UP</span>
+                <span className="text-[13px] text-emerald-400 font-mono font-bold">GRID UP</span>
               </div>
             </div>
           </motion.div>

@@ -68,7 +68,7 @@ export default function MediaGallery({ lang }: MediaGalleryProps) {
   const galleryItems: GalleryItem[] = [
     {
       id: "feed-1",
-      title: "MARK IV 10\" Target Drill",
+      title: "RD M10\" Target Drill",
       category: "fpv",
       type: "video",
       thumbnailUrl: "/wp-content/uploads/2025/09/cta-2.webp",

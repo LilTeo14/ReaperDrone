@@ -90,26 +90,40 @@ export default function ContactForm({ lang }: ContactFormProps) {
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
-    formData.append("_subject", "New Contact Inquiry - Reaper Defence");
-    formData.append("_template", "table");
+    const data = {
+      name: formData.get("name") as string,
+      organization: formData.get("organization") as string,
+      email: formData.get("email") as string,
+      message: formData.get("message") as string,
+      _subject: "New Contact Inquiry - Reaper Defence",
+      _template: "table"
+    };
 
     try {
       const response = await fetch("https://formsubmit.co/ajax/matiasbarriosm@gmail.com", {
         method: "POST",
-        body: formData
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(data)
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (response.ok && (result.success === "true" || result.success === true)) {
         setSubmitted(true);
         e.currentTarget.reset();
       } else {
+        console.error("FormSubmit Error response:", result);
+        const errMsg = result.message || "";
         alert(lang === 'en' 
-          ? "Failed to transmit secure request. Please try again." 
-          : "Error al transmitir la solicitud segura. Por favor, inténtelo de nuevo."
+          ? `Failed to transmit secure request. ${errMsg}`
+          : `Error al transmitir la solicitud segura. ${errMsg}`
         );
       }
     } catch (error) {
-      console.error(error);
+      console.error("FormSubmit Error:", error);
       alert(lang === 'en' 
         ? "Network connection error. Please try again." 
         : "Error de conexión de red. Por favor, inténtelo de nuevo."

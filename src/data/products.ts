@@ -28,7 +28,7 @@ export interface Product {
 export const products: Product[] = [
   {
     id: "fpv-7",
-    name: "MARK IV FPV 7\"",
+    name: "RD M7\"",
     model: "7-Inch Tactical FPV",
     category: "fpv",
     image: "/catalogo/Plataformas FPV/fpv7cat2.png",
@@ -108,7 +108,7 @@ export const products: Product[] = [
   },
   {
     id: "fpv-8",
-    name: "MARK IV FPV 8\"",
+    name: "RD M8\"",
     model: "8-Inch Heavy FPV",
     category: "fpv",
     image: "/catalogo/Plataformas FPV/fpv8 cat.png",
@@ -186,7 +186,7 @@ export const products: Product[] = [
   },
   {
     id: "fpv-10",
-    name: "MARK IV FPV 10\"",
+    name: "RD M10\"",
     model: "10-Inch Heavy Payload FPV",
     category: "fpv",
     image: "/catalogo/Plataformas FPV/fpv10cat.png",
@@ -262,7 +262,7 @@ export const products: Product[] = [
   },
   {
     id: "fpv-15",
-    name: "MARK IV FPV 15\"",
+    name: "RD M15\"",
     model: "15-Inch Heavy Assault FPV",
     category: "fpv",
     image: "/catalogo/Plataformas FPV/fpv15 cat - copia.png",
@@ -484,7 +484,7 @@ export const products: Product[] = [
         { label: "Data Interface", value: "Fiber Optic to Ethernet (integrated media converter)" },
         { label: "Latency", value: "<1 ms" },
         { label: "Bandwidth", value: "Up to 10 Gbps" },
-        { label: "Compatibility", value: "MARK IV FPV 7\" / 8\" / 10\", AERIAL SENTRY 73" }
+        { label: "Compatibility", value: "RD M7\" / M8\" / M10\", AERIAL SENTRY 73" }
       ],
       capabilities: [
         "Operations in active EW jamming environments",
@@ -508,7 +508,7 @@ export const products: Product[] = [
         { label: "Interfaz de Datos", value: "Fibra óptica a Ethernet (conversión integrada)" },
         { label: "Latencia", value: "<1 ms" },
         { label: "Ancho de Banda", value: "Hasta 10 Gbps" },
-        { label: "Compatibilidad", value: "MARK IV FPV 7\" / 8\" / 10\", AERIAL SENTRY 73" }
+        { label: "Compatibilidad", value: "RD M7\" / M8\" / M10\", AERIAL SENTRY 73" }
       ],
       capabilities: [
         "Operaciones en entornos con jamming activo de EW",
@@ -539,7 +539,7 @@ export const products: Product[] = [
         { label: "Data Interface", value: "Fiber Optic to Ethernet (integrated media converter)" },
         { label: "Latency", value: "<1 ms" },
         { label: "Bandwidth", value: "Up to 10 Gbps" },
-        { label: "Compatibility", value: "MARK IV FPV 8\" / 10\" / 15\"" }
+        { label: "Compatibility", value: "RD M8\" / M10\" / M15\"" }
       ],
       capabilities: [
         "Medium-range deep-strike coordination in EW zones",
@@ -563,7 +563,7 @@ export const products: Product[] = [
         { label: "Interfaz de Datos", value: "Fibra óptica a Ethernet (conversión integrada)" },
         { label: "Latencia", value: "<1 ms" },
         { label: "Ancho de Banda", value: "Hasta 10 Gbps" },
-        { label: "Compatibilidad", value: "MARK IV FPV 8\" / 10\" / 15\"" }
+        { label: "Compatibilidad", value: "RD M8\" / M10\" / M15\"" }
       ],
       capabilities: [
         "Coordinación de ataques profundos en zonas con bloqueo de EW",
@@ -594,7 +594,7 @@ export const products: Product[] = [
         { label: "Data Interface", value: "Fiber Optic to Ethernet (integrated media converter)" },
         { label: "Latency", value: "<1.5 ms" },
         { label: "Bandwidth", value: "Up to 10 Gbps" },
-        { label: "Compatibility", value: "MARK IV FPV 10\" / 15\"" }
+        { label: "Compatibility", value: "RD M10\" / M15\"" }
       ],
       capabilities: [
         "Over-the-horizon precision strikes",
@@ -618,7 +618,7 @@ export const products: Product[] = [
         { label: "Interfaz de Datos", value: "Fibra óptica a Ethernet (conversión integrada)" },
         { label: "Latencia", value: "<1.5 ms" },
         { label: "Ancho de Banda", value: "Hasta 10 Gbps" },
-        { label: "Compatibilidad", value: "MARK IV FPV 10\" / 15\"" }
+        { label: "Compatibilidad", value: "RD M10\" / M15\"" }
       ],
       capabilities: [
         "Ataques de precisión más allá del horizonte",

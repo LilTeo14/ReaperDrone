@@ -86,7 +86,7 @@ export default function Hero({ lang }: HeroProps) {
         
         {/* Left Content Column */}
         <motion.div 
-          className="lg:col-span-7 flex flex-col justify-center space-y-8"
+          className="lg:col-span-7 flex flex-col justify-center space-y-8 lg:h-[22rem] lg:justify-between lg:space-y-0"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -142,7 +142,13 @@ export default function Hero({ lang }: HeroProps) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="relative glass-panel rounded-sm p-6 max-w-sm mx-auto aspect-square flex items-center justify-center overflow-hidden scanlines">
+          <div
+            className="relative glass-panel rounded-sm p-6 max-w-[22rem] mx-auto aspect-square flex items-center justify-center overflow-hidden scanlines"
+            style={{
+              backgroundColor: 'rgba(50, 45, 39, 0.8)',
+              borderColor: 'rgba(79, 71, 61, 0.35)'
+            }}
+          >
             <div className="absolute inset-0 bg-[#ff6b00]/[0.02] pointer-events-none" />
             
             {/* Corner Indicators */}

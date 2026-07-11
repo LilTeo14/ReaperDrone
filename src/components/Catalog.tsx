@@ -64,9 +64,9 @@ export default function Catalog({ lang }: CatalogProps) {
       btnDetails: "Ficha Técnica",
       btnCompareFPV: "Comparar Modelos FPV",
       btnCompareClose: "Cerrar Comparación",
-      fiberSectionTitle: "Carretes de Fibra Óptica para Entornos con EW",
+      fiberSectionTitle: "Rollos de Fibra Óptica para Entornos con EW",
       fiberSectionDesc: "Componentes críticos para sistemas FPV de fibra óptica y vehículos no tripulados que operan en entornos de guerra electrónica donde el control de radio está bloqueado o interceptado.",
-      compareTableTitle: "Tabla Comparativa de Carretes de Fibra Óptica",
+      compareTableTitle: "Tabla Comparativa de Rollos de Fibra Óptica",
       specsHeader: "ESPECIFICACIONES TÉCNICAS",
       featuresHeader: "CAPACIDADES DEL SISTEMA",
       deploymentHeader: "APLICACIONES TÁCTICAS",
@@ -123,7 +123,7 @@ export default function Catalog({ lang }: CatalogProps) {
       image: "/catalogo/Fibra optica/Fibra optica.jpeg",
       description: {
         en: "Secure bend-insensitive fiber optic control spools that provide high-tensile, zero-emission connection immune to radio frequency jamming.",
-        es: "Carretes de fibra óptica de control seguros y resistentes a la flexión que proporcionan una conexión de alta resistencia y cero emisiones, inmune a inhibiciones de radiofrecuencia."
+        es: "Rollos de fibra óptica de control seguros y resistentes a la flexión que proporcionan una conexión de alta resistencia y cero emisiones, inmune a inhibiciones de radiofrecuencia."
       }
     },
     {

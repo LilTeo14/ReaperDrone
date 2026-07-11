@@ -89,7 +89,7 @@ export default function Advantages({ lang }: AdvantagesProps) {
         {
           icon: Lock,
           title: "Resiliencia por Fibra Óptica",
-          desc: "Carretes de micro-tether óptico que anulan las emisiones de radiofrecuencia, haciendo que los sistemas sean inmunes a EW."
+          desc: "Rollos de micro-tether óptico que anulan las emisiones de radiofrecuencia, haciendo que los sistemas sean inmunes a EW."
         }
       ]
     }

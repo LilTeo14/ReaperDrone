@@ -72,7 +72,7 @@ export default function Infographics({ lang }: InfographicsProps) {
           icon: Cpu,
           title: "Comunicaciones Resilientes",
           metric: "100% Inmune a EW",
-          desc: "Los carretes de fibra óptica evitan el espectro de RF, manteniéndose completamente operativos en sectores bajo interferencia."
+          desc: "Los rollos de fibra óptica evitan el espectro de RF, manteniéndose completamente operativos en sectores bajo interferencia."
         },
         {
           icon: Target,

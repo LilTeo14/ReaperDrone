@@ -467,7 +467,7 @@ export const products: Product[] = [
     name: "FIBER OPTIC SPOOL 5 KM",
     model: "5km EW-Resilient Link",
     category: "fiber",
-    image: "/wp-content/uploads/2025/09/15-o-cta-1024x795.webp",
+    image: "/catalogo/Fibra optica/rollo-fibra-5km.png",
     en: {
       description: "High-tensile optical fiber spool designed for short-range drone control. Fully eliminates radio frequency emissions, making the connected platform immune to RF jamming, spoofing, and detection.",
       features: [
@@ -493,12 +493,12 @@ export const products: Product[] = [
       ]
     },
     es: {
-      description: "Carrete de fibra óptica de alta resistencia diseñado para control de drones a corta distancia. Elimina por completo las emisiones de radiofrecuencia, haciendo que la plataforma conectada sea inmune a inhibiciones (jamming), suplantaciones (spoofing) y detección de señales.",
+      description: "Rollo de fibra óptica de alta resistencia diseñado para control de drones a corta distancia. Elimina por completo las emisiones de radiofrecuencia, haciendo que la plataforma conectada sea inmune a inhibiciones (jamming), suplantaciones (spoofing) y detección de señales.",
       features: [
         "100% inmune a interferencias de radiofrecuencia (RF) y guerra electrónica (EW)",
         "Firma de RF nula para evitar la localización del piloto o del dron",
         "Convertidores de medios integrados de alta velocidad para transmisión de video HD",
-        "Carrete de fibra monomodo de micro-diámetro y alta resistencia a la tensión"
+        "Rollo de fibra monomodo de micro-diámetro y alta resistencia a la tensión"
       ],
       specs: [
         { label: "Longitud de Cable", value: "5 km" },
@@ -522,7 +522,7 @@ export const products: Product[] = [
     name: "FIBER OPTIC SPOOL 10 KM",
     model: "10km EW-Resilient Link",
     category: "fiber",
-    image: "/wp-content/uploads/2025/09/10-o-cta-1024x795.webp",
+    image: "/catalogo/Fibra optica/rollo-fibra-10km.png",
     en: {
       description: "Medium-range fiber optic spool designed for deep-penetration tactical operations. Provides reliable control signals and telemetry without radio frequency links.",
       features: [
@@ -548,7 +548,7 @@ export const products: Product[] = [
       ]
     },
     es: {
-      description: "Carrete de fibra óptica de medio alcance diseñado para operaciones tácticas de penetración profunda. Proporciona señales de control y telemetría confiables sin usar enlaces de radiofrecuencia.",
+      description: "Rollo de fibra óptica de medio alcance diseñado para operaciones tácticas de penetración profunda. Proporciona señales de control y telemetría confiables sin usar enlaces de radiofrecuencia.",
       features: [
         "Completamente protegido contra bloqueadores tácticos e interceptación de radio",
         "Proporciona un ancho de banda ultra alto para cámaras HD y sistemas de estabilización",
@@ -577,7 +577,7 @@ export const products: Product[] = [
     name: "FIBER OPTIC SPOOL 15 KM",
     model: "15km EW-Resilient Link",
     category: "fiber",
-    image: "/wp-content/uploads/2025/09/13-o-cta-1024x795.webp",
+    image: "/catalogo/Fibra optica/rollo-fibra-15km.png",
     en: {
       description: "Long-range tactical optical spool. Features reinforced coating to withstand high deployment speeds and abrasive environments while maintaining a secure, zero-emission data connection.",
       features: [
@@ -603,7 +603,7 @@ export const products: Product[] = [
       ]
     },
     es: {
-      description: "Carrete óptico táctico de largo alcance. Cuenta con un revestimiento reforzado para soportar velocidades de despliegue elevadas y entornos abrasivos, manteniendo una conexión de datos segura y libre de emisiones.",
+      description: "Rollo óptico táctico de largo alcance. Cuenta con un revestimiento reforzado para soportar velocidades de despliegue elevadas y entornos abrasivos, manteniendo una conexión de datos segura y libre de emisiones.",
       features: [
         "Núcleo de tensión reforzado para soportar velocidades de despliegue de hasta 120 km/h",
         "Longitud de despliegue operativo de 15 km para ataques seguros más allá del horizonte",

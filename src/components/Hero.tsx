@@ -142,7 +142,7 @@ export default function Hero({ lang }: HeroProps) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="relative glass-panel rounded-sm p-6 max-w-md mx-auto aspect-square flex items-center justify-center overflow-hidden scanlines">
+          <div className="relative glass-panel rounded-sm p-6 max-w-sm mx-auto aspect-square flex items-center justify-center overflow-hidden scanlines">
             <div className="absolute inset-0 bg-[#ff6b00]/[0.02] pointer-events-none" />
             
             {/* Corner Indicators */}

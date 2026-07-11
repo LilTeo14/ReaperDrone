@@ -67,7 +67,7 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
         </a>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex space-x-8 text-sm font-medium">
+        <nav className="hidden md:flex space-x-6 text-[0.951rem] font-medium">
           {navLinks.map((link) => (
             <a 
               key={link.href}
@@ -131,7 +131,7 @@ export default function Navbar({ lang, setLang }: NavbarProps) {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-[#8a99ad] hover:text-white hover:bg-[#1d1915] rounded-sm font-mono text-sm tracking-wide transition-colors border-l-2 border-transparent hover:border-[#ff6b00]"
+                className="block px-3 py-2 text-[#8a99ad] hover:text-white hover:bg-[#1d1915] rounded-sm font-mono text-[0.951rem] tracking-wide transition-colors border-l-2 border-transparent hover:border-[#ff6b00]"
               >
                 {link.label}
               </a>

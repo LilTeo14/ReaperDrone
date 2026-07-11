@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from './Image';
 import { motion } from 'framer-motion';
-import { Shield, Radio, Anchor, Crosshair } from 'lucide-react';
 
 interface HeroProps {
   lang: 'en' | 'es';
@@ -16,7 +15,7 @@ export default function Hero({ lang }: HeroProps) {
       subheadline: "Advanced Unmanned Systems & Electronic Warfare Solutions",
       support: "Modern conflicts and security challenges have demonstrated the decisive role of unmanned systems, electronic warfare and real-time intelligence. Reaper Defence develops next-generation technologies designed to enhance operational awareness, force protection and mission effectiveness.",
       btnExplore: "Explore Products",
-      btnRD: "R&D Division",
+      btnRD: "UAV Training",
       btnContact: "Contact Us",
       systemStatus: "SYS.STATUS: ACTIVE // CONNECTED",
       latencies: "LATENCY: 0.8ms // LINK: FIBER-OPTIC"
@@ -26,7 +25,7 @@ export default function Hero({ lang }: HeroProps) {
       subheadline: "Sistemas No Tripulados Avanzados y Soluciones de Guerra Electrónica",
       support: "Los conflictos modernos y los desafíos de seguridad han demostrado el papel decisivo de los sistemas no tripulados, la guerra electrónica y la inteligencia en tiempo real. Reaper Defence desarrolla tecnologías de próxima generación diseñadas para mejorar la conciencia operativa, la protección de fuerzas y la efectividad de las misiones.",
       btnExplore: "Explorar Productos",
-      btnRD: "División I+D",
+      btnRD: "CAPACITACIÓN UAV",
       btnContact: "Contáctanos",
       systemStatus: "SYS.STATUS: ACTIVO // CONECTADO",
       latencies: "LATENCIA: 0.8ms // ENLACE: FIBRA ÓPTICA"
@@ -87,25 +86,13 @@ export default function Hero({ lang }: HeroProps) {
         
         {/* Left Content Column */}
         <motion.div 
-          className="lg:col-span-7 flex flex-col justify-between space-y-6 lg:space-y-0"
+          className="lg:col-span-7 flex flex-col justify-center space-y-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          {/* Top Group: Tag and Subheadline */}
-          <div className="flex flex-col space-y-8">
-            {/* Tag Header */}
-            <motion.div 
-              variants={itemVariants}
-              className="inline-flex items-center space-x-2 border border-[#ff6b00]/30 bg-[#ff6b00]/5 px-3 py-1 rounded-sm max-w-max"
-            >
-              <Shield className="w-4 h-4 text-[#ff6b00] animate-pulse" />
-              <span className="text-xs text-[#ff6b00] font-mono font-bold tracking-widest uppercase">
-                Military Grade Aerospace Systems
-              </span>
-            </motion.div>
-
-            {/* Subheadline */}
+          {/* Top Group: Subheadline */}
+          <div>
             <motion.p 
               variants={itemVariants}
               className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#ff8f3d]/90 font-mono tracking-wide"
@@ -134,7 +121,7 @@ export default function Hero({ lang }: HeroProps) {
               {t[lang].btnExplore}
             </a>
             <a 
-              href="#advanced-development"
+              href="#training"
               className="px-8 py-4 bg-[#ff6b00] hover:bg-[#e05e00] text-white font-bold text-sm tracking-widest uppercase font-mono rounded-sm transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-[#ff6b00]/20 flex items-center justify-center border border-[#ff6b00]"
             >
               {t[lang].btnRD}

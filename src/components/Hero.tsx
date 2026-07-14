@@ -146,7 +146,7 @@ export default function Hero({ lang }: HeroProps) {
             className="relative glass-panel rounded-sm p-6 max-w-[22rem] mx-auto aspect-square flex items-center justify-center overflow-hidden scanlines"
             style={{
               backgroundColor: 'transparent',
-              borderColor: 'rgba(79, 71, 61, 0.21)'
+              borderColor: 'rgba(79, 71, 61, 0.19)'
             }}
           >
             <div className="absolute inset-0 bg-[#ff6b00]/[0.02] pointer-events-none" />
@@ -160,7 +160,7 @@ export default function Hero({ lang }: HeroProps) {
             {/* Full-size Brand Logo */}
             <div className="relative w-full h-full transition-transform hover:scale-102 duration-500">
               <Image 
-                src="/Logo_Reaper_trans_v4.png"
+                src="/Logo_Reaper_trans_v5.png"
                 alt="Reaper Defence Brand Logo"
                 fill
                 priority

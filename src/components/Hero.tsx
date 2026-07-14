@@ -160,7 +160,7 @@ export default function Hero({ lang }: HeroProps) {
             {/* Full-size Brand Logo */}
             <div className="relative w-full h-full transition-transform hover:scale-102 duration-500">
               <Image 
-                src="/Logo_Reaper.png"
+                src="/Logo_Reaper_trans.png"
                 alt="Reaper Defence Brand Logo"
                 fill
                 priority

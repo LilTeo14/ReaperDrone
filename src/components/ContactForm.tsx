@@ -50,6 +50,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
       labelName: "Full Name",
       labelOrg: "Agency / Organization",
       labelEmail: "Secure Email",
+      labelPhone: "Phone Number (Optional)",
       labelMsg: "Tactical Query",
       btnSubmit: "Encrypt & Transmit Request",
       btnSubmitting: "Transmitting Securely...",
@@ -70,6 +71,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
       labelName: "Nombre Completo",
       labelOrg: "Agencia / Organización",
       labelEmail: "Correo Seguro",
+      labelPhone: "Teléfono (Opcional)",
       labelMsg: "Mensaje",
       btnSubmit: "Cifrar y Transmitir Solicitud",
       btnSubmitting: "Transmitiendo de Forma Segura...",
@@ -94,6 +96,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
       name: formData.get("name") as string,
       organization: formData.get("organization") as string,
       email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
       message: formData.get("message") as string,
       _subject: "New Contact Inquiry - Reaper Defence",
       _template: "table"
@@ -259,15 +262,27 @@ export default function ContactForm({ lang }: ContactFormProps) {
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <label className="text-[#8a99ad] uppercase tracking-wider">{t[lang].labelEmail}</label>
-                    <input 
-                      type="email" 
-                      name="email"
-                      required 
-                      placeholder="jdoe@agency.gov"
-                      className="w-full bg-[#1d1915] border border-[#4f473d] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors"
-                    />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="text-[#8a99ad] uppercase tracking-wider">{t[lang].labelEmail}</label>
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        placeholder="jdoe@agency.gov"
+                        className="w-full bg-[#1d1915] border border-[#4f473d] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[#8a99ad] uppercase tracking-wider">{t[lang].labelPhone}</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="+56 9 1234 5678"
+                        autoComplete="tel"
+                        className="w-full bg-[#1d1915] border border-[#4f473d] focus:border-[#ff6b00] rounded-sm px-4 py-3 text-white focus:outline-none transition-colors"
+                      />
+                    </div>
                   </div>
 
                   <div className="space-y-2">
